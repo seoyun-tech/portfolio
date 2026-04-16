@@ -60,9 +60,6 @@ const Hero = () => {
           />
         </div>
 
-        <div className="hero-scroll-indicator">
-          <span className="hero-scroll-line" />
-        </div>
 
       </div>
     </section>

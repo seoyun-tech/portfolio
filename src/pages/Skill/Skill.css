@@ -2,16 +2,16 @@
 
 .skill-section {
   width: 100%;
-  padding: 90px 0 50px;
+  padding: 90px 0;
   background-color: var(--color-white);
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   overflow: hidden;
 }
 
 .skill-container {
-  max-width: 1140px;
+  width: 1140px;
+  max-width: 90%;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
 /* 헤더 */
@@ -106,7 +106,6 @@
 
 /* 반응형 */
 @media (max-width: 1024px) {
-  .skill-container     { padding: 0 40px; }
   .skill-description p { font-size: 20px; }
 }
 

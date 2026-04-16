@@ -116,7 +116,6 @@
 
 .tabs-content {
   flex-grow: 1;
-  min-height: 450px;
   display: flex;
   flex-direction: column;
 }
@@ -198,8 +197,7 @@
   align-items: center;
   gap: 15px;
   cursor: pointer;
-  margin-top: auto;
-  padding-top: 20px;
+  margin-top: 20px;
   width: fit-content;
 }
 
