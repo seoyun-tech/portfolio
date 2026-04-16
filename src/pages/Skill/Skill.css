@@ -66,9 +66,8 @@
 }
 
 .skill-chip:hover {
-  background-color: var(--color-primary);
-  color: var(--color-white);
-  transform: translateY(-6px);
+  background-color: #ebece4;
+  transform: translateY(-5px);
 }
 
 /* 화살표 컨트롤 */
