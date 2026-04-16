@@ -1,0 +1,38 @@
+:root {
+  /* ─── Colors ─────────────────────────── */
+  --color-primary:    #19402d;
+  --color-primary-60: rgba(25, 64, 45, 0.6);
+  --color-primary-25: rgba(25, 64, 45, 0.25);
+  --color-primary-10: rgba(25, 64, 45, 0.1);
+  --color-primary-05: rgba(25, 64, 45, 0.05);
+  --color-bg:         #f4f5f0;
+  --color-white:      #ffffff;
+
+  /* ─── Typography ─────────────────────── */
+  --font-main: 'Poppins', 'Noto Sans KR', sans-serif;
+
+  /* ─── Easing ─────────────────────────── */
+  --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* ─── Border Radius ──────────────────── */
+  --radius-pill:   700px;
+  --radius-tag:    100px;
+  --radius-card:   30px;
+
+  /* ─── Shadows ────────────────────────── */
+  --shadow-tab:   0px 15px 45px rgba(0, 0, 0, 0.08);
+  --shadow-image: 0 30px 60px rgba(0, 0, 0, 0.3);
+
+  /* ─── Extended palette ───────────────── */
+  --color-dark:      #1e2823;   /* Footer / Contact bg */
+  --color-off-white: #fcfcfb;   /* Project section bg  */
+}
+
+/* ─── Shared reveal animation ────────────
+   About, Skill, Experience 모두 동일 로직.
+   각 섹션 CSS에서 animation-delay만 커스텀.
+──────────────────────────────────────── */
+@keyframes revealUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

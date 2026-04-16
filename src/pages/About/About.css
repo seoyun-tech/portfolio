@@ -1,0 +1,132 @@
+/* revealUp keyframe → tokens.css 에서 전역 정의 */
+
+.about-section {
+  position: relative;
+  width: 100%;
+  min-height: 545px;
+  background-color: var(--color-primary);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 레이아웃 */
+.about-content-wrapper {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 80px 40px;
+}
+
+.about-layout-grid {
+  display: grid;
+  grid-template-columns: minmax(180px, 228px) minmax(220px, 274px) minmax(300px, 409px);
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+/* 등장 애니메이션 — 공유 revealUp 사용 */
+.about-item { opacity: 0; }
+
+.about-section.is-visible .about-item {
+  animation: revealUp 1.2s var(--ease-spring) forwards;
+}
+
+.stats-item { animation-delay: 0.1s;  width: 100%; }
+.image-item { animation-delay: 0.25s; width: 100%; display: flex; justify-content: center; }
+.info-item  { animation-delay: 0.4s;  width: 100%; }
+
+/* 왼쪽: 스탯 */
+.stats-box-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.stats-number-huge {
+  font-family: var(--font-main);
+  font-style: italic;
+  font-size: clamp(80px, 12vw, 158px);
+  line-height: 1;
+  color: var(--color-white);
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 23px;
+}
+.stats-plus { font-size: 0.6em; margin-top: 0.15em; margin-left: 5px; }
+
+.stats-label-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-white);
+  font-size: 13.9px;
+  opacity: 0.8;
+}
+
+/* 가운데: 프로필 이미지 */
+.profile-image-frame {
+  width: 100%;
+  max-width: 274px;
+  aspect-ratio: 274 / 343;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: var(--shadow-image);
+}
+.profile-image-main { width: 100%; height: 100%; object-fit: cover; }
+
+/* 오른쪽: 정보 */
+.about-me-tag      { margin-bottom: 30px; }
+.name-header-group { margin-bottom: 50px; }
+
+.name-ko-title    { font-weight: 700; font-size: clamp(32px, 4vw, 36px); color: var(--color-white); margin-bottom: 10px; }
+.name-en-subtitle { font-weight: 400; font-size: clamp(20px, 3vw, 24px); color: var(--color-white); opacity: 0.9; }
+
+.profile-data-list { display: flex; flex-direction: column; gap: 30px; }
+.data-row          { display: flex; flex-direction: column; gap: 8px; }
+.data-label        { font-weight: 700; font-size: 14px; color: rgba(255, 255, 255, 0.6); }
+.data-value        { font-size: 14.1px; color: var(--color-white); opacity: 0.95; }
+
+/* 반응형 */
+@media (max-width: 1024px) {
+  .about-content-wrapper { padding: 60px 30px; }
+  .about-layout-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 48px 40px;
+    align-items: center;
+  }
+  /* 순서: [스탯 2칸] / [이미지] [정보] */
+  .stats-item { order: 1; grid-column: span 2; display: flex; justify-content: center; }
+  .image-item { order: 2; }
+  .info-item  { order: 3; }
+  .stats-box-inner { text-align: center; flex-direction: column-reverse; }
+}
+
+@media (max-width: 768px) {
+  .about-content-wrapper { padding: 60px 24px; }
+  .about-layout-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  /* 순서: 스탯 → 이미지 → 정보 */
+  .stats-item { order: 1; grid-column: auto; }
+  .image-item { order: 2; grid-column: auto; }
+  .info-item  { order: 3; grid-column: auto; }
+
+  .profile-image-frame { max-width: 240px; margin: 0 auto; }
+  .stats-number-huge   { font-size: clamp(64px, 20vw, 96px); justify-content: center; }
+  .stats-label-row     { justify-content: center; }
+  .name-header-group   { margin-bottom: 32px; }
+  .profile-data-list   { align-items: center; }
+}
+
+@media (max-width: 480px) {
+  .about-content-wrapper { padding: 48px 20px; }
+  .profile-image-frame   { max-width: 200px; }
+  .stats-number-huge     { font-size: clamp(56px, 18vw, 80px); }
+}

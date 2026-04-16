@@ -1,0 +1,110 @@
+/* revealUp keyframe → tokens.css 에서 전역 정의 */
+
+.skill-section {
+  width: 100%;
+  padding: 90px 0 50px;
+  background-color: var(--color-white);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.skill-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 헤더 */
+.skill-header {
+  margin-bottom: 60px;
+  max-width: 800px;
+  opacity: 0;
+}
+
+.skill-tag-wrapper { margin-bottom: 30px; }
+
+.skill-description p {
+  font-size: 22.2px;
+  line-height: 1.5;
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+.text-dim { color: var(--color-primary-60); }
+
+/* 캐러셀 */
+.skill-carousel-wrapper {
+  position: relative;
+  width: 100%;
+  opacity: 0;
+}
+
+.skill-carousel {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 30px;
+}
+.skill-carousel::-webkit-scrollbar { display: none; }
+
+.skill-chip {
+  opacity: 0;
+  height: 60px;
+  padding: 0 30px;
+  background-color: var(--color-bg);
+  border-radius: var(--radius-pill);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  font-size: 15px;
+  white-space: nowrap;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.skill-chip:hover {
+  background-color: #ebece4;
+  transform: translateY(-5px);
+}
+
+/* 화살표 컨트롤 */
+.carousel-controls { display: flex; gap: 15px; margin-top: 20px; }
+
+.control-btn {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+.control-btn:hover { opacity: 0.6; }
+
+/* 등장 애니메이션 — 공유 revealUp 사용 */
+.skill-section.is-visible .skill-header {
+  animation: revealUp 1s var(--ease-spring) forwards;
+}
+
+.skill-section.is-visible .skill-carousel-wrapper {
+  animation: revealUp 1s var(--ease-spring) 0.3s forwards;
+}
+
+.skill-section.is-visible .skill-chip {
+  animation: revealUp 0.8s var(--ease-spring) forwards;
+}
+
+/* 반응형 */
+@media (max-width: 1024px) {
+  .skill-container     { padding: 0 40px; }
+  .skill-description p { font-size: 20px; }
+}
+
+@media (max-width: 768px) {
+  .skill-section       { padding: 60px 0 40px; }
+  .skill-description p { font-size: 18px; }
+  .skill-chip          { height: 50px; font-size: 14px; }
+}

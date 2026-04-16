@@ -1,0 +1,144 @@
+.contact-page {
+  min-height: 100vh;
+  background-color: var(--color-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 40px;
+  position: relative;
+  font-family: var(--font-main);
+}
+
+/* 뒤로가기 버튼 */
+.contact-page-back {
+  position: fixed;
+  top: 40px;
+  left: 40px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  z-index: 10;
+}
+
+.contact-page-back:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--color-white);
+}
+
+/* 콘텐츠 */
+.contact-page-inner {
+  width: 100%;
+  max-width: 560px;
+}
+
+.contact-page-tag {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+  margin: 0 0 24px;
+}
+
+.contact-page-title {
+  display: flex;
+  flex-direction: column;
+  font-size: clamp(44px, 7vw, 72px);
+  line-height: 1;
+  color: var(--color-white);
+  font-weight: 400;
+  margin: 0 0 24px;
+}
+
+.contact-page-title strong { font-weight: 700; }
+.contact-page-title em { font-style: italic; font-weight: 300; }
+
+.contact-page-desc {
+  font-size: 14px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0 0 56px;
+}
+
+/* 연락처 목록 */
+.contact-page-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: 0 0 48px;
+  padding: 0;
+  list-style: none;
+}
+
+.contact-page-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-page-item-title {
+  font-size: 36px;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--color-white);
+  line-height: 1;
+}
+
+.contact-page-item-desc {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.45);
+  margin: 0;
+}
+
+.contact-page-item-value {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  width: fit-content;
+  transition: color 0.25s ease;
+}
+
+.contact-page-item-value:hover { color: var(--color-white); }
+
+/* 소셜 아이콘 */
+.contact-page-social {
+  display: flex;
+  gap: 14px;
+}
+
+.contact-page-social-btn {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.contact-page-social-btn:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--color-white);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .contact-page { padding: 100px 24px 60px; align-items: flex-start; }
+  .contact-page-back { top: 24px; left: 24px; }
+  .contact-page-item-title { font-size: 28px; }
+}

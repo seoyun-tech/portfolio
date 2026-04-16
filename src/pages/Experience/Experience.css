@@ -1,0 +1,218 @@
+.experience {
+  padding: 90px 0;
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-white);
+}
+
+.experience-container {
+  width: 1140px;
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-tabs {
+  display: flex;
+  gap: 60px;
+}
+
+/* 탭 네비게이션 */
+.tabs-navigation {
+  /* width: fit-content */
+  width: 240px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+/* 더 있다는 걸 암시하는 하단 그라디언트 */
+.tabs-navigation::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 52px;
+  background: linear-gradient(to bottom, transparent, var(--color-white));
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.35s ease;
+}
+
+.tabs-navigation:hover::after {
+  opacity: 0;
+}
+
+.tabs-list { display: flex; flex-direction: column; }
+
+/* 숨겨진 항목 컨테이너 */
+.tabs-more {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tabs-navigation:hover .tabs-more {
+  grid-template-rows: 1fr;
+}
+
+.tabs-more-inner {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 스태거 등장 */
+.tabs-more-inner .tab-item {
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.3s ease, transform 0.3s ease,
+              background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tabs-navigation:hover .tabs-more-inner .tab-item:nth-child(1) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.18s;
+}
+
+.tabs-navigation:hover .tabs-more-inner .tab-item:nth-child(2) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.28s;
+}
+
+.tab-item {
+  padding: 16px 25.5px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  border-radius: var(--radius-tag);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+}
+
+.tab-item.active {
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-tab);
+}
+
+.tab-label {
+  font-family: var(--font-main);
+  font-size: 17.1px;
+  font-weight: 400;
+  color: var(--color-primary-25);
+  white-space: nowrap;
+}
+
+.tab-item.active .tab-label { color: var(--color-primary); }
+
+/* 탭 콘텐츠 */
+.tabs-content {
+  flex-grow: 1;
+  min-height: 450px;
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-details {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.position-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 250px;
+}
+
+.position-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.position-title {
+  font-family: var(--font-main);
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color-primary);
+  margin: 0;
+}
+
+.period-info {
+  text-align: right;
+  font-family: var(--font-main);
+  font-size: 14px;
+  color: var(--color-primary);
+}
+
+.duration {
+  display: block;
+  font-size: 13px;
+  color: var(--color-primary);
+  margin-top: 4px;
+}
+
+/* 설명 리스트 */
+.description-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-grow: 1;
+}
+
+.description-item {
+  font-family: var(--font-main);
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-primary);
+  position: relative;
+  padding-left: 15px;
+}
+
+.description-item::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+}
+
+/* Learn more 버튼 — IconCircle 컴포넌트 hover 제어 */
+.learn-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  margin-top: auto;
+  padding-top: 20px;
+  width: fit-content;
+}
+
+.learn-more-text {
+  font-family: var(--font-main);
+  font-size: 14px;
+  color: var(--color-primary);
+}
+
+.learn-more-btn:hover .icon-circle {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.learn-more-btn:hover .icon-circle svg path {
+  stroke: var(--color-white);
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .experience-tabs { flex-direction: column; gap: 30px; }
+  .tabs-navigation { width: 100%; }
+  .tab-item        { white-space: nowrap; }
+}
