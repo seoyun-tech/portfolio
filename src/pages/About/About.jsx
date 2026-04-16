@@ -94,7 +94,7 @@ const InfoBox = ({ profile, details }) => (
       </div>
       <div className="profile-data-list">
         {details.map((item, idx) => (
-          <div className="data-row" key={idx}>
+          <div className="data-row" key={idx} style={{ animationDelay: `${0.5 + idx * 0.15}s` }}>
             <span className="data-label">{item.label}</span>
             <span className="data-value">{item.value}</span>
           </div>

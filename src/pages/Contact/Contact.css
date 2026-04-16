@@ -19,6 +19,25 @@
   width: 100%;
 }
 
+/* 등장 애니메이션 */
+.contact-title,
+.contact-desc,
+.contact-info-bar {
+  opacity: 0;
+}
+
+.contact-section.is-visible .contact-title {
+  animation: revealUp 0.8s var(--ease-spring) 0.1s forwards;
+}
+
+.contact-section.is-visible .contact-desc {
+  animation: revealUp 0.8s var(--ease-spring) 0.25s forwards;
+}
+
+.contact-section.is-visible .contact-info-bar {
+  animation: revealUp 0.8s var(--ease-spring) 0.4s forwards;
+}
+
 /* 제목 */
 .contact-title {
   font-family: var(--font-main);
@@ -63,6 +82,14 @@
   background: rgba(255, 255, 255, 0.03);
   border-radius: var(--radius-tag);
   padding: 0 30px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: background 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.contact-info-bar:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.06);
 }
 
 .contact-phone,

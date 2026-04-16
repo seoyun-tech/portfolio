@@ -109,6 +109,11 @@
 .tab-item.active .tab-label { color: var(--color-primary); }
 
 /* 탭 콘텐츠 */
+@keyframes tabFadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
 .tabs-content {
   flex-grow: 1;
   min-height: 450px;
@@ -117,9 +122,12 @@
 }
 
 .experience-details {
+  animation: tabFadeUp 0.45s var(--ease-spring) forwards;
+}
+
+.experience-details {
   display: flex;
   flex-direction: column;
-  gap: 30px;
 }
 
 .position-content {
@@ -206,13 +214,22 @@
   border-color: var(--color-primary);
 }
 
-.learn-more-btn:hover .icon-circle svg path {
-  stroke: var(--color-white);
+.learn-more-btn .icon-circle i {
+  color: var(--color-primary);
+  transition: color 0.3s ease;
+}
+
+.learn-more-btn:hover .icon-circle i {
+  color: var(--color-white);
+}
+
+.experience-tag-row {
+  margin-bottom: 30px;
 }
 
 /* 반응형 */
 @media (max-width: 768px) {
-  .experience-tabs { flex-direction: column; gap: 30px; }
-  .tabs-navigation { width: 100%; }
-  .tab-item        { white-space: nowrap; }
+  .experience-tabs      { flex-direction: column; gap: 30px; }
+  .tabs-navigation      { width: 100%; }
+  .tab-item             { white-space: nowrap; }
 }

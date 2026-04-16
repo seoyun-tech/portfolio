@@ -27,7 +27,9 @@ const Hero = () => {
           <div className="hero-title-group">
             <h1 className="hero-title">
               {c.titleLines.map((line, i) => (
-                <span key={i} className="title-line">{line}</span>
+                <span key={i} className="title-line-wrap">
+                  <span className="title-line" style={{ animationDelay: `${0.1 + i * 0.15}s` }}>{line}</span>
+                </span>
               ))}
             </h1>
             <p className="hero-subtitle">
@@ -56,6 +58,10 @@ const Hero = () => {
             className="hero-profile-image"
             loading="eager"
           />
+        </div>
+
+        <div className="hero-scroll-indicator">
+          <span className="hero-scroll-line" />
         </div>
 
       </div>

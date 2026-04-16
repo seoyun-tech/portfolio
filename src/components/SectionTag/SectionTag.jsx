@@ -8,9 +8,9 @@ import './SectionTag.css';
  *   - 'default' : 밝은 배경 위 (green 텍스트/아이콘)
  *   - 'light'   : 어두운 배경 위 (white 텍스트/아이콘)
  */
-const SectionTag = ({ children, variant = 'default' }) => (
+const SectionTag = ({ children, variant = 'default', noIcon = false }) => (
   <div className={`section-tag section-tag--${variant}`}>
-    <i className="fa-solid fa-circle-check" />
+    {!noIcon && <i className="fa-solid fa-circle-check" />}
     <span>{children}</span>
   </div>
 );

@@ -57,6 +57,7 @@
   padding: 25px 35px;
   border-radius: 8px;
   min-height: 262px;
+  opacity: 0;
 }
 
 .edu-num {
@@ -115,13 +116,31 @@
   left: 0;
 }
 
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
 /* 등장 애니메이션 */
 .education-section.is-visible .edu-title {
   animation: revealUp 0.8s var(--ease-spring) 0.1s forwards;
 }
 
 .education-section.is-visible .edu-grid {
-  animation: revealUp 1s var(--ease-spring) 0.35s forwards;
+  opacity: 1;
+}
+
+.education-section.is-visible .edu-card:nth-child(1) {
+  animation: slideInLeft 0.8s var(--ease-spring) 0.3s forwards;
+}
+
+.education-section.is-visible .edu-card:nth-child(2) {
+  animation: slideInLeft 0.8s var(--ease-spring) 0.45s forwards;
 }
 
 /* 반응형 */

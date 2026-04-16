@@ -1,5 +1,6 @@
 import React from 'react';
 import VideoBackground from '../../components/VideoBackground/VideoBackground';
+import useInView from '../../hooks/useInView';
 import { useLanguage } from '../../context/LanguageContext';
 import './Contact.css';
 
@@ -14,9 +15,10 @@ const CONTENT = {
 
 const Contact = () => {
   const { lang } = useLanguage();
+  const [ref, isVisible] = useInView();
 
   return (
-    <section className="contact-section" id="contact">
+    <section className={`contact-section ${isVisible ? 'is-visible' : ''}`} id="contact" ref={ref}>
       <VideoBackground
         videoOpacity={0.25}
         overlay="linear-gradient(190deg, rgba(30, 40, 35, 0.75) 0%, var(--color-dark) 100%)"

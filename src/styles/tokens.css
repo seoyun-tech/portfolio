@@ -9,7 +9,7 @@
   --color-white:      #ffffff;
 
   /* ─── Typography ─────────────────────── */
-  --font-main: 'Poppins', 'Noto Sans KR', sans-serif;
+  --font-main: 'Pretendard Variable', Pretendard, sans-serif;
 
   /* ─── Easing ─────────────────────────── */
   --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);

@@ -73,45 +73,40 @@ const EXPERIENCES = {
 
 const Experience = () => {
   const [activeTab, setActiveTab] = useState(0);
+  const [animKey, setAnimKey] = useState(0);
   const { lang } = useLanguage();
   const experiences = EXPERIENCES[lang];
+
+  const handleTabClick = (index) => {
+    setActiveTab(index);
+    setAnimKey(k => k + 1);
+  };
 
   return (
     <section className="experience" id="experience">
       <div className="experience-container">
+        <div className="experience-tag-row">
+          <SectionTag>Work Experience</SectionTag>
+        </div>
+
         <div className="experience-tabs">
 
           <div className="tabs-navigation">
             <div className="tabs-list">
-              {experiences.slice(0, 4).map((exp, index) => (
+              {experiences.map((exp, index) => (
                 <div
                   key={index}
                   className={`tab-item ${activeTab === index ? 'active' : ''}`}
-                  onClick={() => setActiveTab(index)}
+                  onClick={() => handleTabClick(index)}
                 >
                   <span className="tab-label">{exp.company}</span>
                 </div>
               ))}
-              <div className="tabs-more">
-                <div className="tabs-more-inner">
-                  {experiences.slice(4).map((exp, index) => (
-                    <div
-                      key={index + 4}
-                      className={`tab-item ${activeTab === index + 4 ? 'active' : ''}`}
-                      onClick={() => setActiveTab(index + 4)}
-                    >
-                      <span className="tab-label">{exp.company}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
             </div>
           </div>
 
           <div className="tabs-content">
-            <div className="experience-details">
-
-              <SectionTag>Work Experience</SectionTag>
+            <div className="experience-details" key={animKey}>
 
               <div className="position-content">
                 <div className="position-header">
@@ -131,7 +126,7 @@ const Experience = () => {
                 <div className="learn-more-btn">
                   <span className="learn-more-text">Learn more</span>
                   <IconCircle>
-                    <i className="fa-solid fa-plus" style={{ color: 'var(--color-primary)', fontSize: '12px' }} />
+                    <i className="fa-solid fa-plus" style={{ fontSize: '12px' }} />
                   </IconCircle>
                 </div>
 

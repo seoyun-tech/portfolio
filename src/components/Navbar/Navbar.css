@@ -42,15 +42,15 @@
 }
 
 .nav-item {
-  font-family: 'Poppins', 'Noto Sans KR', sans-serif;
+  font-family: var(--font-main);
   font-size: 15px;
   font-weight: 500;
-  color: rgba(25, 64, 45, 0.6);
+  color: var(--color-primary-60);
   text-decoration: none;
   transition: 0.3s;
 }
 
-.nav-item:hover { color: #19402d; }
+.nav-item:hover { color: var(--color-primary); }
 
 /* 3. 우측 액션 버튼 및 소셜 아이콘 */
 .navbar-actions {
@@ -62,16 +62,16 @@
 
 .resume-btn {
   padding: 10px 24px;
-  border: 1.5px solid rgba(25, 64, 45, 0.1);
+  border: 1.5px solid var(--color-primary-10);
   border-radius: 50px;
-  color: #19402d;
+  color: var(--color-primary);
   font-weight: 600;
   text-decoration: none;
   font-size: 14px;
   transition: 0.3s;
 }
 
-.resume-btn:hover { background: #19402d; color: #fff; }
+.resume-btn:hover { background: var(--color-primary); color: var(--color-white); }
 
 .social-icons { display: flex; gap: 12px; }
 .social-icon {
@@ -81,7 +81,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  border: 1px solid rgba(25, 64, 45, 0.1);
+  border: 1px solid var(--color-primary-10);
   color: var(--color-primary);
   font-size: 16px;
   transition: transform 0.3s ease, border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
@@ -96,8 +96,8 @@
 
 /* 4. 햄버거 토글 버튼 */
 .nav-toggle { display: none; width: 32px; height: 32px; position: relative; z-index: 1001; }
-.hamburger, .hamburger::before, .hamburger::after { 
-  width: 24px; height: 2px; background: #19402d; transition: 0.3s ease; 
+.hamburger, .hamburger::before, .hamburger::after {
+  width: 24px; height: 2px; background: var(--color-primary); transition: 0.3s ease;
 }
 .hamburger { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
 .hamburger::before, .hamburger::after { content: ''; position: absolute; left: 0; }
@@ -117,7 +117,7 @@
 
 /* 6. 반응형 (모바일 드로워) */
 @media (max-width: 768px) {
-  .nav-toggle { display: block; }
+  .nav-toggle { display: block; margin-left: auto; }
 
   /* 로고 중앙 배치 */
   .navbar-logo {

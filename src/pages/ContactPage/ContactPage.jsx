@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { SOCIAL_LINKS } from '../../constants/social';
+import IconCircle from '../../components/IconCircle/IconCircle';
 import './ContactPage.css';
 
 const ContactPage = () => {
@@ -9,7 +10,9 @@ const ContactPage = () => {
   return (
     <div className="contact-page">
       <button className="contact-page-back" onClick={() => navigate(-1)}>
-        <i className="fa-solid fa-arrow-left" />
+        <IconCircle className="contact-page-back-circle">
+          <i className="fa-solid fa-arrow-left" />
+        </IconCircle>
       </button>
 
       <div className="contact-page-inner">

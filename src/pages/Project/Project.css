@@ -3,6 +3,27 @@
   background-color: var(--color-off-white);
 }
 
+.project-header {
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 90px 40px 0;
+}
+
+.project-title {
+  font-family: var(--font-main);
+  font-size: 52px;
+  line-height: 60px;
+  color: var(--color-primary);
+  text-align: center;
+  font-style: italic;
+  font-weight: 400;
+  margin: 0 0 80px;
+}
+
+.project-title strong { font-weight: 700; font-style: italic; }
+
+
 /* sticky 스택 효과: 뒤 프로젝트가 앞 프로젝트 위에 쌓임 */
 .project-block {
   position: sticky;
@@ -16,7 +37,27 @@
   padding: 95px 0;
 }
 
-.project-block:first-child { border-top: none; }
+/* 블록 진입 시 좌/우 콘텐츠 등장 */
+.proj-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.7s var(--ease-spring), transform 0.7s var(--ease-spring);
+}
+
+.proj-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.7s var(--ease-spring) 0.15s, transform 0.7s var(--ease-spring) 0.15s;
+}
+
+.project-block.is-visible .proj-left,
+.project-block.is-visible .proj-right {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.project-block { border-top: none; }
+.project-block + .project-block { border-top: 1px solid rgba(0, 0, 0, 0.07); }
 
 .project-container {
   max-width: 1140px;
@@ -123,6 +164,12 @@
   border-radius: 20px;
   overflow: hidden;
   box-shadow: var(--shadow-image);
+  transition: transform 0.5s var(--ease-spring), box-shadow 0.5s ease;
+}
+
+.proj-image-wrap:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.35);
 }
 
 .proj-image {

@@ -71,7 +71,6 @@ const Education = () => {
           <strong>Academic</strong> <em>Qualification</em>
         </h2>
 
-        <div className="edu-divider" />
 
         <div className="edu-grid">
           {CARDS[lang].map((card) => (

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import IconCircle from '../../components/IconCircle/IconCircle';
 import SectionTag from '../../components/SectionTag/SectionTag';
 import { useLanguage } from '../../context/LanguageContext';
@@ -151,8 +151,8 @@ const ProjectModal = ({ proj, onClose }) => {
         </button>
 
         <div className="proj-modal-header">
-          <SectionTag>{proj.number}</SectionTag>
-          <SectionTag>{proj.category}</SectionTag>
+          <SectionTag noIcon>{proj.number}</SectionTag>
+          <SectionTag noIcon>{proj.category}</SectionTag>
         </div>
 
         <h3 className="proj-modal-title">
@@ -193,6 +193,68 @@ const ProjectModal = ({ proj, onClose }) => {
   );
 };
 
+const ProjectBlock = ({ proj, i, total, onOpen }) => {
+  const ref = useRef(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { setVisible(true); observer.disconnect(); } },
+      { threshold: 0.15 }
+    );
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div ref={ref} className={`project-block ${visible ? 'is-visible' : ''}`} style={{ zIndex: i + 1 }}>
+      <div className="project-container">
+
+        <div className="proj-left">
+          <SectionTag noIcon>{proj.number}</SectionTag>
+
+          <h3 className="proj-title">
+            {proj.titleLines.map((line, li) => (
+              <span key={li} className={line.italic ? 'proj-title-italic' : ''}>
+                {line.text}
+              </span>
+            ))}
+          </h3>
+
+          <p className="proj-desc">{proj.description}</p>
+
+          <button
+            className="proj-learn-btn"
+            onClick={() => proj.meta && onOpen(proj)}
+            style={!proj.meta ? { opacity: 0.3, cursor: 'default' } : {}}
+          >
+            <IconCircle>
+              <i className="fa-solid fa-arrow-up-right-from-square" style={{ fontSize: '12px' }} />
+            </IconCircle>
+            <span className="proj-learn-text">Learn more</span>
+          </button>
+        </div>
+
+        <div className="proj-right">
+          <div className="proj-category">
+            <SectionTag noIcon>{proj.category}</SectionTag>
+          </div>
+          <div className="proj-image-wrap">
+            <img
+              src={proj.image}
+              alt={`${proj.titleLines[0].text} project`}
+              className="proj-image"
+            />
+          </div>
+        </div>
+
+      </div>
+
+      {i < total - 1 && <div className="proj-divider" />}
+    </div>
+  );
+};
+
 const Project = () => {
   const [activeModal, setActiveModal] = useState(null);
   const { lang } = useLanguage();
@@ -202,51 +264,13 @@ const Project = () => {
     <>
       <section className="project-section" id="project">
         {projects.map((proj, i) => (
-          <div key={proj.number} className="project-block" style={{ zIndex: i + 1 }}>
-            <div className="project-container">
-
-              <div className="proj-left">
-                <SectionTag>{proj.number}</SectionTag>
-
-                <h3 className="proj-title">
-                  {proj.titleLines.map((line, li) => (
-                    <span key={li} className={line.italic ? 'proj-title-italic' : ''}>
-                      {line.text}
-                    </span>
-                  ))}
-                </h3>
-
-                <p className="proj-desc">{proj.description}</p>
-
-                <button
-                  className="proj-learn-btn"
-                  onClick={() => proj.meta && setActiveModal(proj)}
-                  style={!proj.meta ? { opacity: 0.3, cursor: 'default' } : {}}
-                >
-                  <IconCircle>
-                    <i className="fa-solid fa-arrow-up-right-from-square" style={{ fontSize: '12px' }} />
-                  </IconCircle>
-                  <span className="proj-learn-text">Learn more</span>
-                </button>
-              </div>
-
-              <div className="proj-right">
-                <div className="proj-category">
-                  <SectionTag>{proj.category}</SectionTag>
-                </div>
-                <div className="proj-image-wrap">
-                  <img
-                    src={proj.image}
-                    alt={`${proj.titleLines[0].text} project`}
-                    className="proj-image"
-                  />
-                </div>
-              </div>
-
-            </div>
-
-            {i < projects.length - 1 && <div className="proj-divider" />}
-          </div>
+          <ProjectBlock
+            key={proj.number}
+            proj={proj}
+            i={i}
+            total={projects.length}
+            onOpen={setActiveModal}
+          />
         ))}
       </section>
 

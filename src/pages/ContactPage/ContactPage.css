@@ -14,23 +14,23 @@
   position: fixed;
   top: 40px;
   left: 40px;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.1);
   background: transparent;
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 14px;
+  border: none;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 0;
   z-index: 10;
 }
 
-.contact-page-back:hover {
+/* IconCircle 다크 테마 오버라이드 */
+.contact-page-back-circle {
+  border-color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+}
+
+.contact-page-back:hover .contact-page-back-circle {
   background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.25);
   color: var(--color-white);
 }
 
