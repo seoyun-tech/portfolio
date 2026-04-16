@@ -48,7 +48,7 @@
 }
 
 .stats-number-huge {
-  font-family: var(--font-main);
+  font-family: 'Sorts Mill Goudy', serif;
   font-style: italic;
   font-size: clamp(80px, 12vw, 158px);
   line-height: 1;
@@ -59,14 +59,6 @@
 }
 .stats-plus { font-size: 0.6em; margin-top: 0.15em; margin-left: 5px; }
 
-.stats-label-row {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--color-white);
-  font-size: 13.9px;
-  opacity: 0.8;
-}
 
 /* 가운데: 프로필 이미지 */
 .profile-image-frame {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import useInView from '../../hooks/useInView';
 import SectionTag from '../../components/SectionTag/SectionTag';
 import VideoBackground from '../../components/VideoBackground/VideoBackground';
@@ -41,7 +41,7 @@ const About = () => {
       <div className="about-content-wrapper">
         <div className="about-layout-grid">
 
-          <StatsBox />
+          <StatsBox isVisible={isVisible} />
 
           <div className="about-item image-item">
             <div className="profile-image-frame">
@@ -57,19 +57,30 @@ const About = () => {
   );
 };
 
-const StatsBox = () => (
-  <div className="about-item stats-item">
-    <div className="stats-box-inner">
-      <div className="stats-number-huge">
-        5<span className="stats-plus">+</span>
-      </div>
-      <div className="stats-label-row">
-        <i className="fa-solid fa-circle-check" />
-        <span>Years of experience</span>
+const StatsBox = ({ isVisible }) => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!isVisible) return;
+    // 숫자 간 딜레이 — 뒤로 갈수록 느려져서 자연스럽게 멈춥니다
+    const delays = [0, 100, 200, 320, 480, 700];
+    const timers = delays.map((delay, i) =>
+      setTimeout(() => setCount(i), delay)
+    );
+    return () => timers.forEach(clearTimeout);
+  }, [isVisible]);
+
+  return (
+    <div className="about-item stats-item">
+      <div className="stats-box-inner">
+        <div className="stats-number-huge">
+          {count}<span className="stats-plus">+</span>
+        </div>
+        <SectionTag variant="light">Years of experience</SectionTag>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 const InfoBox = ({ profile, details }) => (
   <div className="about-item info-item">
