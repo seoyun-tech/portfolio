@@ -61,10 +61,15 @@
 }
 
 .edu-num {
-  display: block;
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
   font-family: var(--font-main);
   font-size: 9.8px;
   color: var(--color-white);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-tag);
+  padding: 6px 13px;
   margin-bottom: 65px;
 }
 
