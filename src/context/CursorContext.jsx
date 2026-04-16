@@ -4,8 +4,11 @@ const CursorContext = createContext();
 
 export const CursorProvider = ({ children }) => {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const isTouchDevice = window.matchMedia('(hover: none), (pointer: coarse)').matches;
 
   useEffect(() => {
+    if (isTouchDevice) return;
+
     const handleMouseMove = (e) => {
       setMousePos({ x: e.clientX, y: e.clientY });
     };
@@ -14,22 +17,24 @@ export const CursorProvider = ({ children }) => {
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
     };
-  }, []);
+  }, [isTouchDevice]);
 
   return (
     <CursorContext.Provider value={mousePos}>
       {children}
-      <div 
-        className="cursor-dot" 
-        style={{ 
-          left: `${mousePos.x}px`, 
-          top: `${mousePos.y}px`,
-          transform: `translate(-50%, -50%)`,
-          position: 'fixed',
-          pointerEvents: 'none',
-          zIndex: 9999
-        }}
-      />
+      {!isTouchDevice && (
+        <div
+          className="cursor-dot"
+          style={{
+            left: `${mousePos.x}px`,
+            top: `${mousePos.y}px`,
+            transform: `translate(-50%, -50%)`,
+            position: 'fixed',
+            pointerEvents: 'none',
+            zIndex: 9999
+          }}
+        />
+      )}
     </CursorContext.Provider>
   );
 };

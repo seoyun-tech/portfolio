@@ -37,3 +37,12 @@ body:has(a:hover, button:hover, .nav-toggle:hover, .social-icon:hover, .tab-item
   background: var(--color-primary-10);
   border: 1px solid var(--color-primary);
 }
+
+@media (hover: none), (pointer: coarse) {
+  * {
+    cursor: auto !important;
+  }
+  .cursor-dot {
+    display: none !important;
+  }
+}
