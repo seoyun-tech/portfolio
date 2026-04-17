@@ -211,7 +211,7 @@
 }
 
 @media (max-width: 768px) {
-  .hero                 { height: auto; padding: 100px 0 0; }
+  .hero                 { height: auto; min-height: 100vh; padding: 100px 0 0; }
   .hero-container       { flex-direction: column; text-align: center; }
   .hero-image-container { position: relative; width: 100%; right: 0; top: 14px; margin-top: 50px; }
   .hero-title           { font-size: 38px; line-height: 50px; }

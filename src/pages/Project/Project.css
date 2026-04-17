@@ -234,7 +234,11 @@
   font-size: 14px;
   transition: background-color 0.2s ease;
 }
-.proj-modal-close:hover { background-color: rgba(0, 0, 0, 0.05); }
+.proj-modal-close:hover {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
 
 .proj-modal-header {
   display: flex;
@@ -330,14 +334,30 @@
 }
 
 @media (max-width: 768px) {
-  .proj-modal { padding: 28px 20px; max-height: 90vh; overflow-y: auto; }
+  .proj-modal-overlay {
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0;
+  }
+  .proj-modal {
+    width: 100%;
+    max-width: 100%;
+    max-height: 88vh;
+    overflow-y: auto;
+    border-radius: 24px 24px 0 0;
+    padding: 32px 24px 40px;
+    animation: slideUpSheet 0.35s var(--ease-spring);
+  }
+  @keyframes slideUpSheet {
+    from { transform: translateY(100%); }
+    to   { transform: translateY(0); }
+  }
   .proj-modal-title { font-size: 22px; }
   .proj-meta-grid { grid-template-columns: repeat(2, 1fr); }
   .proj-meta-label { font-size: 11px; }
   .proj-meta-value { font-size: 13px; }
   .proj-meta-item { padding: 14px 16px; }
-  .proj-modal-links { flex-direction: column; }
-  .proj-modal-link-btn { justify-content: center; }
+  .proj-modal-links { flex-wrap: wrap; justify-content: center; }
 }
 
 /* 섹션 간 구분선 */
@@ -374,6 +394,7 @@
 
 @media (max-width: 768px) {
   .project-block { position: static; padding: 60px 0; min-height: unset; }
+  .project-block:last-child { min-height: 100vh; }
   .project-block + .project-block { border-top: 1px solid rgba(0, 0, 0, 0.07); }
   .project-container { padding: 0 24px; gap: 35px; }
   .proj-title { font-size: 32px; line-height: 44px; }
