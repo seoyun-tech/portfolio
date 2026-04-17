@@ -3,20 +3,17 @@
 .education-section {
   position: relative;
   width: 100%;
-  min-height: 662px;
   overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  padding: 100px 0;
 }
 
 /* 콘텐츠 */
 .edu-inner {
   position: relative;
   z-index: 10;
-  width: 100%;
-  max-width: 1140px;
-  padding: 105px 40px 80px;
+  width: 1140px;
+  max-width: 90%;
+  margin: 0 auto;
 }
 
 /* 제목 */
@@ -28,20 +25,11 @@
   text-align: center;
   font-style: italic;
   font-weight: 400;
-  margin-bottom: 80px;
+  margin: 0 0 80px;
   opacity: 0;
 }
 
 .edu-title strong { font-weight: 700; font-style: italic; }
-
-/* 구분선 */
-.edu-divider {
-  width: calc(100vw);
-  margin-left: calc(-50vw + 50%);
-  height: 1px;
-  background: rgba(255, 255, 255, 0.05);
-  margin-bottom: 40px;
-}
 
 /* 카드 그리드 */
 .edu-grid {
@@ -65,36 +53,36 @@
   align-items: center;
   width: fit-content;
   font-family: var(--font-main);
-  font-size: 9.8px;
+  font-size: 14px;
   color: var(--color-white);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-tag);
   padding: 6px 13px;
-  margin-bottom: 65px;
+  margin-bottom: 30px;
 }
 
 .edu-name {
   font-family: var(--font-main);
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 400;
   font-style: italic;
   color: var(--color-white);
   letter-spacing: 0.8px;
-  line-height: 19.6px;
-  margin: 0 0 14px;
+  line-height: 1.5;
+  margin: 0 0 12px;
 }
 
 .edu-details {
   display: flex;
   flex-direction: column;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
 }
 
 .edu-details span {
   font-family: var(--font-main);
-  font-size: 14px;
+  font-size: 16px;
   color: rgba(255, 255, 255, 0.6);
-  line-height: 19.6px;
+  line-height: 1.5;
 }
 
 .edu-desc {
@@ -103,14 +91,14 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 8px;
 }
 
 .edu-desc li {
   font-family: var(--font-main);
-  font-size: 14px;
+  font-size: 16px;
   color: rgba(255, 255, 255, 0.6);
-  line-height: 19.6px;
+  line-height: 1.5;
   padding-left: 12px;
   position: relative;
 }
@@ -155,6 +143,6 @@
 }
 
 @media (max-width: 768px) {
-  .edu-inner { padding: 80px 24px 60px; }
+  .education-section { padding: 60px 0; }
   .edu-title  { font-size: 40px; margin-bottom: 60px; }
 }

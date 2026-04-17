@@ -3,30 +3,26 @@
 .about-section {
   position: relative;
   width: 100%;
-  min-height: 545px;
   background-color: var(--color-primary);
   overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 100px 0;
 }
 
 /* 레이아웃 */
 .about-content-wrapper {
   position: relative;
   z-index: 10;
-  width: 100%;
-  max-width: 1140px;
+  width: 1140px;
+  max-width: 90%;
   margin: 0 auto;
-  padding: 80px 40px;
 }
 
 .about-layout-grid {
   display: grid;
-  grid-template-columns: minmax(180px, 228px) minmax(220px, 274px) minmax(300px, 409px);
-  justify-content: space-between;
+  grid-template-columns: minmax(180px, 228px) minmax(220px, 274px) auto;
+  justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 60px;
 }
 
 /* 등장 애니메이션 — 공유 revealUp 사용 */
@@ -38,7 +34,7 @@
 
 .stats-item { animation-delay: 0.1s;  width: 100%; }
 .image-item { animation-delay: 0.25s; width: 100%; display: flex; justify-content: center; }
-.info-item  { animation-delay: 0.4s;  width: 100%; }
+.info-item  { animation-delay: 0.4s;  width: fit-content; }
 
 /* 왼쪽: 스탯 */
 .stats-box-inner {
@@ -50,14 +46,14 @@
 .stats-number-huge {
   font-family: 'Sorts Mill Goudy', serif;
   font-style: italic;
-  font-size: clamp(80px, 12vw, 158px);
+  font-size: 110px;
   line-height: 1;
   color: var(--color-white);
-  display: flex;
+  display: inline-flex;
   align-items: flex-start;
-  margin-bottom: 23px;
+  width: fit-content;
 }
-.stats-plus { font-size: 0.6em; margin-top: 0.15em; margin-left: 5px; }
+.stats-plus { font-size: 64px; margin-top: 0.15em; margin-left: 5px; }
 
 
 /* 가운데: 프로필 이미지 */
@@ -83,16 +79,17 @@
 .about-me-tag      { margin-bottom: 30px; }
 .name-header-group { margin-bottom: 50px; }
 
-.name-ko-title    { font-weight: 700; font-size: clamp(32px, 4vw, 36px); color: var(--color-white); margin-bottom: 10px; }
-.name-en-subtitle { font-weight: 400; font-size: clamp(20px, 3vw, 24px); color: var(--color-white); opacity: 0.9; }
+.name-ko-title    { font-weight: 700; font-size: clamp(32px, 4vw, 36px); color: var(--color-white); margin: 0 0 10px; }
+.name-en-subtitle { font-weight: 400; font-size: clamp(20px, 3vw, 24px); color: var(--color-white); opacity: 0.9; margin: 0; }
 
 .profile-data-list { display: flex; flex-direction: column; gap: 30px; }
 
 .data-row {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   gap: 8px;
   opacity: 0;
+  width: fit-content;
 }
 
 .about-section.is-visible .data-row {
@@ -100,11 +97,10 @@
 }
 
 .data-label { font-weight: 700; font-size: 14px; color: rgba(255, 255, 255, 0.6); }
-.data-value { font-size: 14.1px; color: var(--color-white); opacity: 0.95; }
+.data-value { font-size: 16px; color: var(--color-white); opacity: 0.95; }
 
 /* 반응형 */
 @media (max-width: 1024px) {
-  .about-content-wrapper { padding: 60px 30px; }
   .about-layout-grid {
     grid-template-columns: 1fr 1fr;
     gap: 48px 40px;
@@ -118,7 +114,8 @@
 }
 
 @media (max-width: 768px) {
-  .about-content-wrapper { padding: 60px 24px; }
+  .about-section { padding: 60px 0; }
+  .about-content-wrapper { padding: 0 24px; max-width: 100%; }
   .about-layout-grid {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -127,17 +124,21 @@
   /* 순서: 스탯 → 이미지 → 정보 */
   .stats-item { order: 1; grid-column: auto; }
   .image-item { order: 2; grid-column: auto; }
-  .info-item  { order: 3; grid-column: auto; }
+  .info-item  { order: 3; grid-column: auto; width: 100%; }
 
+  .stats-box-inner     { align-items: center; }
   .profile-image-frame { max-width: 240px; margin: 0 auto; }
   .stats-number-huge   { font-size: clamp(64px, 20vw, 96px); justify-content: center; }
   .stats-label-row     { justify-content: center; }
+  .name-ko-title       { text-align: center; }
+  .name-en-subtitle    { text-align: center; }
   .name-header-group   { margin-bottom: 32px; }
+  .about-me-tag        { display: flex; justify-content: center; }
   .profile-data-list   { align-items: center; }
 }
 
 @media (max-width: 480px) {
-  .about-content-wrapper { padding: 48px 20px; }
+  .about-section         { padding: 48px 0; }
   .profile-image-frame   { max-width: 200px; }
   .stats-number-huge     { font-size: clamp(56px, 18vw, 80px); }
 }

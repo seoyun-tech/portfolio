@@ -2,14 +2,13 @@
   min-height: 100vh;
   background-color: var(--color-dark);
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 80px 40px;
+  justify-content: center;
+  padding: 80px 80px;
   position: relative;
   font-family: var(--font-main);
 }
 
-/* 뒤로가기 버튼 */
 .contact-page-back {
   position: fixed;
   top: 40px;
@@ -21,7 +20,6 @@
   z-index: 10;
 }
 
-/* IconCircle 다크 테마 오버라이드 */
 .contact-page-back-circle {
   border-color: rgba(255, 255, 255, 0.1);
   color: rgba(255, 255, 255, 0.6);
@@ -34,14 +32,24 @@
   color: var(--color-white);
 }
 
-/* 콘텐츠 */
+/* 2컬럼 레이아웃 */
 .contact-page-inner {
   width: 100%;
-  max-width: 560px;
+  max-width: 1140px;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* 왼쪽: 정보 */
+.contact-info {
+  display: flex;
+  flex-direction: column;
 }
 
 .contact-page-tag {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -52,28 +60,26 @@
 .contact-page-title {
   display: flex;
   flex-direction: column;
-  font-size: clamp(44px, 7vw, 72px);
-  line-height: 1;
+  font-size: 48px;
+  line-height: 1.1;
   color: var(--color-white);
   font-weight: 400;
   margin: 0 0 24px;
 }
-
 .contact-page-title strong { font-weight: 700; }
 .contact-page-title em { font-style: italic; font-weight: 300; }
 
 .contact-page-desc {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.8;
   color: rgba(255, 255, 255, 0.5);
-  margin: 0 0 56px;
+  margin: 0 0 48px;
 }
 
-/* 연락처 목록 */
 .contact-page-list {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 32px;
   margin: 0 0 48px;
   padding: 0;
   list-style: none;
@@ -82,14 +88,14 @@
 .contact-page-item {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
 }
 
 .contact-page-item-title {
-  font-size: 36px;
-  font-weight: 300;
-  font-style: italic;
-  color: var(--color-white);
+  font-size: 16px;
+  font-weight: 700;
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.6);
   line-height: 1;
 }
 
@@ -100,45 +106,136 @@
 }
 
 .contact-page-item-value {
-  font-size: 15px;
-  color: rgba(255, 255, 255, 0.5);
+  font-size: 18px;
+  color: var(--color-white);
   text-decoration: none;
   width: fit-content;
   transition: color 0.25s ease;
 }
+.contact-page-item-value:hover { color: rgba(255,255,255,0.7); }
 
-.contact-page-item-value:hover { color: var(--color-white); }
-
-/* 소셜 아이콘 */
 .contact-page-social {
   display: flex;
   gap: 14px;
 }
 
 .contact-page-social-btn {
-  width: 52px;
-  height: 52px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.12);
   background: transparent;
   color: rgba(255, 255, 255, 0.7);
-  font-size: 17px;
+  font-size: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
-
 .contact-page-social-btn:hover {
   background-color: rgba(255, 255, 255, 0.08);
   color: var(--color-white);
   border-color: rgba(255, 255, 255, 0.25);
 }
 
+/* 오른쪽: 폼 */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.contact-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+
+.contact-form-input,
+.contact-form-textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 20px 4px;
+  font-family: var(--font-main);
+  font-size: 15px;
+  color: var(--color-white);
+  outline: none;
+  transition: border-color 0.25s ease;
+  resize: none;
+}
+
+.contact-form-row .contact-form-input:first-child {
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+  padding-right: 24px;
+}
+
+.contact-form-row .contact-form-input:last-child {
+  padding-left: 24px;
+}
+
+.contact-form-input::placeholder,
+.contact-form-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.contact-form-input:focus,
+.contact-form-textarea:focus {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.contact-form-textarea {
+  margin-top: 0;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  min-height: 160px;
+}
+
+.contact-form-btn {
+  margin-top: 40px;
+  width: 100%;
+  padding: 20px;
+  background: var(--color-white);
+  color: var(--color-dark);
+  border: 1px solid var(--color-white);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-main);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+.contact-form-btn:hover {
+  opacity: 0.75;
+}
+.contact-form-btn:disabled { opacity: 0.5; cursor: default; }
+
+.contact-form-feedback {
+  font-size: 14px;
+  margin: 12px 0 0;
+}
+.contact-form-feedback.success { color: #6fcf97; }
+.contact-form-feedback.error   { color: #eb5757; }
+
 /* 반응형 */
+@media (max-width: 1024px) {
+  .contact-page { padding: 80px 40px; }
+  .contact-page-inner { grid-template-columns: 1fr; gap: 60px; }
+}
+
 @media (max-width: 768px) {
   .contact-page { padding: 100px 24px 60px; align-items: flex-start; }
   .contact-page-back { top: 24px; left: 24px; }
-  .contact-page-item-title { font-size: 28px; }
+  .contact-page-inner { align-items: flex-start; }
+  .contact-page-tag,
+  .contact-page-title,
+  .contact-page-desc { display: none; }
+  .contact-form-row { grid-template-columns: 1fr; }
+  .contact-form-row .contact-form-input:first-child { border-right: none; padding-right: 4px; }
+  .contact-form-row .contact-form-input:last-child { padding-left: 4px; }
+  .contact-page-item-title { font-size: 28px; font-weight: 300; font-style: italic; color: var(--color-white); }
+  .contact-page-item-value { font-size: 15px; color: rgba(255, 255, 255, 0.5); }
 }

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { SOCIAL_LINKS } from '../../constants/social';
+import { useLanguage } from '../../context/LanguageContext';
 import './Navbar.css';
 
 const MENU_ITEMS = ['Home', 'About', 'Project', 'Contact'];
@@ -24,6 +25,8 @@ const Navbar = () => {
       <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
         <div className="navbar-container">
 
+          <NavActions />
+
           <Logo />
 
           <div className={`nav-content ${isMenuOpen ? 'open' : ''}`}>
@@ -40,8 +43,6 @@ const Navbar = () => {
                 </li>
               ))}
             </ul>
-
-            <NavActions />
           </div>
 
           <Hamburger
@@ -62,17 +63,27 @@ const Logo = () => (
   </div>
 );
 
-const NavActions = () => (
-  <div className="navbar-actions">
-    <div className="social-icons">
-      {SOCIAL_LINKS.map(({ label, icon, href }) => (
-        <a key={label} href={href} className="social-icon" target="_blank" rel="noreferrer" aria-label={label}>
-          <i className={icon} />
-        </a>
-      ))}
+const NavActions = () => {
+  const { lang, setLang } = useLanguage();
+  return (
+    <div className="navbar-actions">
+      <div className="footer-lang">
+        <span
+          className={lang === 'ko' ? 'active' : ''}
+          onClick={() => { setLang('ko'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+        >
+          Kr.
+        </span>
+        <span
+          className={lang === 'en' ? 'active' : ''}
+          onClick={() => { setLang('en'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+        >
+          En.
+        </span>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 const Hamburger = ({ isMenuOpen, setIsMenuOpen }) => (
   <div

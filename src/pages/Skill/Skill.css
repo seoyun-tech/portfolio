@@ -2,7 +2,7 @@
 
 .skill-section {
   width: 100%;
-  padding: 90px 0;
+  padding: 100px 0;
   background-color: var(--color-white);
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   overflow: hidden;
@@ -17,17 +17,21 @@
 /* 헤더 */
 .skill-header {
   margin-bottom: 60px;
-  max-width: 800px;
   opacity: 0;
 }
 
-.skill-tag-wrapper { margin-bottom: 30px; }
+.skill-description {
+  text-align: left;
+}
+
+.skill-header > .section-tag { margin-bottom: 30px; }
 
 .skill-description p {
-  font-size: 22.2px;
+  font-size: 22px;
   line-height: 1.5;
   color: var(--color-primary);
   font-weight: 500;
+  margin: 0;
 }
 
 .text-dim { color: var(--color-primary-60); }
@@ -37,8 +41,24 @@
   position: relative;
   width: 100%;
   opacity: 0;
+}
+
+/* 처음: 왼쪽 그라데이션 없음 */
+.skill-carousel-wrapper.scroll-start {
+  -webkit-mask-image: linear-gradient(to right, black 92%, transparent 100%);
+  mask-image: linear-gradient(to right, black 92%, transparent 100%);
+}
+
+/* 중간: 양쪽 그라데이션 */
+.skill-carousel-wrapper.scroll-middle {
   -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
   mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+}
+
+/* 끝: 오른쪽 그라데이션 없음 */
+.skill-carousel-wrapper.scroll-end {
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%);
+  mask-image: linear-gradient(to right, transparent 0%, black 8%);
 }
 
 .skill-carousel {
@@ -60,7 +80,7 @@
   align-items: center;
   justify-content: center;
   color: var(--color-primary);
-  font-size: 15px;
+  font-size: 16px;
   white-space: nowrap;
   transition: background-color 0.35s ease, transform 0.35s var(--ease-spring), color 0.35s ease;
 }
@@ -82,9 +102,14 @@
   background: none;
   border: none;
   cursor: pointer;
-  transition: opacity 0.3s ease;
+  font-size: 14px;
+  color: var(--color-primary);
 }
-.control-btn:hover { opacity: 0.6; }
+.control-btn:hover:not(:disabled) { opacity: 0.6; }
+.control-btn:disabled {
+  color: var(--color-primary-25);
+  cursor: default;
+}
 
 @keyframes chipSlideIn {
   from { opacity: 0; transform: translateX(-24px); }
@@ -111,6 +136,7 @@
 
 @media (max-width: 768px) {
   .skill-section       { padding: 60px 0 40px; }
+  .skill-container     { padding: 0 24px; max-width: 100%; }
   .skill-description p { font-size: 18px; }
   .skill-chip          { height: 50px; font-size: 14px; }
 }

@@ -9,15 +9,26 @@ const PROJECTS = {
     {
       number: '01',
       titleLines: [
-        { text: '무신사(Musinsa)', italic: false },
-        { text: '반응형 웹 리디자인', italic: false },
+        { text: '루키즈(Rookiz)', italic: false },
+        { text: 'AI 키즈 OTT 서비스', italic: true },
       ],
-      category: 'UX/UI 기획 및 설계',
+      category: '풀스택 기획 · 개발',
       description:
-        '사용자 행동 데이터를 기반으로 무신사 웹사이트의 탐색 흐름을 재설계하고 반응형 레이아웃을 구현한 프로젝트입니다. 데스크톱과 모바일 모두에서 일관된 쇼핑 경험을 제공하는 것을 목표로 했습니다.',
-      image: '/assets/project-musinsa.png',
-      meta: null,
-      links: null,
+        '생성형 AI와 TMDB API를 결합한 키즈 전용 OTT 미디어 서비스입니다. 어린이 맞춤형 콘텐츠 추천과 직관적인 UI를 목표로, 기획부터 프론트엔드·백엔드 개발 및 배포까지 전 과정을 수행했습니다.',
+      image: '/assets/project-rookiz.png',
+      meta: [
+        { label: '기술스택',        value: 'React 19 · FastAPI · Tailwind v4' },
+        { label: '배포매체',        value: 'Render' },
+        { label: '작업기간',        value: '1주' },
+        { label: '기여도',          value: '100%' },
+        { label: '브라우저 호환성', value: 'Chrome · IE · Opera · Safari' },
+        { label: '페이지 수 / 특징', value: '10페이지 · AI 추천 · 반응형' },
+      ],
+      links: [
+        { label: '사이트 보기',  icon: 'fa-solid fa-globe',   url: 'https://rookiz-front.onrender.com/' },
+        { label: 'GitHub',       icon: 'fa-brands fa-github', url: 'https://github.com/seoyun-tech/Rookiz' },
+        { label: '기획서 보기',  icon: 'fa-brands fa-figma',  url: 'https://www.figma.com/deck/H3UyjjzSW8Ue5igGsHtDhC' },
+      ],
     },
     {
       number: '02',
@@ -45,41 +56,41 @@ const PROJECTS = {
     {
       number: '03',
       titleLines: [
-        { text: '루키즈(Rookiz)', italic: false },
-        { text: 'AI 키즈 OTT 서비스', italic: true },
+        { text: '무신사(Musinsa)', italic: false },
+        { text: '반응형 웹 리디자인', italic: false },
       ],
-      category: '풀스택 기획 · 개발',
+      category: 'UX/UI 기획 및 설계',
       description:
-        '생성형 AI와 TMDB API를 결합한 키즈 전용 OTT 미디어 서비스입니다. 어린이 맞춤형 콘텐츠 추천과 직관적인 UI를 목표로, 기획부터 프론트엔드·백엔드 개발 및 배포까지 전 과정을 수행했습니다.',
-      image: '/assets/project-rookiz.png',
-      meta: [
-        { label: '기술스택',        value: 'React 19 · FastAPI · Tailwind v4' },
-        { label: '배포매체',        value: 'Render' },
-        { label: '작업기간',        value: '1주' },
-        { label: '기여도',          value: '100%' },
-        { label: '브라우저 호환성', value: 'Chrome · IE · Opera · Safari' },
-        { label: '페이지 수 / 특징', value: '10페이지 · AI 추천 · 반응형' },
-      ],
-      links: [
-        { label: '사이트 보기',  icon: 'fa-solid fa-globe',   url: 'https://rookiz-front.onrender.com/' },
-        { label: 'GitHub',       icon: 'fa-brands fa-github', url: 'https://github.com/seoyun-tech/Rookiz' },
-        { label: '기획서 보기',  icon: 'fa-brands fa-figma',  url: 'https://www.figma.com/deck/H3UyjjzSW8Ue5igGsHtDhC' },
-      ],
+        '사용자 행동 데이터를 기반으로 무신사 웹사이트의 탐색 흐름을 재설계하고 반응형 레이아웃을 구현한 프로젝트입니다. 데스크톱과 모바일 모두에서 일관된 쇼핑 경험을 제공하는 것을 목표로 했습니다.',
+      image: '/assets/project-musinsa.png',
+      meta: null,
+      links: null,
     },
   ],
   en: [
     {
       number: '01',
       titleLines: [
-        { text: 'Musinsa', italic: false },
-        { text: 'Responsive Web Redesign', italic: false },
+        { text: 'Rookiz', italic: false },
+        { text: 'AI Kids OTT Service', italic: true },
       ],
-      category: 'UX/UI Planning & Design',
+      category: 'Full-Stack Planning & Dev',
       description:
-        'A project to redesign the navigation flow of the Musinsa website based on user behavior data and implement a responsive layout. The goal was to provide a consistent shopping experience on both desktop and mobile.',
-      image: '',
-      meta: null,
-      links: null,
+        'A kids-only OTT media service combining generative AI with the TMDB API. Targeting child-tailored content recommendations and an intuitive UI, I handled the entire process independently — from planning to frontend/backend development and deployment.',
+      image: '/assets/project-rookiz.png',
+      meta: [
+        { label: 'Tech Stack',         value: 'React 19 · FastAPI · Tailwind v4' },
+        { label: 'Platform',           value: 'Render' },
+        { label: 'Duration',           value: '1 week' },
+        { label: 'Contribution',       value: '100%' },
+        { label: 'Browser Compat.',    value: 'Chrome · IE · Opera · Safari' },
+        { label: 'Pages / Features',   value: '10 pages · AI Rec · Responsive' },
+      ],
+      links: [
+        { label: 'Visit Site', icon: 'fa-solid fa-globe',   url: 'https://rookiz-front.onrender.com/' },
+        { label: 'GitHub',     icon: 'fa-brands fa-github', url: 'https://github.com/seoyun-tech/Rookiz' },
+        { label: 'View Deck',  icon: 'fa-brands fa-figma',  url: 'https://www.figma.com/deck/H3UyjjzSW8Ue5igGsHtDhC' },
+      ],
     },
     {
       number: '02',
@@ -107,26 +118,15 @@ const PROJECTS = {
     {
       number: '03',
       titleLines: [
-        { text: 'Rookiz', italic: false },
-        { text: 'AI Kids OTT Service', italic: true },
+        { text: 'Musinsa', italic: false },
+        { text: 'Responsive Web Redesign', italic: false },
       ],
-      category: 'Full-Stack Planning & Dev',
+      category: 'UX/UI Planning & Design',
       description:
-        'A kids-only OTT media service combining generative AI with the TMDB API. Targeting child-tailored content recommendations and an intuitive UI, I handled the entire process independently — from planning to frontend/backend development and deployment.',
-      image: '/assets/project-rookiz.png',
-      meta: [
-        { label: 'Tech Stack',         value: 'React 19 · FastAPI · Tailwind v4' },
-        { label: 'Platform',           value: 'Render' },
-        { label: 'Duration',           value: '1 week' },
-        { label: 'Contribution',       value: '100%' },
-        { label: 'Browser Compat.',    value: 'Chrome · IE · Opera · Safari' },
-        { label: 'Pages / Features',   value: '10 pages · AI Rec · Responsive' },
-      ],
-      links: [
-        { label: 'Visit Site', icon: 'fa-solid fa-globe',   url: 'https://rookiz-front.onrender.com/' },
-        { label: 'GitHub',     icon: 'fa-brands fa-github', url: 'https://github.com/seoyun-tech/Rookiz' },
-        { label: 'View Deck',  icon: 'fa-brands fa-figma',  url: 'https://www.figma.com/deck/H3UyjjzSW8Ue5igGsHtDhC' },
-      ],
+        'A project to redesign the navigation flow of the Musinsa website based on user behavior data and implement a responsive layout. The goal was to provide a consistent shopping experience on both desktop and mobile.',
+      image: '/assets/project-musinsa.png',
+      meta: null,
+      links: null,
     },
   ],
 };
@@ -211,7 +211,12 @@ const ProjectBlock = ({ proj, i, total, onOpen }) => {
       <div className="project-container">
 
         <div className="proj-left">
-          <SectionTag noIcon>{proj.number}</SectionTag>
+          <div className="proj-number-row">
+            <SectionTag noIcon>{proj.number}</SectionTag>
+            <div className="proj-category-mobile">
+              <SectionTag noIcon>{proj.category}</SectionTag>
+            </div>
+          </div>
 
           <h3 className="proj-title">
             {proj.titleLines.map((line, li) => (
@@ -233,10 +238,11 @@ const ProjectBlock = ({ proj, i, total, onOpen }) => {
             </IconCircle>
             <span className="proj-learn-text">Learn more</span>
           </button>
+
         </div>
 
         <div className="proj-right">
-          <div className="proj-category">
+          <div className="proj-category proj-category-desktop">
             <SectionTag noIcon>{proj.category}</SectionTag>
           </div>
           <div className="proj-image-wrap">
@@ -250,7 +256,6 @@ const ProjectBlock = ({ proj, i, total, onOpen }) => {
 
       </div>
 
-      {i < total - 1 && <div className="proj-divider" />}
     </div>
   );
 };

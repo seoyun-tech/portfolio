@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useCallback } from 'react';
 import useInView from '../../hooks/useInView';
 import SectionTag from '../../components/SectionTag/SectionTag';
 import { useLanguage } from '../../context/LanguageContext';
@@ -20,16 +20,16 @@ const SCROLL_AMOUNT = 300;
 const DESCRIPTION = {
   ko: (
     <p>
-      <strong>영국 NTU 졸업 후 대기업 MD와 이커머스 창업을 거치며 비즈니스의 전 과정을 주도했습니다. </strong>
-      <span className="text-dim">현장에서 체감한 한계를 극복하기 위해 기술을 도구로 선택했고, </span>
-      <span className="text-dim">이제 감각적인 직관을 데이터와 로직으로 증명하려 합니다.</span>
+      <strong>영국 NTU 졸업 후 대기업 MD와 이커머스 창업을 통해 비즈니스 전 과정을 주도했습니다. </strong>
+      <span className="text-dim">현장에서 마주한 한계를 기술력으로 돌파하고자 코딩을 익혔고, </span>
+      <span className="text-dim">이제 데이터와 로직을 바탕으로 시장의 문제를 실효적인 기획으로 풀어냅니다.</span>
     </p>
   ),
   en: (
     <p>
-      <strong>After graduating from NTU in the UK, I led end-to-end business operations through a major company MD role and an e-commerce startup. </strong>
-      <span className="text-dim">I chose technology as a tool to overcome the limits I felt on the ground, </span>
-      <span className="text-dim">and now I am here to prove intuitive instincts with data and logic.</span>
+      <strong>Having led the full scope of business operations through an MD role at a major corporation and an e-commerce venture, </strong>
+      <span className="text-dim">I took up coding to overcome the limitations I encountered on the ground. </span>
+      <span className="text-dim">I now draw on data and logic to shape market challenges into considered, actionable plans.</span>
     </p>
   ),
 };
@@ -38,11 +38,19 @@ const Skill = () => {
   const [sectionRef, isVisible] = useInView();
   const carouselRef = useRef(null);
   const { lang } = useLanguage();
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
+
+  const checkScroll = useCallback(() => {
+    const el = carouselRef.current;
+    if (!el) return;
+    setCanScrollLeft(el.scrollLeft > 0);
+    setCanScrollRight(Math.ceil(el.scrollLeft + el.clientWidth) < el.scrollWidth);
+  }, []);
 
   const scroll = (direction) => {
     if (!carouselRef.current) return;
-    const offset = direction === 'next' ? SCROLL_AMOUNT : -SCROLL_AMOUNT;
-    carouselRef.current.scrollBy({ left: offset, behavior: 'smooth' });
+    carouselRef.current.scrollBy({ left: direction === 'next' ? SCROLL_AMOUNT : -SCROLL_AMOUNT, behavior: 'smooth' });
   };
 
   return (
@@ -54,17 +62,15 @@ const Skill = () => {
       <div className="skill-container">
 
         <div className="skill-header">
-          <div className="skill-tag-wrapper">
-            <SectionTag>Professional Skills</SectionTag>
-          </div>
+          <SectionTag>Professional Skills</SectionTag>
 
           <div className="skill-description">
             {DESCRIPTION[lang]}
           </div>
         </div>
 
-        <div className="skill-carousel-wrapper">
-          <div className="skill-carousel" ref={carouselRef}>
+        <div className={`skill-carousel-wrapper${!canScrollLeft ? ' scroll-start' : !canScrollRight ? ' scroll-end' : ' scroll-middle'}`}>
+          <div className="skill-carousel" ref={carouselRef} onScroll={checkScroll}>
             {SKILLS_DATA.map((skill, index) => (
               <div
                 key={skill.name}
@@ -78,15 +84,23 @@ const Skill = () => {
               </div>
             ))}
           </div>
+        </div>
 
-          <div className="carousel-controls">
-            <button className="control-btn prev" onClick={() => scroll('prev')}>
-              <ArrowIcon direction="left" />
-            </button>
-            <button className="control-btn next" onClick={() => scroll('next')}>
-              <ArrowIcon direction="right" />
-            </button>
-          </div>
+        <div className="carousel-controls">
+          <button
+            className="control-btn prev"
+            onClick={() => scroll('prev')}
+            disabled={!canScrollLeft}
+          >
+            <ArrowIcon direction="left" />
+          </button>
+          <button
+            className="control-btn next"
+            onClick={() => scroll('next')}
+            disabled={!canScrollRight}
+          >
+            <ArrowIcon direction="right" />
+          </button>
         </div>
 
       </div>
@@ -95,10 +109,7 @@ const Skill = () => {
 };
 
 const ArrowIcon = ({ direction }) => (
-  <i
-    className={direction === 'left' ? 'fa-solid fa-chevron-left' : 'fa-solid fa-chevron-right'}
-    style={{ color: 'var(--color-primary)', fontSize: '13px' }}
-  />
+  <i className={direction === 'left' ? 'fa-solid fa-chevron-left' : 'fa-solid fa-chevron-right'} />
 );
 
 export default Skill;

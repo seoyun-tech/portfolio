@@ -84,22 +84,20 @@ const StatsBox = ({ isVisible }) => {
 
 const InfoBox = ({ profile, details }) => (
   <div className="about-item info-item">
-    <div className="info-box-inner">
-      <div className="about-me-tag">
-        <SectionTag variant="light">About Me</SectionTag>
-      </div>
-      <div className="name-header-group">
-        <h2 className="name-ko-title">{profile.koName}</h2>
-        <p className="name-en-subtitle">{profile.enName}</p>
-      </div>
-      <div className="profile-data-list">
-        {details.map((item, idx) => (
-          <div className="data-row" key={idx} style={{ animationDelay: `${0.5 + idx * 0.15}s` }}>
-            <span className="data-label">{item.label}</span>
-            <span className="data-value">{item.value}</span>
-          </div>
-        ))}
-      </div>
+    <div className="about-me-tag">
+      <SectionTag variant="light">About Me</SectionTag>
+    </div>
+    <div className="name-header-group">
+      <h2 className="name-ko-title">{profile.koName}</h2>
+      <p className="name-en-subtitle">{profile.enName}</p>
+    </div>
+    <div className="profile-data-list">
+      {details.map((item, idx) => (
+        <div className="data-row" key={idx} style={{ animationDelay: `${0.5 + idx * 0.15}s` }}>
+          <span className="data-label">{item.label}</span>
+          <span className="data-value">{item.value}</span>
+        </div>
+      ))}
     </div>
   </div>
 );

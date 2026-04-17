@@ -85,9 +85,7 @@ const Experience = () => {
   return (
     <section className="experience" id="experience">
       <div className="experience-container">
-        <div className="experience-tag-row">
-          <SectionTag>Work Experience</SectionTag>
-        </div>
+        <SectionTag>Work Experience</SectionTag>
 
         <div className="experience-tabs">
 
@@ -123,12 +121,12 @@ const Experience = () => {
                   ))}
                 </ul>
 
-                <div className="learn-more-btn">
+                {/* <div className="learn-more-btn">
                   <span className="learn-more-text">Learn more</span>
                   <IconCircle>
                     <i className="fa-solid fa-plus" style={{ fontSize: '12px' }} />
                   </IconCircle>
-                </div>
+                </div> */}
 
               </div>
             </div>
