@@ -330,10 +330,14 @@
 }
 
 @media (max-width: 768px) {
-  .proj-modal { padding: 28px 24px; }
+  .proj-modal { padding: 28px 20px; max-height: 90vh; overflow-y: auto; }
   .proj-modal-title { font-size: 22px; }
   .proj-meta-grid { grid-template-columns: repeat(2, 1fr); }
+  .proj-meta-label { font-size: 11px; }
+  .proj-meta-value { font-size: 13px; }
+  .proj-meta-item { padding: 14px 16px; }
   .proj-modal-links { flex-direction: column; }
+  .proj-modal-link-btn { justify-content: center; }
 }
 
 /* 섹션 간 구분선 */
