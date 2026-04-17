@@ -138,7 +138,13 @@
   .navbar-logo {
     position: absolute;
     left: 50%;
+    top: 0;
+    bottom: 0;
     transform: translateX(-50%);
+    margin: auto;
+    height: fit-content;
+    display: flex;
+    align-items: center;
   }
 
   /* 좌측 Resume 표시 */
