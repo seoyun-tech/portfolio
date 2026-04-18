@@ -39,4 +39,3 @@ export const CursorProvider = ({ children }) => {
   );
 };
 
-export const useCursor = () => useContext(CursorContext);
