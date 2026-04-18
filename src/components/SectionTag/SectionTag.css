@@ -5,8 +5,7 @@
   padding: 6px 13px;
   border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: var(--radius-tag);
-  font-family: var(--font-main);
-  font-size: 14px;
+  font-size: var(--text-sm);
   font-weight: 400;
   width: fit-content;
 }
@@ -18,7 +17,7 @@
 
 /* ── 어두운 배경 위 ── */
 .section-tag--light {
-  color: rgba(255, 255, 255, 0.6);
-  border-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-white-60);
+  border-color: var(--color-white-10);
 }
 

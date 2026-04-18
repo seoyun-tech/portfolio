@@ -1,6 +1,5 @@
 .contact-section {
   position: relative;
-  width: 100%;
   min-height: 520px;
   display: flex;
   justify-content: center;
@@ -8,7 +7,6 @@
   overflow: hidden;
 }
 
-/* 콘텐츠 */
 .contact-inner {
   position: relative;
   z-index: 10;
@@ -16,32 +14,20 @@
   flex-direction: column;
   align-items: center;
   padding: 105px 40px;
-  width: 100%;
 }
 
 /* 등장 애니메이션 */
 .contact-title,
 .contact-desc,
-.contact-info-bar {
-  opacity: 0;
-}
+.contact-info-bar { opacity: 0; }
 
-.contact-section.is-visible .contact-title {
-  animation: revealUp 0.8s var(--ease-spring) 0.1s forwards;
-}
-
-.contact-section.is-visible .contact-desc {
-  animation: revealUp 0.8s var(--ease-spring) 0.25s forwards;
-}
-
-.contact-section.is-visible .contact-info-bar {
-  animation: revealUp 0.8s var(--ease-spring) 0.4s forwards;
-}
+.contact-section.is-visible .contact-title    { animation: revealUp 0.8s var(--ease-spring) 0.1s  forwards; }
+.contact-section.is-visible .contact-desc     { animation: revealUp 0.8s var(--ease-spring) 0.25s forwards; }
+.contact-section.is-visible .contact-info-bar { animation: revealUp 0.8s var(--ease-spring) 0.4s  forwards; }
 
 /* 제목 */
 .contact-title {
-  font-family: var(--font-main);
-  font-size: 51.4px;
+  font-size: 52px;
   line-height: 0.6;
   color: var(--color-white);
   text-align: center;
@@ -49,24 +35,15 @@
   margin: 0 0 30px;
 }
 
-.contact-title strong {
-  font-weight: 700;
-  font-style: normal;
-  display: block;
-}
-
-.contact-title em {
-  font-style: italic;
-  font-weight: 300;
-  display: block;
-}
+.contact-title strong { font-weight: 700; display: block; }
+.contact-title em     { font-style: italic; font-weight: 300; display: block; }
 
 /* 설명 */
 .contact-desc {
-  font-family: var(--font-main);
-  font-size: 14px;
-  line-height: 19.6px;
-  color: rgba(255, 255, 255, 0.6);
+  font-size: var(--text-sm);
+  line-height: 1.4;
+  white-space: pre-line;
+  color: var(--color-white-60);
   text-align: center;
   margin: 0 0 60px;
 }
@@ -75,7 +52,6 @@
 .contact-info-bar {
   display: flex;
   align-items: center;
-  justify-content: center;
   width: 456px;
   max-width: 100%;
   height: 71px;
@@ -94,8 +70,7 @@
 
 .contact-phone,
 .contact-email {
-  font-family: var(--font-main);
-  font-size: 14px;
+  font-size: var(--text-sm);
   color: var(--color-white);
   flex: 1;
   text-align: center;

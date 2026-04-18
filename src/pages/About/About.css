@@ -3,64 +3,39 @@
 .about-section {
   position: relative;
   width: 100%;
-  background-color: var(--color-primary);
+  background-color: var(--color-dark);
   overflow: hidden;
   padding: 100px 0;
 }
 
-/* 레이아웃 */
 .about-content-wrapper {
   position: relative;
   z-index: 10;
-  width: 1140px;
-  max-width: 90%;
-  margin: 0 auto;
+  width: 100%;
+  padding: 0 24px;
 }
 
 .about-layout-grid {
   display: grid;
-  grid-template-columns: minmax(180px, 228px) minmax(220px, 274px) auto;
-  justify-content: center;
+  grid-template-columns: 280px 380px;
   align-items: center;
-  gap: 60px;
+  gap: 80px;
+  margin: 0 auto;
+  width: fit-content;
 }
 
 /* 등장 애니메이션 — 공유 revealUp 사용 */
 .about-item { opacity: 0; }
 
-.about-section.is-visible .about-item {
-  animation: revealUp 1.2s var(--ease-spring) forwards;
-}
+.about-section.is-visible .image-item { animation: revealUp 1.2s var(--ease-spring) 0.25s forwards; }
+.about-section.is-visible .info-item  { animation: revealUp 1.2s var(--ease-spring) 0.4s  forwards; }
 
-.stats-item { animation-delay: 0.1s;  width: 100%; }
-.image-item { animation-delay: 0.25s; width: 100%; display: flex; justify-content: center; }
-.info-item  { animation-delay: 0.4s;  width: fit-content; }
+.image-item { display: flex; justify-content: center; padding-top: 32px; }
 
-/* 왼쪽: 스탯 */
-.stats-box-inner {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.stats-number-huge {
-  font-family: 'Sorts Mill Goudy', serif;
-  font-style: italic;
-  font-size: 110px;
-  line-height: 1;
-  color: var(--color-white);
-  display: inline-flex;
-  align-items: flex-start;
-  width: fit-content;
-}
-.stats-plus { font-size: 64px; margin-top: 0.15em; margin-left: 5px; }
-
-
-/* 가운데: 프로필 이미지 */
+/* 프로필 이미지 */
 .profile-image-frame {
   width: 100%;
-  max-width: 274px;
-  aspect-ratio: 274 / 343;
+  aspect-ratio: 3 / 4;
   border-radius: var(--radius-card);
   overflow: hidden;
   box-shadow: var(--shadow-image);
@@ -76,11 +51,20 @@
 }
 
 /* 오른쪽: 정보 */
-.about-me-tag      { margin-bottom: 30px; }
-.name-header-group { margin-bottom: 50px; }
+.about-tag-mobile  { display: none; }
+.about-me-tag      { margin-bottom: 32px; width: fit-content; }
+.name-header-group { margin-bottom: 36px; }
 
 .name-ko-title    { font-weight: 700; font-size: clamp(32px, 4vw, 36px); color: var(--color-white); margin: 0 0 10px; }
 .name-en-subtitle { font-weight: 400; font-size: clamp(20px, 3vw, 24px); color: var(--color-white); opacity: 0.9; margin: 0; }
+
+.about-bio {
+  font-size: var(--text-base);
+  line-height: 1.6;
+  white-space: pre-line;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0 0 36px;
+}
 
 .profile-data-list { display: flex; flex-direction: column; gap: 30px; }
 
@@ -89,56 +73,44 @@
   flex-direction: column;
   gap: 8px;
   opacity: 0;
-  width: fit-content;
 }
 
 .about-section.is-visible .data-row {
   animation: revealUp 0.7s var(--ease-spring) forwards;
 }
 
-.data-label { font-weight: 700; font-size: 14px; color: rgba(255, 255, 255, 0.6); }
-.data-value { font-size: 16px; color: var(--color-white); opacity: 0.95; }
+.data-label { font-weight: 700; font-size: var(--text-sm); color: var(--color-white-60); }
+.data-value { font-size: var(--text-base); color: var(--color-white); opacity: 0.95; white-space: pre-line; }
 
 /* 반응형 */
 @media (max-width: 1024px) {
   .about-layout-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 48px 40px;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    gap: 48px 60px;
     align-items: center;
   }
-  /* 순서: [스탯 2칸] / [이미지] [정보] */
-  .stats-item { order: 1; grid-column: span 2; display: flex; justify-content: center; }
-  .image-item { order: 2; }
-  .info-item  { order: 3; }
-  .stats-box-inner { text-align: center; flex-direction: column-reverse; }
 }
 
 @media (max-width: 768px) {
   .about-section { padding: 60px 0; }
-  .about-content-wrapper { padding: 0 24px; max-width: 100%; }
   .about-layout-grid {
     grid-template-columns: 1fr;
     gap: 40px;
     text-align: center;
   }
-  /* 순서: 스탯 → 이미지 → 정보 */
-  .stats-item { order: 1; grid-column: auto; }
-  .image-item { order: 2; grid-column: auto; }
-  .info-item  { order: 3; grid-column: auto; width: 100%; }
+  /* 순서: 이미지 → 정보 */
+  .image-item { order: 1; }
+  .info-item  { order: 2; width: 100%; }
 
-  .stats-box-inner     { align-items: center; }
   .profile-image-frame { max-width: 240px; margin: 0 auto; }
-  .stats-number-huge   { font-size: clamp(64px, 20vw, 96px); justify-content: center; }
-  .stats-label-row     { justify-content: center; }
-  .name-ko-title       { text-align: center; }
-  .name-en-subtitle    { text-align: center; }
   .name-header-group   { margin-bottom: 32px; }
-  .about-me-tag        { display: flex; justify-content: center; }
+  .about-tag-mobile    { display: flex; justify-content: center; margin-bottom: 32px; }
+  .about-me-tag        { display: none; }
   .profile-data-list   { align-items: center; }
 }
 
 @media (max-width: 480px) {
   .about-section         { padding: 48px 0; }
   .profile-image-frame   { max-width: 200px; }
-  .stats-number-huge     { font-size: clamp(56px, 18vw, 80px); }
 }

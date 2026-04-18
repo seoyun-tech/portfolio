@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { SOCIAL_LINKS } from '../../constants/social';
 import { useLanguage } from '../../context/LanguageContext';
 import './Navbar.css';
 
@@ -58,16 +57,16 @@ const Navbar = () => {
 };
 
 const Logo = () => (
-  <div className="navbar-logo">
+  <a href="#home" className="navbar-logo">
     <img src="logo.svg" alt="Logo" className="logo-img" />
-  </div>
+  </a>
 );
 
 const NavActions = () => {
   const { lang, setLang } = useLanguage();
   return (
     <div className="navbar-actions">
-      <div className="footer-lang">
+      <div className="lang-switcher">
         <span
           className={lang === 'ko' ? 'active' : ''}
           onClick={() => { setLang('ko'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}

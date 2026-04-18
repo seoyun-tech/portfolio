@@ -1,0 +1,87 @@
+.cip {
+  display: flex;
+  flex-direction: column;
+}
+
+.cip-tag {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+  margin: 0 0 24px;
+}
+
+.cip-title {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  color: var(--color-white);
+  font-weight: 400;
+  margin: 0 0 24px;
+}
+.cip-title strong { font-weight: 700; }
+.cip-title em { font-style: italic; font-weight: 300; }
+
+.cip--modal .cip-title { font-size: clamp(36px, 5vw, 60px); }
+.cip--page .cip-title  { font-size: 48px; }
+
+.cip-desc {
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0 0 48px;
+}
+.cip--modal .cip-desc { font-size: var(--text-sm); }
+.cip--page .cip-desc  { font-size: var(--text-base); }
+
+.cip-list {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  margin: 0 0 44px;
+  padding: 0;
+  list-style: none;
+}
+
+.cip-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cip-item-title { font-style: normal; line-height: 1; }
+
+.cip--modal .cip-item-title {
+  font-size: 32px;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--color-white);
+}
+.cip--page .cip-item-title {
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--color-white-60);
+}
+
+.cip-item-desc {
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.45);
+  margin: 0;
+}
+
+.cip-item-value {
+  text-decoration: none;
+  width: fit-content;
+  transition: color 0.25s ease;
+}
+.cip--modal .cip-item-value { font-size: 15px; color: rgba(255, 255, 255, 0.5); }
+.cip--page .cip-item-value  { font-size: var(--text-lg); color: var(--color-white); }
+.cip-item-value:hover { color: var(--color-white); }
+
+.cip-social { display: flex; gap: 14px; }
+
+@media (max-width: 768px) {
+  .cip--modal .cip-item-title { font-size: 26px; }
+  .cip--page .cip-item-title  { font-size: 28px; font-weight: 300; font-style: italic; color: var(--color-white); }
+  .cip--page .cip-item-value  { font-size: 15px; color: rgba(255, 255, 255, 0.5); }
+}

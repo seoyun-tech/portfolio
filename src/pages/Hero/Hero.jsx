@@ -1,21 +1,20 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import IconCircle from '../../components/IconCircle/IconCircle';
 import { useLanguage } from '../../context/LanguageContext';
 import './Hero.css';
 
 const CONTENT = {
   ko: {
-    titleLines: ['경험을 데이터로,', '직관을 로직으로 증명하는'],
+    titleLines: ['시장을 읽고,', '제품으로 답하는'],
     subtitle: ['기획자 ', '박서윤', '입니다.'],
   },
   en: {
-    titleLines: ['Beyond errors,', 'proving the difference'],
+    titleLines: ['Reading markets,', 'building answers through product.'],
     subtitle: ['I\'m ', 'Seoyun Park', ', a Product Planner.'],
   },
 };
 
-const Hero = () => {
+const Hero = ({ onOpenContact }) => {
   const { lang } = useLanguage();
   const c = CONTENT[lang];
 
@@ -38,12 +37,12 @@ const Hero = () => {
           </div>
 
           <div className="hero-cta-group">
-            <Link to="/contact" className="hero-contact-button">
+            <button className="hero-contact-button" onClick={onOpenContact}>
               <IconCircle>
                 <i className="fa-solid fa-arrow-right" style={{ fontSize: '12px' }} />
               </IconCircle>
               <span className="hero-contact-text">Contact Me</span>
-            </Link>
+            </button>
 
             <a href="/resume.pdf" className="hero-resume-button" target="_blank" rel="noreferrer">
               Resume

@@ -7,9 +7,16 @@
   --color-primary-05: rgba(25, 64, 45, 0.05);
   --color-bg:         #f4f5f0;
   --color-white:      #ffffff;
+  --color-white-60:   rgba(255, 255, 255, 0.6);
+  --color-white-10:   rgba(255, 255, 255, 0.1);
+  --color-success:    #6fcf97;
+  --color-error:      #eb5757;
 
   /* ─── Typography ─────────────────────── */
   --font-main: 'Pretendard Variable', Pretendard, sans-serif;
+  --text-sm:   14px;
+  --text-base: 16px;
+  --text-lg:   18px;
 
   /* ─── Easing ─────────────────────────── */
   --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
@@ -24,8 +31,7 @@
   --shadow-image: 0 30px 60px rgba(0, 0, 0, 0.3);
 
   /* ─── Extended palette ───────────────── */
-  --color-dark:      #1e2823;   /* Footer / Contact bg */
-  --color-off-white: #fcfcfb;   /* Project section bg  */
+  --color-dark:      #1e2823;   /* About / Contact / Footer bg */
 }
 
 /* ─── Shared reveal animation ────────────

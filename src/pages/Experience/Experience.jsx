@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import SectionTag from '../../components/SectionTag/SectionTag';
-import IconCircle from '../../components/IconCircle/IconCircle';
 import { useLanguage } from '../../context/LanguageContext';
 import './Experience.css';
 
@@ -90,45 +89,32 @@ const Experience = () => {
         <div className="experience-tabs">
 
           <div className="tabs-navigation">
-            <div className="tabs-list">
-              {experiences.map((exp, index) => (
-                <div
-                  key={index}
-                  className={`tab-item ${activeTab === index ? 'active' : ''}`}
-                  onClick={() => handleTabClick(index)}
-                >
-                  <span className="tab-label">{exp.company}</span>
-                </div>
-              ))}
-            </div>
+            {experiences.map((exp, index) => (
+              <div
+                key={index}
+                className={`tab-item ${activeTab === index ? 'active' : ''}`}
+                onClick={() => handleTabClick(index)}
+              >
+                <span className="tab-label">{exp.company}</span>
+              </div>
+            ))}
           </div>
 
           <div className="tabs-content">
             <div className="experience-details" key={animKey}>
-
-              <div className="position-content">
-                <div className="position-header">
-                  <h3 className="position-title">{experiences[activeTab].role}</h3>
-                  <div className="period-info">
-                    <span>{experiences[activeTab].period}</span>
-                    <span className="duration">({experiences[activeTab].duration})</span>
-                  </div>
+              <div className="position-header">
+                <h3 className="position-title">{experiences[activeTab].role}</h3>
+                <div className="period-info">
+                  <span>{experiences[activeTab].period}</span>
+                  <span className="duration">({experiences[activeTab].duration})</span>
                 </div>
-
-                <ul className="description-list">
-                  {experiences[activeTab].description.map((item, idx) => (
-                    <li key={idx} className="description-item">{item}</li>
-                  ))}
-                </ul>
-
-                {/* <div className="learn-more-btn">
-                  <span className="learn-more-text">Learn more</span>
-                  <IconCircle>
-                    <i className="fa-solid fa-plus" style={{ fontSize: '12px' }} />
-                  </IconCircle>
-                </div> */}
-
               </div>
+
+              <ul className="description-list">
+                {experiences[activeTab].description.map((item, idx) => (
+                  <li key={idx} className="description-item">{item}</li>
+                ))}
+              </ul>
             </div>
           </div>
 

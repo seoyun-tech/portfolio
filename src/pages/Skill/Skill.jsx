@@ -4,16 +4,7 @@ import SectionTag from '../../components/SectionTag/SectionTag';
 import { useLanguage } from '../../context/LanguageContext';
 import './Skill.css';
 
-const SKILLS_DATA = [
-  { name: "HTML",         width: 151 },
-  { name: "CSS",          width: 151 },
-  { name: "JavaScript",   width: 151 },
-  { name: "React",        width: 151 },
-  { name: "GitHub",       width: 151 },
-  { name: "Figma",        width: 151 },
-  { name: "Photoshop",    width: 151 },
-  { name: "Illustrator",  width: 151 },
-];
+const SKILLS_DATA = ["HTML", "CSS", "JavaScript", "React", "GitHub", "Figma", "Photoshop", "Illustrator"];
 
 const SCROLL_AMOUNT = 300;
 
@@ -71,16 +62,13 @@ const Skill = () => {
 
         <div className={`skill-carousel-wrapper${!canScrollLeft ? ' scroll-start' : !canScrollRight ? ' scroll-end' : ' scroll-middle'}`}>
           <div className="skill-carousel" ref={carouselRef} onScroll={checkScroll}>
-            {SKILLS_DATA.map((skill, index) => (
+            {SKILLS_DATA.map((name, index) => (
               <div
-                key={skill.name}
+                key={name}
                 className="skill-chip"
-                style={{
-                  minWidth: `${skill.width}px`,
-                  animationDelay: `${0.1 + index * 0.1}s`
-                }}
+                style={{ animationDelay: `${0.1 + index * 0.1}s` }}
               >
-                {skill.name}
+                {name}
               </div>
             ))}
           </div>

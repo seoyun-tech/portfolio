@@ -14,26 +14,22 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .footer-copyright {
-  font-family: var(--font-main);
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.6);
+  font-size: var(--text-sm);
+  color: var(--color-white-60);
   margin: 0;
 }
 
 .footer-lang {
   display: flex;
-  gap: 33.4px;
+  gap: 32px;
 }
 
 .footer-lang span {
-  font-family: var(--font-main);
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.6);
+  font-size: var(--text-sm);
+  color: var(--color-white-60);
   text-transform: capitalize;
   cursor: pointer;
   transition: color 0.3s ease;
@@ -42,17 +38,25 @@
 .footer-lang span:hover { color: rgba(255, 255, 255, 0.9); }
 .footer-lang span.active { color: var(--color-white); font-weight: 600; }
 
-/* 푸터 소셜 아이콘 — 어두운 배경 대응 */
-.site-footer .social-icons { display: flex; gap: 12px; }
-.site-footer .social-icon {
-  border-color: rgba(255, 255, 255, 0.2);
+/* 소셜 아이콘 */
+.social-icons { display: flex; gap: 12px; }
+.social-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   color: rgba(255, 255, 255, 0.7);
+  font-size: var(--text-base);
+  transition: transform 0.3s ease, border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
-.site-footer .social-icon:hover {
-  border-color: rgba(255, 255, 255, 0.8);
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #fff;
+.social-icon:hover {
   transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.8);
+  background-color: var(--color-white-10);
+  color: var(--color-white);
 }
 
 @media (max-width: 768px) {

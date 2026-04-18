@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
-import IconCircle from '../../components/IconCircle/IconCircle';
 import SectionTag from '../../components/SectionTag/SectionTag';
+import IconButton from '../../components/IconButton/IconButton';
+import useModalLock from '../../hooks/useModalLock';
 import { useLanguage } from '../../context/LanguageContext';
 import './Project.css';
 
@@ -15,6 +16,7 @@ const PROJECTS = {
       category: '풀스택 기획 · 개발',
       description:
         '생성형 AI와 TMDB API를 결합한 키즈 전용 OTT 미디어 서비스입니다. 어린이 맞춤형 콘텐츠 추천과 직관적인 UI를 목표로, 기획부터 프론트엔드·백엔드 개발 및 배포까지 전 과정을 수행했습니다.',
+      intent: '기존 OTT는 성인 중심 설계로 어린이가 안전하게 이용하기 어렵습니다. AI 추천으로 연령에 맞는 콘텐츠를 자동 큐레이션하는 키즈 전용 미디어 환경을 기획·구현했습니다.',
       image: '/assets/project-rookiz.png',
       meta: [
         { label: '기술스택',        value: 'React 19 · FastAPI · Tailwind v4' },
@@ -39,6 +41,7 @@ const PROJECTS = {
       category: 'UX/UI 기획 및 설계',
       description:
         '스포티파이 앱의 정보 구조와 탐색 흐름을 재설계한 iOS 모바일 앱 리디자인 프로젝트입니다. AI 개인화 추천(AI FOR YOU), 시간·상황 기반 Dynamic TPO, AI DJ 등 신규 기능을 기획하고, 온보딩부터 메인 탐색까지 전체 사용자 여정을 Figma 프로토타입으로 구현했습니다.',
+      intent: '음악은 방대하지만 탐색 흐름이 복잡해 원하는 곡을 찾기 어렵습니다. AI 추천과 상황 기반 큐레이션으로 능동적 탐색 없이도 최적의 음악을 만나는 경험을 설계했습니다.',
       image: '/assets/project-spotify.png',
       meta: [
         { label: '기술스택',        value: 'Figma · FigJam' },
@@ -62,6 +65,7 @@ const PROJECTS = {
       category: 'UX/UI 기획 및 설계',
       description:
         '사용자 행동 데이터를 기반으로 무신사 웹사이트의 탐색 흐름을 재설계하고 반응형 레이아웃을 구현한 프로젝트입니다. 데스크톱과 모바일 모두에서 일관된 쇼핑 경험을 제공하는 것을 목표로 했습니다.',
+      intent: '상품은 많지만 탐색 구조가 직관적이지 않아 사용자 이탈이 발생합니다. 행동 데이터 기반으로 탐색 흐름을 재설계하고 반응형 레이아웃을 구현했습니다.',
       image: '/assets/project-musinsa.png',
       meta: null,
       links: null,
@@ -77,6 +81,7 @@ const PROJECTS = {
       category: 'Full-Stack Planning & Dev',
       description:
         'A kids-only OTT media service combining generative AI with the TMDB API. Targeting child-tailored content recommendations and an intuitive UI, I handled the entire process independently — from planning to frontend/backend development and deployment.',
+      intent: 'OTT platforms are built for adults, leaving children without a safe option. I built a kids-only service that uses AI to automatically match content to each child\'s age and taste.',
       image: '/assets/project-rookiz.png',
       meta: [
         { label: 'Tech Stack',         value: 'React 19 · FastAPI · Tailwind v4' },
@@ -101,6 +106,7 @@ const PROJECTS = {
       category: 'UX/UI Planning & Design',
       description:
         'An iOS mobile app redesign project restructuring Spotify\'s information architecture and navigation flow. I planned new features including AI personalized recommendations (AI FOR YOU), time/context-based Dynamic TPO, and AI DJ, and implemented the full user journey from onboarding to main navigation as a Figma prototype.',
+      intent: 'The library is vast, but finding the right song takes too many steps. I redesigned the experience so music finds you — through AI and context-aware recommendations.',
       image: '/assets/project-spotify.png',
       meta: [
         { label: 'Tech Stack',        value: 'Figma · FigJam' },
@@ -124,6 +130,7 @@ const PROJECTS = {
       category: 'UX/UI Planning & Design',
       description:
         'A project to redesign the navigation flow of the Musinsa website based on user behavior data and implement a responsive layout. The goal was to provide a consistent shopping experience on both desktop and mobile.',
+      intent: 'A massive catalog with unintuitive navigation leads to drop-off. I restructured the flow using behavior data and built a responsive layout for a consistent experience across devices.',
       image: '/assets/project-musinsa.png',
       meta: null,
       links: null,
@@ -132,15 +139,7 @@ const PROJECTS = {
 };
 
 const ProjectModal = ({ proj, onClose }) => {
-  useEffect(() => {
-    document.body.style.overflow = 'hidden';
-    const handleKey = (e) => { if (e.key === 'Escape') onClose(); };
-    window.addEventListener('keydown', handleKey);
-    return () => {
-      document.body.style.overflow = 'unset';
-      window.removeEventListener('keydown', handleKey);
-    };
-  }, [onClose]);
+  useModalLock(onClose);
 
   return (
     <div className="proj-modal-overlay" onClick={onClose}>
@@ -149,6 +148,8 @@ const ProjectModal = ({ proj, onClose }) => {
         <button className="proj-modal-close" onClick={onClose} aria-label="Close">
           <i className="fa-solid fa-xmark" />
         </button>
+
+        <img src={proj.image} alt={proj.titleLines[0].text} className="proj-modal-image" />
 
         <div className="proj-modal-header">
           <SectionTag noIcon>{proj.number}</SectionTag>
@@ -163,7 +164,7 @@ const ProjectModal = ({ proj, onClose }) => {
           ))}
         </h3>
 
-        <p className="proj-modal-desc">{proj.description}</p>
+        {proj.intent && <p className="proj-modal-desc">{proj.intent}</p>}
 
         {proj.meta && (
           <div className="proj-meta-grid">
@@ -228,16 +229,13 @@ const ProjectBlock = ({ proj, i, total, onOpen }) => {
 
           <p className="proj-desc">{proj.description}</p>
 
-          <button
-            className="proj-learn-btn"
+          <IconButton
+            icon="fa-solid fa-arrow-up-right-from-square"
             onClick={() => proj.meta && onOpen(proj)}
             style={!proj.meta ? { opacity: 0.3, cursor: 'default' } : {}}
           >
-            <IconCircle>
-              <i className="fa-solid fa-arrow-up-right-from-square" style={{ fontSize: '12px' }} />
-            </IconCircle>
-            <span className="proj-learn-text">Learn more</span>
-          </button>
+            Learn more
+          </IconButton>
 
         </div>
 

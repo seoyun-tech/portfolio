@@ -1,34 +1,38 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar/Navbar'
 import Hero from './pages/Hero/Hero'
 import About from './pages/About/About'
 import Skill from './pages/Skill/Skill'
 import Experience from './pages/Experience/Experience'
-import Education from './pages/Education/Education'
 import Project from './pages/Project/Project'
 import Contact from './pages/Contact/Contact'
 import Footer from './components/Footer/Footer'
 import ContactPage from './pages/ContactPage/ContactPage'
+import ContactDrawer from './components/ContactDrawer/ContactDrawer'
 import { CursorProvider } from './context/CursorContext'
 import { LanguageProvider } from './context/LanguageContext'
 import './App.css'
 
-const MainLayout = () => (
-  <>
-    <Navbar />
-    <main>
-      <Hero />
-      <About />
-      <Skill />
-      <Experience />
-      <Education />
-      <Project />
-      <Contact />
-    </main>
-    <Footer />
-  </>
-)
+const MainLayout = () => {
+  const [isContactOpen, setIsContactOpen] = useState(false);
+
+  return (
+    <>
+      <Navbar />
+      <main>
+        <Hero onOpenContact={() => setIsContactOpen(true)} />
+        <About />
+        <Experience />
+        <Project />
+        <Skill />
+        <Contact />
+      </main>
+      <Footer />
+      <ContactDrawer isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
+    </>
+  );
+}
 
 function App() {
   return (

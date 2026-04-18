@@ -8,7 +8,7 @@
 body {
   font-family: var(--font-main);
   color: var(--color-primary);
-  background-color: #fff;
+  background-color: var(--color-white);
   overflow-x: hidden;
 }
 
@@ -31,7 +31,7 @@ body {
   transition: width 0.25s ease-out, height 0.25s ease-out, background 0.25s ease-out;
 }
 
-body:has(a:hover, button:hover, .nav-toggle:hover, .social-icon:hover, .tab-item:hover, .learn-more-btn:hover) .cursor-dot {
+body:has(a:hover, button:hover, .nav-toggle:hover, .tab-item:hover, .lang-switcher span:hover) .cursor-dot {
   width: 44px;
   height: 44px;
   background: var(--color-primary-10);
