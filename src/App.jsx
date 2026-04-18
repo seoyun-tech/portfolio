@@ -8,7 +8,6 @@ import Experience from './pages/Experience/Experience'
 import Project from './pages/Project/Project'
 import Contact from './pages/Contact/Contact'
 import Footer from './components/Footer/Footer'
-import ContactPage from './pages/ContactPage/ContactPage'
 import ContactDrawer from './components/ContactDrawer/ContactDrawer'
 import { CursorProvider } from './context/CursorContext'
 import { LanguageProvider } from './context/LanguageContext'
@@ -42,7 +41,6 @@ function App() {
           <div className="App">
             <Routes>
               <Route path="/" element={<MainLayout />} />
-              <Route path="/contact" element={<ContactPage />} />
             </Routes>
           </div>
         </BrowserRouter>
