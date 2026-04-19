@@ -7,10 +7,14 @@ const CONTENT = {
   ko: {
     titleLines: ['시장을 읽고,', '제품으로 답하는'],
     subtitle: ['기획자 ', '박서윤', '입니다.'],
+    contactBtn: '문의하기',
+    resumeBtn: '이력서',
   },
   en: {
     titleLines: ['Reading markets,', 'building answers through product.'],
     subtitle: ['I\'m ', 'Seoyun Park', ', a Product Planner.'],
+    contactBtn: 'Contact Me',
+    resumeBtn: 'Resume',
   },
 };
 
@@ -41,11 +45,11 @@ const Hero = ({ onOpenContact }) => {
               <IconCircle>
                 <i className="fa-solid fa-arrow-right" style={{ fontSize: '12px' }} />
               </IconCircle>
-              <span className="hero-contact-text">Contact Me</span>
+              <span className="hero-contact-text">{c.contactBtn}</span>
             </button>
 
             <a href="/resume.pdf" className="hero-resume-button" target="_blank" rel="noreferrer">
-              Resume
+              {c.resumeBtn}
             </a>
           </div>
         </div>

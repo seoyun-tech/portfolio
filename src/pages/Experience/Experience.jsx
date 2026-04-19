@@ -3,6 +3,11 @@ import SectionTag from '../../components/SectionTag/SectionTag';
 import { useLanguage } from '../../context/LanguageContext';
 import './Experience.css';
 
+const LABELS = {
+  ko: { sectionTag: '경력' },
+  en: { sectionTag: 'Work Experience' },
+};
+
 const EXPERIENCES = {
   ko: [
     {
@@ -84,7 +89,7 @@ const Experience = () => {
   return (
     <section className="experience" id="experience">
       <div className="experience-container">
-        <SectionTag>Work Experience</SectionTag>
+        <SectionTag>{LABELS[lang].sectionTag}</SectionTag>
 
         <div className="experience-tabs">
 

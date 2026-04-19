@@ -4,7 +4,7 @@
 }
 
 .cip-tag {
-  font-size: 13px;
+  font-size: var(--text-sm);
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -30,6 +30,7 @@
   line-height: 1.8;
   color: rgba(255, 255, 255, 0.5);
   margin: 0 0 48px;
+  white-space: pre-line;
 }
 .cip--modal .cip-desc { font-size: var(--text-sm); }
 .cip--page .cip-desc  { font-size: var(--text-base); }
@@ -74,7 +75,7 @@
   width: fit-content;
   transition: color 0.25s ease;
 }
-.cip--modal .cip-item-value { font-size: 15px; color: rgba(255, 255, 255, 0.5); }
+.cip--modal .cip-item-value { font-size: var(--text-base); color: rgba(255, 255, 255, 0.5); }
 .cip--page .cip-item-value  { font-size: var(--text-lg); color: var(--color-white); }
 .cip-item-value:hover { color: var(--color-white); }
 
@@ -83,5 +84,5 @@
 @media (max-width: 768px) {
   .cip--modal .cip-item-title { font-size: 26px; }
   .cip--page .cip-item-title  { font-size: 28px; font-weight: 300; font-style: italic; color: var(--color-white); }
-  .cip--page .cip-item-value  { font-size: 15px; color: rgba(255, 255, 255, 0.5); }
+  .cip--page .cip-item-value  { font-size: var(--text-base); color: rgba(255, 255, 255, 0.5); }
 }

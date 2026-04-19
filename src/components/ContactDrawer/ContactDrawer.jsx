@@ -1,19 +1,23 @@
 import React, { useRef, useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import { useLanguage } from '../../context/LanguageContext';
-import ContactInfoPanel from '../ContactInfoPanel/ContactInfoPanel';
+import ContactInfoPanel from './ContactInfoPanel';
 import './ContactDrawer.css';
 
 const PLACEHOLDERS = {
   ko: {
     name: '이름을 입력해 주세요.',
-    email: '이메일 주소',
+    email: 'example@domain.com',
     message: '채용 문의, 협업 제안 등 편하게 말씀해 주세요.',
+    sending: '전송 중...',
+    send: '— 메시지 보내기',
   },
   en: {
     name: "What's your name?",
-    email: 'Email address',
+    email: 'example@domain.com',
     message: 'Feel free to leave any hiring inquiries or collaboration proposals.',
+    sending: 'Sending...',
+    send: '— Send Message',
   },
 };
 
@@ -71,7 +75,7 @@ const ContactDrawer = ({ isOpen, onClose }) => {
             <textarea className="cd-form-textarea" name="message"
               placeholder={ph.message} autoComplete="off" rows={6} required />
             <button className="cd-form-btn" type="submit" disabled={loading}>
-              {loading ? 'Sending...' : '— Send Message'}
+              {loading ? ph.sending : ph.send}
             </button>
             {status === 'success' && <p className="cd-form-feedback success">메시지가 전송되었습니다.</p>}
             {status === 'error'   && <p className="cd-form-feedback error">전송에 실패했습니다. 다시 시도해 주세요.</p>}

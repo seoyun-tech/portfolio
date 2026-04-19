@@ -7,10 +7,11 @@ import './About.css';
 
 const CONTENT = {
   ko: {
+    sectionTag: '소개',
     bioLines: [
-      '현장에서 마주한 한계를 직접 돌파하려 코드를 익혔습니다.',
-      '화려한 기술보다 중요한 건 문제를 해결하는 기술이기에,',
-      '팀의 병목을 뚫고 목표를 향한 최선의 경로를 설계합니다.',
+      '현장에서 마주한 한계를 넘기 위해 코드를 익혔습니다.',
+      '화려한 기술보다 해결하는 기술에 집중하며,',
+      '팀의 병목을 뚫고 최선의 경로를 설계합니다.',
     ],
     details: [
       { label: '생년월일', value: '1994. 05. 11' },
@@ -18,13 +19,14 @@ const CONTENT = {
     ],
   },
   en: {
+    sectionTag: 'About Me',
     bioLines: [
       'I taught myself to code to break through the limits I faced on the ground.',
       'What matters isn\'t flashy tech — it\'s technology that solves real problems.',
       'I find the most efficient path to the goal by clearing the team\'s bottlenecks.',
     ],
     details: [
-      { label: 'Date of Birth', value: 'May 11, 1994' },
+      { label: 'Birth', value: 'May 11, 1994' },
       { label: 'Education',     value: 'NTU International College(UK)\nArt & Design · 2015 – 2016\n\nNottingham Trent University(UK)\nFashion Degree(BA) · 2016 – 2019' },
     ],
   },
@@ -50,7 +52,7 @@ const About = () => {
 
       <div className="about-content-wrapper">
         <div className="about-tag-mobile">
-          <SectionTag variant="light">About Me</SectionTag>
+          <SectionTag variant="light">{CONTENT[lang].sectionTag}</SectionTag>
         </div>
         <div className="about-layout-grid">
 
@@ -60,7 +62,7 @@ const About = () => {
             </div>
           </div>
 
-          <InfoBox profile={PROFILE} content={CONTENT[lang]} />
+          <InfoBox profile={PROFILE} content={CONTENT[lang]} sectionTag={CONTENT[lang].sectionTag} />
 
         </div>
       </div>
@@ -68,10 +70,10 @@ const About = () => {
   );
 };
 
-const InfoBox = ({ profile, content }) => (
+const InfoBox = ({ profile, content, sectionTag }) => (
   <div className="about-item info-item">
     <div className="about-me-tag">
-      <SectionTag variant="light">About Me</SectionTag>
+      <SectionTag variant="light">{sectionTag}</SectionTag>
     </div>
     <div className="name-header-group">
       <h2 className="name-ko-title">{profile.koName}</h2>

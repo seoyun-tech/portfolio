@@ -5,6 +5,11 @@ import useModalLock from '../../hooks/useModalLock';
 import { useLanguage } from '../../context/LanguageContext';
 import './Project.css';
 
+const LABELS = {
+  ko: { learnMore: '자세히 보기' },
+  en: { learnMore: 'Learn more' },
+};
+
 const PROJECTS = {
   ko: [
     {
@@ -194,7 +199,7 @@ const ProjectModal = ({ proj, onClose }) => {
   );
 };
 
-const ProjectBlock = ({ proj, i, total, onOpen }) => {
+const ProjectBlock = ({ proj, i, total, onOpen, lang }) => {
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
 
@@ -234,7 +239,7 @@ const ProjectBlock = ({ proj, i, total, onOpen }) => {
             onClick={() => proj.meta && onOpen(proj)}
             style={!proj.meta ? { opacity: 0.3, cursor: 'default' } : {}}
           >
-            Learn more
+            {LABELS[lang].learnMore}
           </IconButton>
 
         </div>
@@ -273,6 +278,7 @@ const Project = () => {
             i={i}
             total={projects.length}
             onOpen={setActiveModal}
+            lang={lang}
           />
         ))}
       </section>

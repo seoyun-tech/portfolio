@@ -5,8 +5,14 @@ import { useLanguage } from '../../context/LanguageContext';
 import './Contact.css';
 
 const CONTENT = {
-  ko: { desc: '새로운 기회와 협업에 대해 언제든 환영합니다.\n편하게 연락주세요.' },
-  en: { desc: "I'm always open to new opportunities and collaborations.\nFeel free to reach out anytime." },
+  ko: {
+    heading: ['연락', '주세요.'],
+    desc: '새로운 기회와 협업에 대해 언제든 환영합니다.\n편하게 연락주세요.',
+  },
+  en: {
+    heading: ['Get in', 'Touch'],
+    desc: "I'm always open to new opportunities and collaborations.\nFeel free to reach out anytime.",
+  },
 };
 
 const Contact = () => {
@@ -22,9 +28,9 @@ const Contact = () => {
 
       <div className="contact-inner">
         <h2 className="contact-title">
-          <strong>Get in</strong>
+          <strong>{CONTENT[lang].heading[0]}</strong>
           <br />
-          <em>Touch</em>
+          <em>{CONTENT[lang].heading[1]}</em>
         </h2>
 
         <p className="contact-desc">{CONTENT[lang].desc}</p>

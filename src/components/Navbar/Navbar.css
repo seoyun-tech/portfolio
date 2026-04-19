@@ -65,9 +65,9 @@
 .lang-switcher span.active { color: var(--color-primary); font-weight: 600; }
 
 /* 햄버거 토글 버튼 */
-.nav-toggle { display: none; width: 32px; height: 32px; position: relative; z-index: 1001; }
+.nav-toggle { display: none; width: 44px; height: 44px; position: relative; z-index: 1001; }
 .hamburger, .hamburger::before, .hamburger::after {
-  width: 24px; height: 2px; background: var(--color-primary); transition: 0.3s ease;
+  width: 24px; height: 2px; background: var(--color-primary); border-radius: 2px; transition: 0.3s ease;
 }
 .hamburger { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
 .hamburger::before, .hamburger::after { content: ''; position: absolute; left: 0; }

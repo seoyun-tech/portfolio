@@ -8,6 +8,11 @@ const SKILLS_DATA = ["HTML", "CSS", "JavaScript", "React", "GitHub", "Figma", "P
 
 const SCROLL_AMOUNT = 300;
 
+const LABELS = {
+  ko: { sectionTag: '보유 스킬' },
+  en: { sectionTag: 'Professional Skills' },
+};
+
 const DESCRIPTION = {
   ko: (
     <p>
@@ -53,7 +58,7 @@ const Skill = () => {
       <div className="skill-container">
 
         <div className="skill-header">
-          <SectionTag>Professional Skills</SectionTag>
+          <SectionTag>{LABELS[lang].sectionTag}</SectionTag>
 
           <div className="skill-description">
             {DESCRIPTION[lang]}

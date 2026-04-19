@@ -2,11 +2,25 @@ import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../../context/LanguageContext';
 import './Navbar.css';
 
-const MENU_ITEMS = ['Home', 'About', 'Project', 'Contact'];
+const MENU_ITEMS = {
+  ko: [
+    { id: 'home',    label: '홈' },
+    { id: 'about',   label: '소개' },
+    { id: 'project', label: '프로젝트' },
+    { id: 'contact', label: '연락처' },
+  ],
+  en: [
+    { id: 'home',    label: 'Home' },
+    { id: 'about',   label: 'About' },
+    { id: 'project', label: 'Project' },
+    { id: 'contact', label: 'Contact' },
+  ],
+};
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { lang } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
@@ -30,14 +44,14 @@ const Navbar = () => {
 
           <div className={`nav-content ${isMenuOpen ? 'open' : ''}`}>
             <ul className="nav-menu">
-              {MENU_ITEMS.map((item) => (
-                <li key={item}>
+              {MENU_ITEMS[lang].map(({ id, label }) => (
+                <li key={id}>
                   <a
-                    href={`#${item.toLowerCase()}`}
+                    href={`#${id}`}
                     className="nav-item"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    {item}
+                    {label}
                   </a>
                 </li>
               ))}
