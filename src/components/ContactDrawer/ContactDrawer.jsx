@@ -13,9 +13,9 @@ const PLACEHOLDERS = {
     send: '— 메시지 보내기',
   },
   en: {
-    name: "What's your name?",
+    name: "Please enter your name",
     email: 'example@domain.com',
-    message: 'Feel free to leave any hiring inquiries or collaboration proposals.',
+    message: 'Please feel free to share your recruitment inquiries or collaboration proposals.',
     sending: 'Sending...',
     send: '— Send Message',
   },
@@ -73,7 +73,7 @@ const ContactDrawer = ({ isOpen, onClose }) => {
                 placeholder={ph.email} autoComplete="off" required />
             </div>
             <textarea className="cd-form-textarea" name="message"
-              placeholder={ph.message} autoComplete="off" rows={6} required />
+              placeholder={ph.message} autoComplete="off" rows={4} required />
             <button className="cd-form-btn" type="submit" disabled={loading}>
               {loading ? ph.sending : ph.send}
             </button>

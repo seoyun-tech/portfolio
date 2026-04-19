@@ -21,9 +21,9 @@ const CONTENT = {
   en: {
     sectionTag: 'About Me',
     bioLines: [
-      'I taught myself to code to break through the limits I faced on the ground.',
-      'What matters isn\'t flashy tech — it\'s technology that solves real problems.',
-      'I find the most efficient path to the goal by clearing the team\'s bottlenecks.',
+      'I mastered coding to overcome the real-world challenges.',
+      'Solving problems matters more than flashy tech.',
+      'I clear bottlenecks and design the optimal route.',
     ],
     details: [
       { label: 'Birth', value: 'May 11, 1994' },

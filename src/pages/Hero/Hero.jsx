@@ -11,8 +11,8 @@ const CONTENT = {
     resumeBtn: '이력서',
   },
   en: {
-    titleLines: ['Reading markets,', 'building answers through product.'],
-    subtitle: ['I\'m ', 'Seoyun Park', ', a Product Planner.'],
+    titleLines: ['Reading the markets,', 'Responding with products.'],
+    subtitle: ['Product Strategist, ', 'Seo-yun Park.'],
     contactBtn: 'Contact Me',
     resumeBtn: 'Resume',
   },

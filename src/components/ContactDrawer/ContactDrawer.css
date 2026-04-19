@@ -78,8 +78,8 @@
 .cd-inner {
   display: flex;
   flex-direction: column;
-  gap: 48px;
-  padding: 80px 52px 60px;
+  gap: 28px;
+  padding: 60px 52px 40px;
   flex: 1;
 }
 
@@ -108,7 +108,7 @@
   border: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   padding: 20px 4px;
-  font-size: var(--text-base);
+  font-size: var(--text-sm);
   color: var(--color-white);
   outline: none;
   transition: border-color 0.25s ease;
@@ -140,7 +140,7 @@
 }
 
 .cd-form-btn {
-  margin-top: 40px;
+  margin-top: 24px;
   width: 100%;
   padding: 20px;
   background: var(--color-white);
@@ -166,7 +166,7 @@
 /* Responsive */
 @media (max-width: 768px) {
   .cd-panel { width: 100vw; }
-  .cd-inner { padding: 72px 24px 48px; gap: 40px; }
+  .cd-inner { padding: 60px 24px 40px; gap: 28px; }
   .cd-form-row { grid-template-columns: 1fr; }
   .cd-form-row .cd-form-input:first-child {
     border-right: none;

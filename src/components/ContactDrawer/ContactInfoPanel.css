@@ -29,7 +29,7 @@
 .cip-desc {
   line-height: 1.8;
   color: rgba(255, 255, 255, 0.5);
-  margin: 0 0 48px;
+  margin: 0 0 28px;
   white-space: pre-line;
 }
 .cip--modal .cip-desc { font-size: var(--text-sm); }
@@ -38,8 +38,8 @@
 .cip-list {
   display: flex;
   flex-direction: column;
-  gap: 36px;
-  margin: 0 0 44px;
+  gap: 24px;
+  margin: 0 0 0;
   padding: 0;
   list-style: none;
 }
@@ -59,7 +59,7 @@
   color: var(--color-white);
 }
 .cip--page .cip-item-title {
-  font-size: var(--text-base);
+  font-size: var(--text-sm);
   font-weight: 700;
   color: var(--color-white-60);
 }
@@ -79,10 +79,8 @@
 .cip--page .cip-item-value  { font-size: var(--text-lg); color: var(--color-white); }
 .cip-item-value:hover { color: var(--color-white); }
 
-.cip-social { display: flex; gap: 14px; }
+.cip-social { display: flex; gap: 14px; margin-top: 24px; }
 
 @media (max-width: 768px) {
   .cip--modal .cip-item-title { font-size: 26px; }
-  .cip--page .cip-item-title  { font-size: 28px; font-weight: 300; font-style: italic; color: var(--color-white); }
-  .cip--page .cip-item-value  { font-size: var(--text-base); color: rgba(255, 255, 255, 0.5); }
 }

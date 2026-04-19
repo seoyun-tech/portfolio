@@ -16,10 +16,10 @@ const CONTENT = {
   en: {
     tag: 'Get in Touch',
     title: ["Let's work", 'together'],
-    desc: 'I\'m always open to new opportunities and collaborations.\nFeel free to reach out anytime.',
+    desc: 'I am always open to new opportunities and collaborations.\nPlease feel free to get in touch.',
     items: [
-      { title: 'Call Me', desc: null,                        href: 'tel:01074087823',             value: '+82 10 7408 7823' },
-      { title: 'Write',   desc: 'Or send a direct email at', href: 'mailto:cielle.sora@gmail.com', value: 'cielle.sora@gmail.com' },
+      { title: 'Phone', desc: null,                        href: 'tel:01074087823',             value: '+82 10 7408 7823' },
+      { title: 'Email',   desc: 'Or send a direct email at', href: 'mailto:cielle.sora@gmail.com', value: 'cielle.sora@gmail.com' },
     ],
   },
 };

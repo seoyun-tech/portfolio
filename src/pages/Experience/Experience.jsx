@@ -12,7 +12,7 @@ const EXPERIENCES = {
   ko: [
     {
       company: '공원더파크',
-      role: '온라인쇼핑몰 대표',
+      role: '온라인쇼핑몰 운영',
       period: '2022.05 - 2025.10',
       duration: '3년 6개월',
       description: [
@@ -44,32 +44,32 @@ const EXPERIENCES = {
   en: [
     {
       company: 'Gongone The Park',
-      role: 'Online Shopping Mall CEO',
+      role: 'Founder',
       period: '2022.05 - 2025.10',
-      duration: '3 yrs 6 mon',
+      duration: '3 yrs 6 mos',
       description: [
-        'Founded and operated a women\'s clothing online shopping mall',
-        'Product sourcing, marketing strategy planning and customer data analysis',
-        'Website optimization through user purchase pattern analysis',
+        'Founded and operated a women\'s fashion brand',
+        'Managed the full cycle from garment design and production to marketing',
+        'Optimised the online store based on user data and purchase patterns',
       ],
     },
     {
       company: 'Femimode Co., Ltd.',
-      role: 'Merchandise Planner MD',
+      role: 'Product Planning MD',
       period: '2020.04 - 2022.05',
-      duration: '2 yrs 2 mon',
+      duration: '2 yrs 2 mos',
       description: [
-        'Seasonal product planning and visual shoot directing',
-        'Responsible for overall buying and operations of 3 imported brands',
+        'Managed seasonal product planning and directed visual photoshoot production',
+        'Led the end-to-end buying and operations for three international brands',
       ],
     },
     {
       company: 'Vivien Co., Ltd.',
       role: 'Online MD',
       period: '2020.03 - 2020.04',
-      duration: '2 mon',
+      duration: '2 mos',
       description: [
-        'E-commerce channel launch and promotion support',
+        'Supported the launch of new e-commerce channels and seasonal promotions',
       ],
     },
   ],

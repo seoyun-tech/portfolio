@@ -85,7 +85,7 @@ const PROJECTS = {
       ],
       category: 'Full-Stack Planning & Dev',
       description:
-        'A kids-only OTT media service combining generative AI with the TMDB API. Targeting child-tailored content recommendations and an intuitive UI, I handled the entire process independently — from planning to frontend/backend development and deployment.',
+        'A kids-only OTT service integrating Generative AI with the TMDB API. With a focus on tailored content and an intuitive UI, I led the entire process from planning to full-stack development and deployment.',
       intent: 'OTT platforms are built for adults, leaving children without a safe option. I built a kids-only service that uses AI to automatically match content to each child\'s age and taste.',
       image: '/assets/project-rookiz.png',
       meta: [
