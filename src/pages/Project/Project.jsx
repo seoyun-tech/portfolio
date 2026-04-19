@@ -23,6 +23,9 @@ const PROJECTS = {
         '생성형 AI와 TMDB API를 결합한 키즈 전용 OTT 미디어 서비스입니다. 어린이 맞춤형 콘텐츠 추천과 직관적인 UI를 목표로, 기획부터 프론트엔드·백엔드 개발 및 배포까지 전 과정을 수행했습니다.',
       intent: '기존 OTT는 성인 중심 설계로 어린이가 안전하게 이용하기 어렵습니다. AI 추천으로 연령에 맞는 콘텐츠를 자동 큐레이션하는 키즈 전용 미디어 환경을 기획·구현했습니다.',
       image: '/assets/project-rookiz.png',
+      imagePosition: 'center',
+      imageScale: 1.4,
+      modalImage: '/assets/project-rookiz-modal.png',
       meta: [
         { label: '기술스택',        value: 'React 19 · FastAPI · Tailwind v4' },
         { label: '배포매체',        value: 'Render' },
@@ -48,6 +51,9 @@ const PROJECTS = {
         '스포티파이 앱의 정보 구조와 탐색 흐름을 재설계한 iOS 모바일 앱 리디자인 프로젝트입니다. AI 개인화 추천(AI FOR YOU), 시간·상황 기반 Dynamic TPO, AI DJ 등 신규 기능을 기획하고, 온보딩부터 메인 탐색까지 전체 사용자 여정을 Figma 프로토타입으로 구현했습니다.',
       intent: '음악은 방대하지만 탐색 흐름이 복잡해 원하는 곡을 찾기 어렵습니다. AI 추천과 상황 기반 큐레이션으로 능동적 탐색 없이도 최적의 음악을 만나는 경험을 설계했습니다.',
       image: '/assets/project-spotify.png',
+      imagePosition: '65% 40%',
+      imageScale: 1.5,
+      modalImage: null,
       meta: [
         { label: '기술스택',        value: 'Figma · FigJam' },
         { label: '배포매체',        value: 'Figma 프로토타입 (iOS)' },
@@ -88,6 +94,9 @@ const PROJECTS = {
         'A kids-only OTT service integrating Generative AI with the TMDB API. With a focus on tailored content and an intuitive UI, I led the entire process from planning to full-stack development and deployment.',
       intent: 'OTT platforms are built for adults, leaving children without a safe option. I built a kids-only service that uses AI to automatically match content to each child\'s age and taste.',
       image: '/assets/project-rookiz.png',
+      imagePosition: 'center',
+      imageScale: 1.4,
+      modalImage: '/assets/project-rookiz-modal.png',
       meta: [
         { label: 'Tech Stack',         value: 'React 19 · FastAPI · Tailwind v4' },
         { label: 'Platform',           value: 'Render' },
@@ -113,6 +122,9 @@ const PROJECTS = {
         'An iOS mobile app redesign project restructuring Spotify\'s information architecture and navigation flow. I planned new features including AI personalized recommendations (AI FOR YOU), time/context-based Dynamic TPO, and AI DJ, and implemented the full user journey from onboarding to main navigation as a Figma prototype.',
       intent: 'The library is vast, but finding the right song takes too many steps. I redesigned the experience so music finds you — through AI and context-aware recommendations.',
       image: '/assets/project-spotify.png',
+      imagePosition: '65% 40%',
+      imageScale: 1.5,
+      modalImage: null,
       meta: [
         { label: 'Tech Stack',        value: 'Figma · FigJam' },
         { label: 'Platform',          value: 'Figma Prototype (iOS)' },
@@ -154,7 +166,7 @@ const ProjectModal = ({ proj, onClose }) => {
           <i className="fa-solid fa-xmark" />
         </button>
 
-        <img src={proj.image} alt={proj.titleLines[0].text} className="proj-modal-image" />
+        <img src={proj.modalImage ?? proj.image} alt={proj.titleLines[0].text} className="proj-modal-image" />
 
         <div className="proj-modal-header">
           <SectionTag noIcon>{proj.number}</SectionTag>
@@ -199,7 +211,7 @@ const ProjectModal = ({ proj, onClose }) => {
   );
 };
 
-const ProjectBlock = ({ proj, i, total, onOpen, lang }) => {
+const ProjectBlock = ({ proj, i, onOpen, lang }) => {
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
 
@@ -253,6 +265,10 @@ const ProjectBlock = ({ proj, i, total, onOpen, lang }) => {
               src={proj.image}
               alt={`${proj.titleLines[0].text} project`}
               className="proj-image"
+              style={{
+                ...(proj.imagePosition && { objectPosition: proj.imagePosition }),
+                ...(proj.imageScale && { transform: `scale(${proj.imageScale})` }),
+              }}
             />
           </div>
         </div>
@@ -276,7 +292,7 @@ const Project = () => {
             key={proj.number}
             proj={proj}
             i={i}
-            total={projects.length}
+
             onOpen={setActiveModal}
             lang={lang}
           />

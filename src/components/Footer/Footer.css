@@ -38,7 +38,6 @@
 .footer-lang span:hover { color: rgba(255, 255, 255, 0.9); }
 .footer-lang span.active { color: var(--color-white); font-weight: 600; }
 
-/* 소셜 아이콘 */
 .social-icons { display: flex; gap: 12px; }
 .social-icon {
   width: 44px;

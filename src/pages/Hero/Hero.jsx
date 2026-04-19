@@ -1,5 +1,5 @@
 import React from 'react';
-import IconCircle from '../../components/IconCircle/IconCircle';
+import IconButton from '../../components/IconButton/IconButton';
 import { useLanguage } from '../../context/LanguageContext';
 import './Hero.css';
 
@@ -41,12 +41,9 @@ const Hero = ({ onOpenContact }) => {
           </div>
 
           <div className="hero-cta-group">
-            <button className="hero-contact-button" onClick={onOpenContact}>
-              <IconCircle>
-                <i className="fa-solid fa-arrow-right" style={{ fontSize: '12px' }} />
-              </IconCircle>
-              <span className="hero-contact-text">{c.contactBtn}</span>
-            </button>
+            <IconButton icon="fa-solid fa-arrow-right" onClick={onOpenContact}>
+              {c.contactBtn}
+            </IconButton>
 
             <a href="/resume.pdf" className="hero-resume-button" target="_blank" rel="noreferrer">
               {c.resumeBtn}

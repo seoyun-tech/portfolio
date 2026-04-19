@@ -16,7 +16,6 @@
   padding: 105px 40px;
 }
 
-/* 등장 애니메이션 */
 .contact-title,
 .contact-desc,
 .contact-info-bar { opacity: 0; }
@@ -25,7 +24,6 @@
 .contact-section.is-visible .contact-desc     { animation: revealUp 0.8s var(--ease-spring) 0.25s forwards; }
 .contact-section.is-visible .contact-info-bar { animation: revealUp 0.8s var(--ease-spring) 0.4s  forwards; }
 
-/* 제목 */
 .contact-title {
   font-size: 52px;
   line-height: 0.6;
@@ -38,7 +36,6 @@
 .contact-title strong { font-weight: 700; display: block; }
 .contact-title em     { font-style: italic; font-weight: 300; display: block; }
 
-/* 설명 */
 .contact-desc {
   font-size: var(--text-sm);
   line-height: 1.4;
@@ -48,7 +45,6 @@
   margin: 0 0 60px;
 }
 
-/* 연락처 바 */
 .contact-info-bar {
   display: flex;
   align-items: center;
@@ -88,7 +84,6 @@
   flex-shrink: 0;
 }
 
-/* 반응형 */
 @media (max-width: 768px) {
   .contact-inner { padding: 80px 24px; }
   .contact-title { font-size: 40px; }

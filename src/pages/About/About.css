@@ -1,5 +1,3 @@
-/* revealUp keyframe → tokens.css 에서 전역 정의 */
-
 .about-section {
   position: relative;
   width: 100%;
@@ -24,7 +22,6 @@
   width: fit-content;
 }
 
-/* 등장 애니메이션 — 공유 revealUp 사용 */
 .about-item { opacity: 0; }
 
 .about-section.is-visible .image-item { animation: revealUp 1.2s var(--ease-spring) 0.25s forwards; }
@@ -32,7 +29,6 @@
 
 .image-item { display: flex; justify-content: center; padding-top: 32px; }
 
-/* 프로필 이미지 */
 .profile-image-frame {
   width: 100%;
   aspect-ratio: 3 / 4;
@@ -50,7 +46,6 @@
   transform: scale(1.05);
 }
 
-/* 오른쪽: 정보 */
 .about-tag-mobile  { display: none; }
 .about-me-tag      { margin-bottom: 32px; width: fit-content; }
 .name-header-group { margin-bottom: 36px; }
@@ -82,7 +77,6 @@
 .data-label { font-weight: 700; font-size: var(--text-sm); color: var(--color-white-60); }
 .data-value { font-size: var(--text-base); color: var(--color-white); opacity: 0.95; white-space: pre-line; }
 
-/* 반응형 */
 @media (max-width: 1024px) {
   .about-layout-grid {
     grid-template-columns: auto auto;
@@ -99,7 +93,6 @@
     gap: 40px;
     text-align: center;
   }
-  /* 순서: 이미지 → 정보 */
   .image-item { order: 1; }
   .info-item  { order: 2; width: 100%; }
 

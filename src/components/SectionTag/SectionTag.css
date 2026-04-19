@@ -10,12 +10,10 @@
   width: fit-content;
 }
 
-/* ── 밝은 배경 위 (기본) ── */
 .section-tag--default {
   color: var(--color-primary);
 }
 
-/* ── 어두운 배경 위 ── */
 .section-tag--light {
   color: var(--color-white-60);
   border-color: var(--color-white-10);

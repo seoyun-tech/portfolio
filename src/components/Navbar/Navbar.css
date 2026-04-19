@@ -53,7 +53,6 @@
   order: 3;
 }
 
-/* GNB 언어 선택 */
 .lang-switcher { display: flex; gap: 24px; }
 .lang-switcher span {
   font-size: var(--text-sm);
@@ -64,7 +63,6 @@
 .lang-switcher span:hover { color: var(--color-primary); }
 .lang-switcher span.active { color: var(--color-primary); font-weight: 600; }
 
-/* 햄버거 토글 버튼 */
 .nav-toggle { display: none; width: 44px; height: 44px; position: relative; z-index: 1001; }
 .hamburger, .hamburger::before, .hamburger::after {
   width: 24px; height: 2px; background: var(--color-primary); border-radius: 2px; transition: 0.3s ease;
@@ -80,7 +78,6 @@
 
 .menu-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.4); backdrop-filter: blur(4px); z-index: 999; }
 
-/* 반응형 */
 @media (max-width: 1024px) {
   .nav-toggle { display: block; margin-left: auto; }
 

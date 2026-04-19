@@ -1,4 +1,3 @@
-/* Overlay */
 .cd-overlay {
   position: fixed;
   inset: 0;
@@ -15,7 +14,6 @@
   pointer-events: auto;
 }
 
-/* Panel */
 .cd-panel {
   position: fixed;
   top: 0;
@@ -34,7 +32,6 @@
   right: 0;
 }
 
-/* Close button */
 .cd-close {
   position: absolute;
   top: 28px;
@@ -74,7 +71,6 @@
   background: var(--color-white);
 }
 
-/* Inner layout */
 .cd-inner {
   display: flex;
   flex-direction: column;
@@ -83,13 +79,11 @@
   flex: 1;
 }
 
-/* Info section */
 .cd-info {
   display: flex;
   flex-direction: column;
 }
 
-/* Form */
 .cd-form {
   display: flex;
   flex-direction: column;
@@ -163,7 +157,6 @@
 .cd-form-feedback.success { color: var(--color-success); }
 .cd-form-feedback.error   { color: var(--color-error); }
 
-/* Responsive */
 @media (max-width: 768px) {
   .cd-panel { width: 100vw; }
   .cd-inner { padding: 60px 24px 40px; gap: 28px; }

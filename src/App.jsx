@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar/Navbar'
 import Hero from './pages/Hero/Hero'
 import About from './pages/About/About'
@@ -37,13 +36,9 @@ function App() {
   return (
     <LanguageProvider>
       <CursorProvider>
-        <BrowserRouter>
-          <div className="App">
-            <Routes>
-              <Route path="/" element={<MainLayout />} />
-            </Routes>
-          </div>
-        </BrowserRouter>
+        <div className="App">
+          <MainLayout />
+        </div>
       </CursorProvider>
     </LanguageProvider>
   )
