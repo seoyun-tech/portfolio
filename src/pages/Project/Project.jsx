@@ -35,9 +35,10 @@ const PROJECTS = {
         { label: '페이지 수 / 특징', value: '10페이지 · AI 추천 · 반응형' },
       ],
       links: [
-        { label: '사이트 보기',  icon: 'fa-solid fa-globe',   url: 'https://rookiz-front.onrender.com/' },
-        { label: 'GitHub',       icon: 'fa-brands fa-github', url: 'https://github.com/seoyun-tech/Rookiz' },
-        { label: '기획서 보기',  icon: 'fa-brands fa-figma',  url: 'https://www.figma.com/deck/H3UyjjzSW8Ue5igGsHtDhC' },
+        { label: '사이트 보기',      icon: 'fa-solid fa-globe',   url: 'https://rookiz-front.onrender.com/' },
+        { label: 'GitHub',           icon: 'fa-brands fa-github', url: 'https://github.com/seoyun-tech/Rookiz' },
+        { label: '기획서 보기',      icon: 'fa-brands fa-figma',  url: 'https://www.figma.com/deck/H3UyjjzSW8Ue5igGsHtDhC' },
+        { label: '프로토타입 보기',  icon: 'fa-brands fa-figma',  url: 'https://www.figma.com/proto/uiEEZajUsTu8qwpV3h2jVV/%E2%9D%A4ROOKIZ-%EB%94%94%EC%9E%90%EC%9D%B8?page-id=0%3A1&node-id=12-1473&p=f&viewport=174%2C621%2C0.05&t=zE9ezWslnC7PYs5k-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=15%3A249&show-proto-sidebar=1' },
       ],
     },
     {
@@ -106,9 +107,10 @@ const PROJECTS = {
         { label: 'Pages / Features',   value: '10 pages · AI Rec · Responsive' },
       ],
       links: [
-        { label: 'Visit Site', icon: 'fa-solid fa-globe',   url: 'https://rookiz-front.onrender.com/' },
-        { label: 'GitHub',     icon: 'fa-brands fa-github', url: 'https://github.com/seoyun-tech/Rookiz' },
-        { label: 'View Deck',  icon: 'fa-brands fa-figma',  url: 'https://www.figma.com/deck/H3UyjjzSW8Ue5igGsHtDhC' },
+        { label: 'Visit Site',      icon: 'fa-solid fa-globe',   url: 'https://rookiz-front.onrender.com/' },
+        { label: 'GitHub',          icon: 'fa-brands fa-github', url: 'https://github.com/seoyun-tech/Rookiz' },
+        { label: 'View Deck',       icon: 'fa-brands fa-figma',  url: 'https://www.figma.com/deck/H3UyjjzSW8Ue5igGsHtDhC' },
+        { label: 'View Prototype',  icon: 'fa-brands fa-figma',  url: 'https://www.figma.com/proto/uiEEZajUsTu8qwpV3h2jVV/%E2%9D%A4ROOKIZ-%EB%94%94%EC%9E%90%EC%9D%B8?page-id=0%3A1&node-id=12-1473&p=f&viewport=174%2C621%2C0.05&t=zE9ezWslnC7PYs5k-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=15%3A249&show-proto-sidebar=1' },
       ],
     },
     {
