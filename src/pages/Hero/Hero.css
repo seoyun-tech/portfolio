@@ -88,21 +88,21 @@
   display: inline-flex;
   align-items: center;
   padding: 18px 28px;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--color-primary);
   border-radius: var(--radius-pill);
   font-weight: 500;
   font-size: var(--text-sm);
   line-height: 20px;
-  color: var(--color-primary);
+  color: var(--color-white);
+  background-color: var(--color-primary);
   text-decoration: none;
   letter-spacing: -0.01em;
   transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 
 .hero-resume-button:hover {
-  background-color: var(--color-primary);
-  border-color: var(--color-primary);
-  color: var(--color-white);
+  background-color: transparent;
+  color: var(--color-primary);
 }
 
 .hero-image-container {
