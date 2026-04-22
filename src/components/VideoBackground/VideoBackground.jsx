@@ -1,4 +1,3 @@
-import React from 'react';
 import './VideoBackground.css';
 
 const VIDEO_SRC = 'https://elegantbusiness.liquid-themes.com/wp-content/uploads/2024/09/elegant-business-bg.mp4';

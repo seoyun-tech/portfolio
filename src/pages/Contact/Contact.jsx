@@ -1,4 +1,3 @@
-import React from 'react';
 import VideoBackground from '../../components/VideoBackground/VideoBackground';
 import useInView from '../../hooks/useInView';
 import { useLanguage } from '../../context/LanguageContext';

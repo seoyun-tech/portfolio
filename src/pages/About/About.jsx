@@ -1,4 +1,3 @@
-import React from 'react';
 import useInView from '../../hooks/useInView';
 import SectionTag from '../../components/SectionTag/SectionTag';
 import VideoBackground from '../../components/VideoBackground/VideoBackground';

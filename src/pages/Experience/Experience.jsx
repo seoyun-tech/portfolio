@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import SectionTag from '../../components/SectionTag/SectionTag';
 import { useLanguage } from '../../context/LanguageContext';
 import './Experience.css';

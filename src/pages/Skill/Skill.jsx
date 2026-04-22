@@ -1,4 +1,4 @@
-import React, { useRef, useState, useCallback } from 'react';
+import { useRef, useState, useCallback } from 'react';
 import useInView from '../../hooks/useInView';
 import SectionTag from '../../components/SectionTag/SectionTag';
 import { useLanguage } from '../../context/LanguageContext';

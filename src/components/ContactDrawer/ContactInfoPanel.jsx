@@ -1,11 +1,10 @@
-import React from 'react';
 import SocialLinks from '../SocialLinks/SocialLinks';
 import { useLanguage } from '../../context/LanguageContext';
 import './ContactInfoPanel.css';
 
 const CONTENT = {
   ko: {
-    tag: '문의하기',
+    tag: '연락하기',
     title: ['새로운 기회를', '기다립니다.'],
     desc: '새로운 기회와 협업에 대해 언제든 환영합니다.\n편하게 연락주세요.',
     items: [

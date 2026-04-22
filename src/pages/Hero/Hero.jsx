@@ -1,4 +1,3 @@
-import React from 'react';
 import IconButton from '../../components/IconButton/IconButton';
 import { useLanguage } from '../../context/LanguageContext';
 import './Hero.css';
@@ -7,7 +6,7 @@ const CONTENT = {
   ko: {
     titleLines: ['시장을 읽고,', '제품으로 답하는'],
     subtitle: ['기획자 ', '박서윤', '입니다.'],
-    contactBtn: '문의하기',
+    contactBtn: '연락하기',
     resumeBtn: '이력서',
   },
   en: {

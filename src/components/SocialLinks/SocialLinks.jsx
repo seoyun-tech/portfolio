@@ -1,4 +1,3 @@
-import React from 'react';
 import { SOCIAL_LINKS } from '../../constants/social';
 import './SocialLinks.css';
 

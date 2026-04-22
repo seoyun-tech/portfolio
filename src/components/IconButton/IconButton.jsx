@@ -1,4 +1,3 @@
-import React from 'react';
 import IconCircle from '../IconCircle/IconCircle';
 import './IconButton.css';
 

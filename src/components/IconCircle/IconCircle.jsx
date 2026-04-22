@@ -1,4 +1,3 @@
-import React from 'react';
 import './IconCircle.css';
 
 const IconCircle = ({ children, className = '' }) => (
