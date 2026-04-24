@@ -27,11 +27,9 @@ const PROJECTS = {
         '생성형 AI와 TMDB API를 결합한 키즈 전용 OTT 미디어 서비스입니다. 어린이 맞춤형 콘텐츠 추천과 직관적인 UI를 목표로, 기획부터 프론트엔드·백엔드 개발 및 배포까지 전 과정을 수행했습니다.',
       intent: '기존 OTT는 성인 중심 설계로 어린이가 안전하게 이용하기 어렵습니다. AI 추천으로 연령에 맞는 콘텐츠를 자동 큐레이션하는 키즈 전용 미디어 환경을 기획·구현했습니다.',
       image: '/assets/project-rookiz-scene.jpg',
-      imagePosition: 'center',
-      imageScale: 1.4,
       modalImage: '/assets/project-rookiz-modal.png',
-      embedUrl: 'https://www.figma.com/proto/uiEEZajUsTu8qwpV3h2jVV/ROOKIZ-%EB%94%94%EC%9E%90%EC%9D%B8?node-id=15-249&p=f&viewport=109%2C436%2C0.04&t=8WADpxFJbOmXR8EF-1&scaling=scale-content&content-responsive&starting-point-node-id=15%3A249&show-proto-sidebar=1&page-id=0%3A1&hide-ui=1',
-      embedMask: 'inset(149px 124px 215px 123px round 4px)',
+      embedUrl: 'https://www.figma.com/proto/uiEEZajUsTu8qwpV3h2jVV/ROOKIZ-%EB%94%94%EC%9E%90%EC%9D%B8?node-id=4230-7512&p=f&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=4230%3A7512&page-id=0%3A1&hide-ui=1',
+      embedMask: { top: 83, left: 60.2, width: 359, height: 256, borderRadius: 4 },
       embedBg: true,
       meta: [
         { label: '기술스택',        value: 'React 19 · FastAPI · Tailwind v4' },
@@ -59,11 +57,9 @@ const PROJECTS = {
         '스포티파이 앱의 정보 구조와 탐색 흐름을 재설계한 iOS 모바일 앱 리디자인 프로젝트입니다. AI 개인화 추천(AI FOR YOU), 시간·상황 기반 Dynamic TPO, AI DJ 등 신규 기능을 기획하고, 온보딩부터 메인 탐색까지 전체 사용자 여정을 Figma 프로토타입으로 구현했습니다.',
       intent: '음악은 방대하지만 탐색 흐름이 복잡해 원하는 곡을 찾기 어렵습니다. AI 추천과 상황 기반 큐레이션으로 능동적 탐색 없이도 최적의 음악을 만나는 경험을 설계했습니다.',
       image: '/assets/project-spotify-scene.jpg',
-      imagePosition: 'center',
-      imageScale: 1,
       modalImage: null,
-      embedUrl: 'https://www.figma.com/proto/tATtPvK1Ez7Jh9rJTsWAks/SPOTIFY-%EB%94%94%EC%9E%90%EC%9D%B8?node-id=28-311&p=f&viewport=-49%2C323%2C0.17&t=NEK24RC6AvxeKoJ6-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=28%3A311&show-proto-sidebar=1&page-id=0%3A1&hide-ui=1',
-      embedMask: 'inset(122px 209px 109px 209px round 23px)',
+      embedUrl: 'https://www.figma.com/proto/tATtPvK1Ez7Jh9rJTsWAks/SPOTIFY-%EB%94%94%EC%9E%90%EC%9D%B8?node-id=2188-3467&p=f&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=2188%3A3467&page-id=2188%3A1329&hide-ui=1',
+      embedMask: { top: 59, left: 152, width: 177, height: 375, borderRadius: 26 },
       embedBg: true,
       meta: [
         { label: '기술스택',        value: 'Figma · FigJam' },
@@ -105,13 +101,11 @@ const PROJECTS = {
       category: 'Full-Stack Planning & Dev',
       description:
         'A kids-only OTT service integrating Generative AI with the TMDB API. With a focus on tailored content and an intuitive UI, I led the entire process from planning to full-stack development and deployment.',
-      intent: 'OTT platforms are built for adults, leaving children without a safe option. I built a kids-only service that uses AI to automatically match content to each child\'s age and taste.',
+      intent: "OTT platforms are built for adults, leaving children without a safe option. I built a kids-only service that uses AI to automatically match content to each child's age and taste.",
       image: '/assets/project-rookiz-scene.jpg',
-      imagePosition: 'center',
-      imageScale: 1.4,
       modalImage: '/assets/project-rookiz-modal.png',
-      embedUrl: 'https://www.figma.com/proto/uiEEZajUsTu8qwpV3h2jVV/ROOKIZ-%EB%94%94%EC%9E%90%EC%9D%B8?node-id=15-249&p=f&viewport=109%2C436%2C0.04&t=8WADpxFJbOmXR8EF-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=15%3A249&show-proto-sidebar=1&page-id=0%3A1&hide-ui=1',
-      embedMask: 'inset(232px 180px 200px 178px round 4px)',
+      embedUrl: 'https://www.figma.com/proto/uiEEZajUsTu8qwpV3h2jVV/ROOKIZ-%EB%94%94%EC%9E%90%EC%9D%B8?node-id=4230-7512&p=f&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=4230%3A7512&page-id=0%3A1&hide-ui=1',
+      embedMask: { top: 83, left: 60.2, width: 359, height: 256, borderRadius: 4 },
       embedBg: true,
       meta: [
         { label: 'Tech Stack',         value: 'React 19 · FastAPI · Tailwind v4' },
@@ -136,14 +130,12 @@ const PROJECTS = {
       ],
       category: 'UX/UI Planning & Design',
       description:
-        'An iOS mobile app redesign project restructuring Spotify\'s information architecture and navigation flow. I planned new features including AI personalized recommendations (AI FOR YOU), time/context-based Dynamic TPO, and AI DJ, and implemented the full user journey from onboarding to main navigation as a Figma prototype.',
+        "An iOS mobile app redesign project restructuring Spotify's information architecture and navigation flow. I planned new features including AI personalized recommendations (AI FOR YOU), time/context-based Dynamic TPO, and AI DJ, and implemented the full user journey from onboarding to main navigation as a Figma prototype.",
       intent: 'The library is vast, but finding the right song takes too many steps. I redesigned the experience so music finds you — through AI and context-aware recommendations.',
       image: '/assets/project-spotify-scene.jpg',
-      imagePosition: 'center',
-      imageScale: 1,
       modalImage: null,
-      embedUrl: 'https://www.figma.com/proto/tATtPvK1Ez7Jh9rJTsWAks/SPOTIFY-%EB%94%94%EC%9E%90%EC%9D%B8?node-id=28-311&p=f&viewport=-49%2C323%2C0.17&t=NEK24RC6AvxeKoJ6-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=28%3A311&show-proto-sidebar=1&page-id=0%3A1&hide-ui=1',
-      embedMask: 'inset(132px 209px 125px 217px round 28px)',
+      embedUrl: 'https://www.figma.com/proto/tATtPvK1Ez7Jh9rJTsWAks/SPOTIFY-%EB%94%94%EC%9E%90%EC%9D%B8?node-id=2188-3467&p=f&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=2188%3A3467&page-id=2188%3A1329&hide-ui=1',
+      embedMask: { top: 59, left: 152, width: 177, height: 375, borderRadius: 26 },
       embedBg: true,
       meta: [
         { label: 'Tech Stack',        value: 'Figma · FigJam' },
@@ -183,7 +175,6 @@ const ProjectModal = ({ proj, onClose }) => {
   return (
     <div className="proj-modal-overlay" onClick={onClose}>
       <div className="proj-modal" onClick={(e) => e.stopPropagation()}>
-
         <button className="proj-modal-close" onClick={onClose} aria-label="Close">
           <i className="fa-solid fa-xmark" />
         </button>
@@ -227,19 +218,18 @@ const ProjectModal = ({ proj, onClose }) => {
             ))}
           </div>
         )}
-
       </div>
     </div>
   );
 };
 
-const ProjectBlock = ({ proj, i, onOpen, lang }) => {
+const ProjectBlock = ({ proj, i, onOpen }) => {
   const [ref, visible] = useInView();
+  const { lang } = useLanguage();
 
   return (
-    <div ref={ref} className={`project-block ${visible ? 'is-visible' : ''}`} style={{ zIndex: i + 1 }}>
+    <div ref={ref} className={`project-block${visible ? ' is-visible' : ''}`} style={{ zIndex: i + 1 }}>
       <div className="project-container">
-
         <div className="proj-left">
           <div className="proj-number-row">
             <SectionTag noIcon>{proj.number}</SectionTag>
@@ -265,45 +255,39 @@ const ProjectBlock = ({ proj, i, onOpen, lang }) => {
           >
             {LABELS[lang].learnMore}
           </IconButton>
-
         </div>
 
         <div className="proj-right">
-          <div className="proj-category proj-category-desktop">
+          <div className="proj-category">
             <SectionTag noIcon>{proj.category}</SectionTag>
           </div>
-          <div className={`proj-image-wrap ${proj.embedUrl ? 'proj-image-wrap--embed' : ''}`}>
+          <div className={`proj-image-wrap${proj.embedUrl ? ' proj-image-wrap--embed' : ''}`}>
             {proj.embedUrl ? (
               <>
                 {proj.embedBg && (
                   <img src={proj.image} alt="" aria-hidden="true" className="proj-embed-bg" />
                 )}
-                <iframe
-                  src={toFigmaEmbed(proj.embedUrl)}
-                  className="proj-image proj-image-embed"
-                  style={proj.embedMask ? { '--embed-mask': proj.embedMask } : undefined}
-                  title={`${proj.titleLines[0].text} prototype`}
-                  allow="fullscreen; clipboard-write"
-                  allowFullScreen
-                  loading="lazy"
-                />
+                <div className="proj-embed-mask" style={proj.embedMask}>
+                  <iframe
+                    src={toFigmaEmbed(proj.embedUrl)}
+                    className="proj-image-embed"
+                    title={`${proj.titleLines[0].text} prototype`}
+                    allow="fullscreen; clipboard-write"
+                    allowFullScreen
+                    loading="eager"
+                  />
+                </div>
               </>
             ) : (
               <img
                 src={proj.image}
                 alt={`${proj.titleLines[0].text} project`}
                 className="proj-image"
-                style={{
-                  ...(proj.imagePosition && { objectPosition: proj.imagePosition }),
-                  ...(proj.imageScale && { transform: `scale(${proj.imageScale})` }),
-                }}
               />
             )}
           </div>
         </div>
-
       </div>
-
     </div>
   );
 };
@@ -321,9 +305,7 @@ const Project = () => {
             key={proj.number}
             proj={proj}
             i={i}
-
             onOpen={setActiveModal}
-            lang={lang}
           />
         ))}
       </section>

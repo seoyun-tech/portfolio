@@ -8,13 +8,26 @@ const CONTENT = {
   ko: {
     sectionTag: '소개',
     bioLines: [
-      '현장에서 마주한 한계를 넘기 위해 코드를 익혔습니다.',
-      '화려한 기술보다 해결하는 기술에 집중하며,',
-      '팀의 병목을 뚫고 최선의 경로를 설계합니다.',
+      '현장에서 마주한 한계를 직접 돌파하려 코드를 익혔습니다.',
+      '화려한 기술보다 중요한 건 문제를 해결하는 기술이기에,',
+      '팀의 병목을 뚫고 목표를 향한 가장 효율적인 길을 냅니다.',
     ],
     details: [
       { label: '생년월일', value: '1994. 05. 11' },
-      { label: '학력',     value: 'NTU International College(UK)\nArt & Design · 2015 – 2016\n\nNottingham Trent University(UK)\nFashion Degree(학사) · 2016 – 2019' },
+      {
+        label: '학력',
+        items: [
+          { title: 'NTU International College(UK)',   subtitle: 'Art & Design',         date: '2015 – 2016' },
+          { title: 'Nottingham Trent University(UK)', subtitle: 'Fashion Degree(학사)', date: '2016 – 2019' },
+        ],
+      },
+      {
+        label: '수상 및 활동',
+        items: [
+          { title: 'River Island 2019 Menswear Collection Concept Competition', subtitle: '전체 우승',                    date: '2018. 05' },
+          { title: '패션코드 2023 F/W 참가',                                      subtitle: '한국콘텐츠진흥원(KOCCA) 주관', date: '2022. 03' },
+        ],
+      },
     ],
   },
   en: {
@@ -26,7 +39,20 @@ const CONTENT = {
     ],
     details: [
       { label: 'Birth', value: 'May 11, 1994' },
-      { label: 'Education',     value: 'NTU International College(UK)\nArt & Design · 2015 – 2016\n\nNottingham Trent University(UK)\nFashion Degree(BA) · 2016 – 2019' },
+      {
+        label: 'Education',
+        items: [
+          { title: 'NTU International College(UK)',   subtitle: 'Art & Design',       date: '2015 – 2016' },
+          { title: 'Nottingham Trent University(UK)', subtitle: 'Fashion Degree(BA)', date: '2016 – 2019' },
+        ],
+      },
+      {
+        label: 'Awards & Activities',
+        items: [
+          { title: 'River Island 2019 Menswear Collection Concept Competition', subtitle: '1st Prize',     date: 'May 2018' },
+          { title: 'Fashion Code 2023 F/W',                                      subtitle: 'Hosted by KOCCA', date: 'Mar 2022' },
+        ],
+      },
     ],
   },
 };
@@ -40,54 +66,70 @@ const PROFILE = {
 const About = () => {
   const [ref, isVisible] = useInView();
   const { lang } = useLanguage();
+  const content = CONTENT[lang];
+  const bioText = content.bioLines.join('\n');
 
   return (
     <section
-      className={`about-section ${isVisible ? 'is-visible' : ''}`}
+      className={`about-section${isVisible ? ' is-visible' : ''}`}
       id="about"
       ref={ref}
     >
       <VideoBackground videoOpacity={0.4} overlay="rgba(12, 42, 27, 0.2)" />
 
-      <div className="about-content-wrapper">
-        <div className="about-tag-mobile">
-          <SectionTag variant="light">{CONTENT[lang].sectionTag}</SectionTag>
+      <div className="about-wrapper">
+        <div className="about-tag">
+          <SectionTag variant="light">{content.sectionTag}</SectionTag>
         </div>
-        <div className="about-layout-grid">
-
+        <div className="about-grid">
           <div className="about-item image-item">
-            <div className="profile-image-frame">
-              <img src={PROFILE.photo} alt="박서윤 프로필" className="profile-image-main" />
+            <div className="profile-frame">
+              <img src={PROFILE.photo} alt="박서윤 프로필" className="profile-img" />
             </div>
+            <p className="about-bio bio-desktop">{bioText}</p>
           </div>
 
-          <InfoBox profile={PROFILE} content={CONTENT[lang]} sectionTag={CONTENT[lang].sectionTag} />
-
+          <InfoBox profile={PROFILE} content={content} bioText={bioText} />
         </div>
       </div>
     </section>
   );
 };
 
-const InfoBox = ({ profile, content, sectionTag }) => (
-  <div className="about-item info-item">
-    <div className="about-me-tag">
-      <SectionTag variant="light">{sectionTag}</SectionTag>
+const InfoBox = ({ profile, content, bioText }) => {
+  const { lang } = useLanguage();
+  const primaryName = lang === 'ko' ? profile.koName : profile.enName;
+
+  return (
+    <div className="about-item info-item">
+      <div className="name-group">
+        <h2 className="name-ko">{primaryName}</h2>
+        <p className="name-en">{profile.enName}</p>
+      </div>
+      <p className="about-bio bio-mobile">{bioText}</p>
+      <div className="detail-list">
+        {content.details.map((detail, idx) => (
+          <div className="detail-row" key={detail.label} style={{ animationDelay: `${0.5 + idx * 0.15}s` }}>
+            <span className="detail-label">{detail.label}</span>
+            {detail.value && <span className="detail-value">{detail.value}</span>}
+            {detail.items && (
+              <div className="detail-items">
+                {detail.items.map((item, i) => (
+                  <div className="detail-item" key={i}>
+                    <div className="detail-head">
+                      <span className="detail-title">{item.title}</span>
+                      <span className="detail-meta">{item.date}</span>
+                    </div>
+                    <span className="detail-meta">{item.subtitle}</span>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
     </div>
-    <div className="name-header-group">
-      <h2 className="name-ko-title">{profile.koName}</h2>
-      <p className="name-en-subtitle">{profile.enName}</p>
-    </div>
-    <p className="about-bio">{content.bioLines.join('\n')}</p>
-    <div className="profile-data-list">
-      {content.details.map((item, idx) => (
-        <div className="data-row" key={idx} style={{ animationDelay: `${0.5 + idx * 0.15}s` }}>
-          <span className="data-label">{item.label}</span>
-          <span className="data-value">{item.value}</span>
-        </div>
-      ))}
-    </div>
-  </div>
-);
+  );
+};
 
 export default About;

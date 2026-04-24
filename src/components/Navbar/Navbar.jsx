@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useLanguage } from '../../context/LanguageContext';
 import './Navbar.css';
 
-const MENU_ITEMS = {
+const MENU = {
   ko: [
     { id: 'home',    label: '홈' },
     { id: 'about',   label: '소개' },
@@ -18,39 +18,40 @@ const MENU_ITEMS = {
 };
 
 const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { lang } = useLanguage();
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const { lang, setLang }       = useLanguage();
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 50);
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    const onScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
   useEffect(() => {
-    document.body.style.overflow = isMenuOpen ? 'hidden' : 'unset';
-    return () => { document.body.style.overflow = 'unset'; };
-  }, [isMenuOpen]);
+    document.body.style.overflow = menuOpen ? 'hidden' : '';
+    return () => { document.body.style.overflow = ''; };
+  }, [menuOpen]);
+
+  const switchLang = (l) => {
+    setLang(l);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return (
     <>
-      <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
+      <nav className={`navbar${scrolled ? ' scrolled' : ''}`}>
         <div className="navbar-container">
 
-          <NavActions />
+          <a href="#home" className="navbar-logo">
+            <img src="logo.svg" alt="Logo" />
+          </a>
 
-          <Logo />
-
-          <div className={`nav-content ${isMenuOpen ? 'open' : ''}`}>
+          <div className={`nav-panel${menuOpen ? ' open' : ''}`}>
             <ul className="nav-menu">
-              {MENU_ITEMS[lang].map(({ id, label }) => (
+              {MENU[lang].map(({ id, label }) => (
                 <li key={id}>
-                  <a
-                    href={`#${id}`}
-                    className="nav-item"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
+                  <a href={`#${id}`} className="nav-item" onClick={() => setMenuOpen(false)}>
                     {label}
                   </a>
                 </li>
@@ -58,53 +59,25 @@ const Navbar = () => {
             </ul>
           </div>
 
-          <Hamburger
-            isMenuOpen={isMenuOpen}
-            setIsMenuOpen={setIsMenuOpen}
-          />
+          <div className="lang-switcher">
+            <span className={lang === 'ko' ? 'active' : ''} onClick={() => switchLang('ko')}>Kr.</span>
+            <span className={lang === 'en' ? 'active' : ''} onClick={() => switchLang('en')}>En.</span>
+          </div>
+
+          <button
+            className={`nav-toggle${menuOpen ? ' open' : ''}`}
+            onClick={() => setMenuOpen(o => !o)}
+            aria-label="메뉴 열기"
+          >
+            <span className="hamburger" />
+          </button>
+
         </div>
       </nav>
 
-      {isMenuOpen && <div className="menu-overlay" onClick={() => setIsMenuOpen(false)} />}
+      {menuOpen && <div className="menu-overlay" onClick={() => setMenuOpen(false)} />}
     </>
   );
 };
-
-const Logo = () => (
-  <a href="#home" className="navbar-logo">
-    <img src="logo.svg" alt="Logo" className="logo-img" />
-  </a>
-);
-
-const NavActions = () => {
-  const { lang, setLang } = useLanguage();
-  return (
-    <div className="navbar-actions">
-      <div className="lang-switcher">
-        <span
-          className={lang === 'ko' ? 'active' : ''}
-          onClick={() => { setLang('ko'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-        >
-          Kr.
-        </span>
-        <span
-          className={lang === 'en' ? 'active' : ''}
-          onClick={() => { setLang('en'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-        >
-          En.
-        </span>
-      </div>
-    </div>
-  );
-};
-
-const Hamburger = ({ isMenuOpen, setIsMenuOpen }) => (
-  <div
-    className={`nav-toggle ${isMenuOpen ? 'open' : ''}`}
-    onClick={() => setIsMenuOpen(!isMenuOpen)}
-  >
-    <div className="hamburger" />
-  </div>
-);
 
 export default Navbar;

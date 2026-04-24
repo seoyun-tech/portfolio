@@ -4,9 +4,10 @@
 }
 
 .experience-container {
-  width: 1140px;
-  max-width: 90%;
+  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
+  padding: 0 40px;
   display: flex;
   flex-direction: column;
 }
@@ -17,52 +18,41 @@
   margin-top: 40px;
 }
 
-.tabs-navigation {
+.tabs-nav {
   width: 240px;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
+  gap: 8px;
 }
 
 .tab-item {
   padding: 16px 25px;
-  margin-bottom: 8px;
   cursor: pointer;
   border-radius: var(--radius-tag);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  align-items: center;
-}
-
-.tab-item.active {
-  background-color: var(--color-white);
-  box-shadow: var(--shadow-tab);
-}
-
-.tab-label {
   font-size: var(--text-lg);
   font-weight: 500;
   color: var(--color-primary-25);
   white-space: nowrap;
 }
 
-.tab-item.active .tab-label { color: var(--color-primary); }
+.tab-item.active {
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-tab);
+  color: var(--color-primary);
+}
 
 @keyframes tabFadeUp {
   from { opacity: 0; transform: translateY(14px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-.tabs-content {
+.experience-details {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   padding-top: 16px;
-}
-
-.experience-details {
-  display: flex;
-  flex-direction: column;
   animation: tabFadeUp 0.45s var(--ease-spring) forwards;
 }
 
@@ -113,8 +103,7 @@
 }
 
 @media (max-width: 768px) {
-  .experience-container { padding: 0 24px; max-width: 100%; }
+  .experience-container { padding: 0 24px; }
   .experience-tabs      { flex-direction: column; gap: 30px; }
-  .tabs-navigation      { width: 100%; }
-  .tab-item             { white-space: nowrap; }
+  .tabs-nav             { width: 100%; }
 }

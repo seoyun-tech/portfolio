@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 
-const useInView = (threshold = 0.15) => {
+const useInView = (threshold = 0.15, rootMargin = '0px') => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef(null);
 
@@ -12,12 +12,12 @@ const useInView = (threshold = 0.15) => {
           observer.disconnect();
         }
       },
-      { threshold }
+      { threshold, rootMargin }
     );
 
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
-  }, [threshold]);
+  }, [threshold, rootMargin]);
 
   return [ref, isVisible];
 };

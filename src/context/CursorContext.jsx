@@ -1,6 +1,4 @@
-import { createContext, useState, useEffect } from 'react';
-
-const CursorContext = createContext();
+import { useState, useEffect } from 'react';
 
 export const CursorProvider = ({ children }) => {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -8,19 +6,13 @@ export const CursorProvider = ({ children }) => {
 
   useEffect(() => {
     if (isTouchDevice) return;
-
-    const handleMouseMove = (e) => {
-      setMousePos({ x: e.clientX, y: e.clientY });
-    };
-
+    const handleMouseMove = (e) => setMousePos({ x: e.clientX, y: e.clientY });
     window.addEventListener('mousemove', handleMouseMove);
-    return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-    };
+    return () => window.removeEventListener('mousemove', handleMouseMove);
   }, [isTouchDevice]);
 
   return (
-    <CursorContext.Provider value={mousePos}>
+    <>
       {children}
       {!isTouchDevice && (
         <div
@@ -28,14 +20,13 @@ export const CursorProvider = ({ children }) => {
           style={{
             left: `${mousePos.x}px`,
             top: `${mousePos.y}px`,
-            transform: `translate(-50%, -50%)`,
+            transform: 'translate(-50%, -50%)',
             position: 'fixed',
             pointerEvents: 'none',
-            zIndex: 9999
+            zIndex: 9999,
           }}
         />
       )}
-    </CursorContext.Provider>
+    </>
   );
 };
-

@@ -22,22 +22,14 @@ const EXPERIENCES = {
       ],
     },
     {
-      company: '㈜훼미모드',
+      company: '㈜남영비비안',
       role: '상품기획 MD',
-      period: '2020.04 - 2022.05',
-      duration: '2년 2개월',
+      period: '2020.03 - 2022.05',
+      duration: '2년 4개월',
       description: [
         '시즌 상품 기획 및 비주얼 촬영 디렉팅',
         '수입 브랜드 3개 총괄 바잉 및 운영 전담',
-      ],
-    },
-    {
-      company: '㈜남영비비안',
-      role: '온라인 MD',
-      period: '2020.03 - 2020.04',
-      duration: '2개월',
-      description: [
-        '이커머스 채널 런칭 및 프로모션 지원',
+        '채널별 판매 전략 수립을 통한 목표 수익 및 매출 달성',
       ],
     },
   ],
@@ -48,28 +40,20 @@ const EXPERIENCES = {
       period: '2022.05 - 2025.10',
       duration: '3 yrs 6 mos',
       description: [
-        'Founded and operated a women\'s fashion brand',
+        "Founded and operated a women's fashion brand",
         'Managed the full cycle from garment design and production to marketing',
         'Optimised the online store based on user data and purchase patterns',
       ],
     },
     {
-      company: 'Femimode Co., Ltd.',
+      company: 'Namyoung Vivien Co., Ltd.',
       role: 'Product Planning MD',
-      period: '2020.04 - 2022.05',
-      duration: '2 yrs 2 mos',
+      period: '2020.03 - 2022.05',
+      duration: '2 yrs 4 mos',
       description: [
         'Managed seasonal product planning and directed visual photoshoot production',
         'Led the end-to-end buying and operations for three international brands',
-      ],
-    },
-    {
-      company: 'Vivien Co., Ltd.',
-      role: 'Online MD',
-      period: '2020.03 - 2020.04',
-      duration: '2 mos',
-      description: [
-        'Supported the launch of new e-commerce channels and seasonal promotions',
+        'Achieved revenue and sales targets through channel-specific sales strategies',
       ],
     },
   ],
@@ -92,37 +76,33 @@ const Experience = () => {
         <SectionTag>{LABELS[lang].sectionTag}</SectionTag>
 
         <div className="experience-tabs">
-
-          <div className="tabs-navigation">
+          <nav className="tabs-nav">
             {experiences.map((exp, index) => (
               <div
                 key={index}
-                className={`tab-item ${activeTab === index ? 'active' : ''}`}
+                className={`tab-item${activeTab === index ? ' active' : ''}`}
                 onClick={() => handleTabClick(index)}
               >
-                <span className="tab-label">{exp.company}</span>
+                {exp.company}
               </div>
             ))}
-          </div>
+          </nav>
 
-          <div className="tabs-content">
-            <div className="experience-details" key={animKey}>
-              <div className="position-header">
-                <h3 className="position-title">{experiences[activeTab].role}</h3>
-                <div className="period-info">
-                  <span>{experiences[activeTab].period}</span>
-                  <span className="duration">({experiences[activeTab].duration})</span>
-                </div>
+          <div className="experience-details" key={animKey}>
+            <div className="position-header">
+              <h3 className="position-title">{experiences[activeTab].role}</h3>
+              <div className="period-info">
+                <span>{experiences[activeTab].period}</span>
+                <span className="duration">({experiences[activeTab].duration})</span>
               </div>
-
-              <ul className="description-list">
-                {experiences[activeTab].description.map((item, idx) => (
-                  <li key={idx} className="description-item">{item}</li>
-                ))}
-              </ul>
             </div>
-          </div>
 
+            <ul className="description-list">
+              {experiences[activeTab].description.map((item, idx) => (
+                <li key={idx} className="description-item">{item}</li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </section>
