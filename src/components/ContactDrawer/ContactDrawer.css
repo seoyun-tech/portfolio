@@ -87,7 +87,6 @@
 .cd-form {
   display: flex;
   flex-direction: column;
-  gap: 0;
 }
 
 .cd-form-row {
@@ -159,7 +158,7 @@
 
 @media (max-width: 768px) {
   .cd-panel { width: 100vw; }
-  .cd-inner { padding: 60px 24px 40px; gap: 28px; }
+  .cd-inner { padding: 60px 24px 40px; }
   .cd-form-row { grid-template-columns: 1fr; }
   .cd-form-row .cd-form-input:first-child {
     border-right: none;

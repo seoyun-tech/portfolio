@@ -28,6 +28,7 @@ const PROJECTS = {
       intent: '기존 OTT는 성인 중심 설계로 어린이가 안전하게 이용하기 어렵습니다. AI 추천으로 연령에 맞는 콘텐츠를 자동 큐레이션하는 키즈 전용 미디어 환경을 기획·구현했습니다.',
       image: '/assets/project-rookiz-scene.jpg',
       modalImage: '/assets/project-rookiz-modal.png',
+      mobileImage: '/assets/project-rookiz.png',
       embedUrl: 'https://www.figma.com/proto/uiEEZajUsTu8qwpV3h2jVV/ROOKIZ-%EB%94%94%EC%9E%90%EC%9D%B8?node-id=4230-7512&p=f&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=4230%3A7512&page-id=0%3A1&hide-ui=1',
       embedMask: { top: 83, left: 60.2, width: 359, height: 256, borderRadius: 4 },
       embedBg: true,
@@ -58,6 +59,7 @@ const PROJECTS = {
       intent: '음악은 방대하지만 탐색 흐름이 복잡해 원하는 곡을 찾기 어렵습니다. AI 추천과 상황 기반 큐레이션으로 능동적 탐색 없이도 최적의 음악을 만나는 경험을 설계했습니다.',
       image: '/assets/project-spotify-scene.jpg',
       modalImage: null,
+      mobileImage: '/assets/project-spotify.png',
       embedUrl: 'https://www.figma.com/proto/tATtPvK1Ez7Jh9rJTsWAks/SPOTIFY-%EB%94%94%EC%9E%90%EC%9D%B8?node-id=2188-3467&p=f&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=2188%3A3467&page-id=2188%3A1329&hide-ui=1',
       embedMask: { top: 59, left: 152, width: 177, height: 375, borderRadius: 26 },
       embedBg: true,
@@ -104,6 +106,7 @@ const PROJECTS = {
       intent: "OTT platforms are built for adults, leaving children without a safe option. I built a kids-only service that uses AI to automatically match content to each child's age and taste.",
       image: '/assets/project-rookiz-scene.jpg',
       modalImage: '/assets/project-rookiz-modal.png',
+      mobileImage: '/assets/project-rookiz.png',
       embedUrl: 'https://www.figma.com/proto/uiEEZajUsTu8qwpV3h2jVV/ROOKIZ-%EB%94%94%EC%9E%90%EC%9D%B8?node-id=4230-7512&p=f&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=4230%3A7512&page-id=0%3A1&hide-ui=1',
       embedMask: { top: 83, left: 60.2, width: 359, height: 256, borderRadius: 4 },
       embedBg: true,
@@ -134,6 +137,7 @@ const PROJECTS = {
       intent: 'The library is vast, but finding the right song takes too many steps. I redesigned the experience so music finds you — through AI and context-aware recommendations.',
       image: '/assets/project-spotify-scene.jpg',
       modalImage: null,
+      mobileImage: '/assets/project-spotify.png',
       embedUrl: 'https://www.figma.com/proto/tATtPvK1Ez7Jh9rJTsWAks/SPOTIFY-%EB%94%94%EC%9E%90%EC%9D%B8?node-id=2188-3467&p=f&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=2188%3A3467&page-id=2188%3A1329&hide-ui=1',
       embedMask: { top: 59, left: 152, width: 177, height: 375, borderRadius: 26 },
       embedBg: true,
@@ -277,6 +281,9 @@ const ProjectBlock = ({ proj, i, onOpen }) => {
                     loading="eager"
                   />
                 </div>
+                {proj.mobileImage && (
+                  <img src={proj.mobileImage} alt={`${proj.titleLines[0].text} project`} className="proj-mobile-image" />
+                )}
               </>
             ) : (
               <img

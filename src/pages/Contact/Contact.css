@@ -96,5 +96,5 @@
     width: 100%;
     max-width: 340px;
   }
-  .contact-vdivider { width: 304px; height: 1px; }
+  .contact-vdivider { width: 100%; height: 1px; }
 }

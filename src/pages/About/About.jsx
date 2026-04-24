@@ -8,9 +8,9 @@ const CONTENT = {
   ko: {
     sectionTag: '소개',
     bioLines: [
-      '현장에서 마주한 한계를 직접 돌파하려 코드를 익혔습니다.',
-      '화려한 기술보다 중요한 건 문제를 해결하는 기술이기에,',
-      '팀의 병목을 뚫고 목표를 향한 가장 효율적인 길을 냅니다.',
+      '현장의 한계를 넘기 위해 코드를 익혔습니다.',
+      '화려한 기술보다 해결하는 기술에 집중하며,',
+      '팀의 병목을 뚫고 최선의 경로를 설계합니다.',
     ],
     details: [
       { label: '생년월일', value: '1994. 05. 11' },
@@ -33,9 +33,9 @@ const CONTENT = {
   en: {
     sectionTag: 'About Me',
     bioLines: [
-      'I mastered coding to overcome the real-world challenges.',
-      'Solving problems matters more than flashy tech.',
-      'I clear bottlenecks and design the optimal route.',
+      'I learned to code to push past the limits I faced on the ground.',
+      'I focus on the craft of solving problems, not on flashy tech.',
+      'I clear bottlenecks and design the best path forward.',
     ],
     details: [
       { label: 'Birth', value: 'May 11, 1994' },

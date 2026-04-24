@@ -83,7 +83,6 @@
   animation: fadeUpStretch 0.9s var(--ease-spring) 0.55s forwards;
 }
 
-
 .hero-resume-button {
   display: inline-flex;
   align-items: center;
