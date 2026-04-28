@@ -18,7 +18,6 @@
   opacity: 0;
 }
 
-
 .skill-header > .section-tag { margin-bottom: 30px; }
 
 .skill-description p {
@@ -76,9 +75,11 @@
   transition: background-color 0.35s ease, transform 0.35s var(--ease-spring), color 0.35s ease;
 }
 
-.skill-chip:hover {
-  background-color: #ebece4;
-  transform: translateY(-5px);
+@media (hover: hover) {
+  .skill-chip:hover {
+    background-color: #ebece4;
+    transform: translateY(-5px);
+  }
 }
 
 .carousel-controls { display: flex; gap: 15px; margin-top: 20px; }

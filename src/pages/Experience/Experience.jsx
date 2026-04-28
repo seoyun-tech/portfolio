@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import SectionTag from '../../components/SectionTag/SectionTag';
+import useInView from '../../hooks/useInView';
 import { useLanguage } from '../../context/LanguageContext';
 import './Experience.css';
 
@@ -40,9 +41,9 @@ const EXPERIENCES = {
       period: '2022.05 - 2025.10',
       duration: '3 yrs 6 mos',
       description: [
-        "Founded and operated a women's fashion brand",
-        'Managed the full cycle from garment design and production to marketing',
-        'Optimised the online store based on user data and purchase patterns',
+        "Founded and operated a women's clothing e-commerce business",
+        'Oversaw product sourcing, devised marketing strategies, and analysed customer data',
+        'Optimised the website through analysis of user purchasing behaviour',
       ],
     },
     {
@@ -51,9 +52,9 @@ const EXPERIENCES = {
       period: '2020.03 - 2022.05',
       duration: '2 yrs 4 mos',
       description: [
-        'Managed seasonal product planning and directed visual photoshoot production',
-        'Led the end-to-end buying and operations for three international brands',
-        'Achieved revenue and sales targets through channel-specific sales strategies',
+        'Led seasonal product planning and directed visual photoshoot production',
+        'Held sole responsibility for the buying and operations of three international import brands',
+        'Delivered revenue and sales targets through channel-specific trading strategies',
       ],
     },
   ],
@@ -63,6 +64,7 @@ const Experience = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [animKey, setAnimKey] = useState(0);
   const { lang } = useLanguage();
+  const [ref, isVisible] = useInView();
   const experiences = EXPERIENCES[lang];
 
   const handleTabClick = (index) => {
@@ -71,9 +73,11 @@ const Experience = () => {
   };
 
   return (
-    <section className="experience" id="experience">
+    <section className={`experience${isVisible ? ' is-visible' : ''}`} id="experience" ref={ref}>
       <div className="experience-container">
-        <SectionTag>{LABELS[lang].sectionTag}</SectionTag>
+        <div className="experience-tag">
+          <SectionTag>{LABELS[lang].sectionTag}</SectionTag>
+        </div>
 
         <div className="experience-tabs">
           <nav className="tabs-nav">

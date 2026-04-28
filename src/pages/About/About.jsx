@@ -8,12 +8,11 @@ const CONTENT = {
   ko: {
     sectionTag: '소개',
     bioLines: [
-      '현장의 한계를 넘기 위해 코드를 익혔습니다.',
-      '화려한 기술보다 해결하는 기술에 집중하며,',
-      '팀의 병목을 뚫고 최선의 경로를 설계합니다.',
+      '6년의 실무 경험에 기술적 이해를 더했습니다.',
+      '현장의 문제를 비즈니스 로직으로 설계하고,',
+      '기술적 소통으로 제품을 완성합니다.',
     ],
     details: [
-      { label: '생년월일', value: '1994. 05. 11' },
       {
         label: '학력',
         items: [
@@ -25,7 +24,7 @@ const CONTENT = {
         label: '수상 및 활동',
         items: [
           { title: 'River Island 2019 Menswear Collection Concept Competition', subtitle: '전체 우승',                    date: '2018. 05' },
-          { title: '패션코드 2023 F/W 참가',                                      subtitle: '한국콘텐츠진흥원(KOCCA) 주관', date: '2022. 03' },
+          { title: '패션코드 2023 F/W 참가',                                      subtitle: '한국콘텐츠진흥원(KOCCA) 주관', date: '2023. 03' },
         ],
       },
     ],
@@ -33,12 +32,11 @@ const CONTENT = {
   en: {
     sectionTag: 'About Me',
     bioLines: [
-      'I learned to code to push past the limits I faced on the ground.',
-      'I focus on the craft of solving problems, not on flashy tech.',
-      'I clear bottlenecks and design the best path forward.',
+      '6 years of experience, sharpened with technical depth.',
+      'I frame field problems as business logic,',
+      'and deliver through technical communication.',
     ],
     details: [
-      { label: 'Birth', value: 'May 11, 1994' },
       {
         label: 'Education',
         items: [
@@ -86,7 +84,6 @@ const About = () => {
             <div className="profile-frame">
               <img src={PROFILE.photo} alt="박서윤 프로필" className="profile-img" />
             </div>
-            <p className="about-bio bio-desktop">{bioText}</p>
           </div>
 
           <InfoBox profile={PROFILE} content={content} bioText={bioText} />
@@ -106,7 +103,7 @@ const InfoBox = ({ profile, content, bioText }) => {
         <h2 className="name-ko">{primaryName}</h2>
         <p className="name-en">{profile.enName}</p>
       </div>
-      <p className="about-bio bio-mobile">{bioText}</p>
+      <p className="about-bio">{bioText}</p>
       <div className="detail-list">
         {content.details.map((detail, idx) => (
           <div className="detail-row" key={detail.label} style={{ animationDelay: `${0.5 + idx * 0.15}s` }}>

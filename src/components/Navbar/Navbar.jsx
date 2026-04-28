@@ -38,6 +38,20 @@ const Navbar = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const handleNavClick = (e, id) => {
+    if (!menuOpen) return;
+    e.preventDefault();
+    document.body.style.overflow = '';
+    setMenuOpen(false);
+    requestAnimationFrame(() => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const navHeight = document.querySelector('.navbar')?.offsetHeight ?? 72;
+      const y = el.getBoundingClientRect().top + window.scrollY - navHeight;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    });
+  };
+
   return (
     <>
       <nav className={`navbar${scrolled ? ' scrolled' : ''}`}>
@@ -51,7 +65,7 @@ const Navbar = () => {
             <ul className="nav-menu">
               {MENU[lang].map(({ id, label }) => (
                 <li key={id}>
-                  <a href={`#${id}`} className="nav-item" onClick={() => setMenuOpen(false)}>
+                  <a href={`#${id}`} className="nav-item" onClick={(e) => handleNavClick(e, id)}>
                     {label}
                   </a>
                 </li>

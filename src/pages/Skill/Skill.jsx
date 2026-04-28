@@ -4,7 +4,7 @@ import SectionTag from '../../components/SectionTag/SectionTag';
 import { useLanguage } from '../../context/LanguageContext';
 import './Skill.css';
 
-const SKILLS_DATA = ["HTML", "CSS", "JavaScript", "React", "GitHub", "Figma", "Photoshop", "Illustrator"];
+const SKILLS_DATA = ['HTML', 'CSS', 'JavaScript', 'React', 'GitHub', 'Figma', 'Photoshop', 'Illustrator'];
 
 const SCROLL_AMOUNT = 300;
 
