@@ -68,7 +68,7 @@ const PROJECTS = [
       en: 'The library is vast, but finding the right song takes too many steps. I redesigned the experience so music finds you, through AI and context-aware recommendations.',
     },
     image:       '/assets/project-spotify-scene.jpg',
-    modalImage:  null,
+    modalImage:  '/assets/project-spotify-modal.png',
     mobileImage: '/assets/project-spotify.png',
     embedUrl:    'https://www.figma.com/proto/tATtPvK1Ez7Jh9rJTsWAks/SPOTIFY-%EB%94%94%EC%9E%90%EC%9D%B8?node-id=2188-3467&p=f&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=2188%3A3467&page-id=2188%3A1329&hide-ui=1',
     embedMask:   { top: 59, left: 152, width: 177, height: 375, borderRadius: 26 },
@@ -98,7 +98,7 @@ const PROJECTS = [
       en: "Musinsa's webzine and shop content are intertwined, making purposeful navigation difficult. I strengthened each function independently, building an [Entry → Desire → Purchase → Exploration] flow inspired by department store design, with style clustering for a personalised experience.",
     },
     image:       '/assets/project-musinsa-scene.png',
-    modalImage:  '/assets/project-musinsa.png',
+    modalImage:  '/assets/project-musinsa-modal.png',
     mobileImage: '/assets/project-musinsa.png',
     meta: {
       ko: ['HTML · CSS · JavaScript', 'GitHub Pages', '2주',     '100%', 'Chrome · Safari · Firefox', '3페이지 · 모달 구성 · 반응형'],
