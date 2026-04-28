@@ -13,12 +13,12 @@ const EXPERIENCES = {
   ko: [
     {
       company: '공원더파크',
-      role: '창업 · 운영',
+      role: '대표',
       period: '2022.05 - 2025.10',
       duration: '3년 6개월',
       description: [
         '여성 의류 온라인 쇼핑몰 창업 및 운영',
-        '제품 소싱, 마케팅 전략 수립 및 고객 데이터 분석',
+        '상품 기획·디자인·생산 관리 및 데이터 기반 마케팅',
         '사용자 구매 패턴 분석을 통한 웹사이트 최적화',
       ],
     },
@@ -42,7 +42,7 @@ const EXPERIENCES = {
       duration: '3 yrs 6 mos',
       description: [
         "Founded and operated a women's clothing e-commerce business",
-        'Oversaw product sourcing, devised marketing strategies, and analysed customer data',
+        'Managed product planning, design, and production while executing data-driven marketing strategies',
         'Optimised the website through analysis of user purchasing behaviour',
       ],
     },
@@ -74,7 +74,7 @@ const Experience = () => {
 
   return (
     <section className={`experience${isVisible ? ' is-visible' : ''}`} id="experience" ref={ref}>
-      <div className="experience-container">
+      <div className="experience-container page-container">
         <div className="experience-tag">
           <SectionTag>{LABELS[lang].sectionTag}</SectionTag>
         </div>

@@ -6,7 +6,6 @@
   width: fit-content;
   border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: var(--radius-pill);
-  text-decoration: none;
   font-weight: 500;
   font-size: var(--text-sm);
   color: var(--color-primary);
@@ -34,11 +33,8 @@
 .icon-btn:hover .icon-circle i { color: var(--color-white); }
 
 .icon-btn-text {
-  font-size: var(--text-sm);
-  font-weight: 500;
   line-height: 20px;
   letter-spacing: -0.01em;
-  color: var(--color-primary);
   transition: color 0.3s ease;
 }
 

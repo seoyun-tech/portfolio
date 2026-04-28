@@ -4,10 +4,6 @@
 }
 
 .experience-container {
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 40px;
   display: flex;
   flex-direction: column;
 }
@@ -110,8 +106,7 @@
 }
 
 @media (max-width: 768px) {
-  .experience           { padding: 60px 0; }
-  .experience-container { padding: 0 24px; }
-  .experience-tabs      { flex-direction: column; gap: 30px; }
-  .tabs-nav             { width: 100%; }
+  .experience      { padding: 60px 0; }
+  .experience-tabs { flex-direction: column; gap: 30px; }
+  .tabs-nav        { width: 100%; }
 }

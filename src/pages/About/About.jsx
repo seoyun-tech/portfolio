@@ -61,38 +61,6 @@ const PROFILE = {
   photo:  '/assets/about-photo.svg',
 };
 
-const About = () => {
-  const [ref, isVisible] = useInView();
-  const { lang } = useLanguage();
-  const content = CONTENT[lang];
-  const bioText = content.bioLines.join('\n');
-
-  return (
-    <section
-      className={`about-section${isVisible ? ' is-visible' : ''}`}
-      id="about"
-      ref={ref}
-    >
-      <VideoBackground videoOpacity={0.4} overlay="rgba(12, 42, 27, 0.2)" />
-
-      <div className="about-wrapper">
-        <div className="about-tag">
-          <SectionTag variant="light">{content.sectionTag}</SectionTag>
-        </div>
-        <div className="about-grid">
-          <div className="about-item image-item">
-            <div className="profile-frame">
-              <img src={PROFILE.photo} alt="박서윤 프로필" className="profile-img" />
-            </div>
-          </div>
-
-          <InfoBox profile={PROFILE} content={content} bioText={bioText} />
-        </div>
-      </div>
-    </section>
-  );
-};
-
 const InfoBox = ({ profile, content, bioText }) => {
   const { lang } = useLanguage();
   const primaryName = lang === 'ko' ? profile.koName : profile.enName;
@@ -108,7 +76,6 @@ const InfoBox = ({ profile, content, bioText }) => {
         {content.details.map((detail, idx) => (
           <div className="detail-row" key={detail.label} style={{ animationDelay: `${0.5 + idx * 0.15}s` }}>
             <span className="detail-label">{detail.label}</span>
-            {detail.value && <span className="detail-value">{detail.value}</span>}
             {detail.items && (
               <div className="detail-items">
                 {detail.items.map((item, i) => (
@@ -126,6 +93,38 @@ const InfoBox = ({ profile, content, bioText }) => {
         ))}
       </div>
     </div>
+  );
+};
+
+const About = () => {
+  const [ref, isVisible] = useInView();
+  const { lang } = useLanguage();
+  const content = CONTENT[lang];
+  const bioText = content.bioLines.join('\n');
+
+  return (
+    <section
+      className={`about-section${isVisible ? ' is-visible' : ''}`}
+      id="about"
+      ref={ref}
+    >
+      <VideoBackground videoOpacity={0.4} overlay="rgba(12, 42, 27, 0.2)" />
+
+      <div className="about-wrapper page-container">
+        <div className="about-tag">
+          <SectionTag variant="light">{content.sectionTag}</SectionTag>
+        </div>
+        <div className="about-grid">
+          <div className="about-item image-item">
+            <div className="profile-frame">
+              <img src={PROFILE.photo} alt="박서윤 프로필" className="profile-img" />
+            </div>
+          </div>
+
+          <InfoBox profile={PROFILE} content={content} bioText={bioText} />
+        </div>
+      </div>
+    </section>
   );
 };
 

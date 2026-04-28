@@ -16,17 +16,17 @@ html {
 body {
   min-width: 320px;
   min-height: 100vh;
+  font-family: var(--font-main);
+  color: var(--color-primary);
+  background-color: var(--color-white);
+  overflow-x: hidden;
 }
 
 #root {
   width: 100%;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+ul { list-style: none; }
 
 a {
   text-decoration: none;

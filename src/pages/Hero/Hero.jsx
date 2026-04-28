@@ -23,7 +23,7 @@ const Hero = ({ onOpenContact }) => {
 
   return (
     <section className="hero" id="home">
-      <div className="hero-container">
+      <div className="hero-container page-container">
 
         <div className="hero-text-content">
           <h1 className="hero-title">

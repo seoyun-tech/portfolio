@@ -34,6 +34,18 @@
   --color-dark:      #1e2823;   /* About / Contact / Footer bg */
 }
 
+/* ─── Page container ────────────────────── */
+.page-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+@media (max-width: 768px) {
+  .page-container { padding: 0 24px; }
+}
+
 /* ─── Shared reveal animation ────────────
    About, Skill, Experience 모두 동일 로직.
    각 섹션 CSS에서 animation-delay만 커스텀.

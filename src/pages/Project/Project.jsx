@@ -172,12 +172,61 @@ const ProjectModal = ({ proj, lang, onClose }) => {
   );
 };
 
+const ProjectImage = ({ proj, lang }) => {
+  const title = `${proj.titleLines[0][lang]} project`;
+  const hasEmbed = proj.embedUrl || proj.screenImage;
+  const hasVariants = hasEmbed || proj.mobileImage;
+
+  if (!hasVariants) {
+    return (
+      <div className="proj-image-wrap">
+        <img src={proj.image} alt={title} className="proj-image" />
+      </div>
+    );
+  }
+
+  return (
+    <div className="proj-image-wrap proj-image-wrap--embed">
+      <img
+        src={proj.image}
+        alt={hasEmbed ? '' : title}
+        aria-hidden={hasEmbed || undefined}
+        className={hasEmbed ? 'proj-embed-bg' : 'proj-image'}
+      />
+      {hasEmbed && (
+        <div className="proj-embed-mask" style={proj.embedMask}>
+          {proj.embedUrl ? (
+            <iframe
+              src={toFigmaEmbed(proj.embedUrl)}
+              className="proj-image-embed"
+              title={`${proj.titleLines[0][lang]} prototype`}
+              allow="fullscreen; clipboard-write"
+              allowFullScreen
+              loading="eager"
+            />
+          ) : (
+            <img
+              src={proj.screenImage}
+              alt={title}
+              className="proj-image-embed"
+              style={{ objectFit: 'cover', objectPosition: 'top' }}
+            />
+          )}
+        </div>
+      )}
+      {proj.mobileImage && (
+        <img src={proj.mobileImage} alt={title} className="proj-mobile-image" />
+      )}
+    </div>
+  );
+};
+
 const ProjectBlock = ({ proj, i, lang, onOpen }) => {
   const [ref, visible] = useInView();
 
   return (
     <div ref={ref} className={`project-block${visible ? ' is-visible' : ''}`} style={{ zIndex: i + 1 }}>
-      <div className="project-container">
+      <div className="project-container page-container">
         <div className="proj-left">
           <div className="proj-number-row">
             <SectionTag noIcon>{proj.number}</SectionTag>
@@ -209,47 +258,7 @@ const ProjectBlock = ({ proj, i, lang, onOpen }) => {
           <div className="proj-category">
             <SectionTag noIcon>{proj.category[lang]}</SectionTag>
           </div>
-          <div className={`proj-image-wrap${(proj.embedUrl || proj.screenImage || proj.mobileImage) ? ' proj-image-wrap--embed' : ''}`}>
-            {(proj.embedUrl || proj.screenImage || proj.mobileImage) ? (
-              <>
-                {(proj.embedUrl || proj.screenImage) ? (
-                  <img src={proj.image} alt="" aria-hidden="true" className="proj-embed-bg" />
-                ) : (
-                  <img src={proj.image} alt={`${proj.titleLines[0][lang]} project`} className="proj-image" />
-                )}
-                {(proj.embedUrl || proj.screenImage) && (
-                  <div className="proj-embed-mask" style={proj.embedMask}>
-                    {proj.embedUrl ? (
-                      <iframe
-                        src={toFigmaEmbed(proj.embedUrl)}
-                        className="proj-image-embed"
-                        title={`${proj.titleLines[0][lang]} prototype`}
-                        allow="fullscreen; clipboard-write"
-                        allowFullScreen
-                        loading="eager"
-                      />
-                    ) : (
-                      <img
-                        src={proj.screenImage}
-                        alt={`${proj.titleLines[0][lang]} project`}
-                        className="proj-image-embed"
-                        style={{ objectFit: 'cover', objectPosition: 'top' }}
-                      />
-                    )}
-                  </div>
-                )}
-                {proj.mobileImage && (
-                  <img src={proj.mobileImage} alt={`${proj.titleLines[0][lang]} project`} className="proj-mobile-image" />
-                )}
-              </>
-            ) : (
-              <img
-                src={proj.image}
-                alt={`${proj.titleLines[0][lang]} project`}
-                className="proj-image"
-              />
-            )}
-          </div>
+          <ProjectImage proj={proj} lang={lang} />
         </div>
       </div>
     </div>

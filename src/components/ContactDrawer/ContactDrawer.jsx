@@ -63,9 +63,7 @@ const ContactDrawer = ({ isOpen, onClose }) => {
         </button>
 
         <div className="cd-inner">
-          <div className="cd-info">
-            <ContactInfoPanel variant="page" />
-          </div>
+          <ContactInfoPanel variant="page" />
 
           <form ref={formRef} onSubmit={handleSubmit} className="cd-form">
             <div className="cd-form-row">

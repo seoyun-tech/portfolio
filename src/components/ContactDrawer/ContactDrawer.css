@@ -79,11 +79,6 @@
   flex: 1;
 }
 
-.cd-info {
-  display: flex;
-  flex-direction: column;
-}
-
 .cd-form {
   display: flex;
   flex-direction: column;

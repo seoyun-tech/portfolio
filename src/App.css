@@ -5,13 +5,6 @@
   cursor: none !important;
 }
 
-body {
-  font-family: var(--font-main);
-  color: var(--color-primary);
-  background-color: var(--color-white);
-  overflow-x: hidden;
-}
-
 .App {
   width: 100%;
   max-width: 1920px;

@@ -12,10 +12,6 @@
 .about-wrapper {
   position: relative;
   z-index: 10;
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 40px;
 }
 
 .about-tag {
@@ -41,7 +37,6 @@
 .image-item {
   display: flex;
   flex-direction: column;
-  gap: 24px;
 }
 
 
@@ -105,13 +100,6 @@
   color: var(--color-white-60);
 }
 
-.detail-value {
-  font-size: var(--text-base);
-  color: var(--color-white);
-  opacity: 0.95;
-  white-space: pre-line;
-}
-
 .detail-items {
   display: flex;
   flex-direction: column;
@@ -153,7 +141,6 @@
 
 @media (max-width: 768px) {
   .about-section  { padding: 60px 0; }
-  .about-wrapper  { padding: 0 24px; }
   .about-tag      { margin-bottom: 40px; }
   .about-grid {
     grid-template-columns: 1fr;

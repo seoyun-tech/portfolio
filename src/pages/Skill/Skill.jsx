@@ -57,7 +57,7 @@ const Skill = () => {
       id="skill"
       className={`skill-section${isVisible ? ' is-visible' : ''}`}
     >
-      <div className="skill-container">
+      <div className="skill-container page-container">
 
         <div className="skill-header">
           <SectionTag>{LABELS[lang].sectionTag}</SectionTag>
