@@ -17,14 +17,7 @@ export const CursorProvider = ({ children }) => {
       {!isTouchDevice && (
         <div
           className="cursor-dot"
-          style={{
-            left: `${mousePos.x}px`,
-            top: `${mousePos.y}px`,
-            transform: 'translate(-50%, -50%)',
-            position: 'fixed',
-            pointerEvents: 'none',
-            zIndex: 9999,
-          }}
+          style={{ left: `${mousePos.x}px`, top: `${mousePos.y}px` }}
         />
       )}
     </>

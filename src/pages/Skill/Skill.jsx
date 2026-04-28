@@ -1,4 +1,4 @@
-import { useRef, useState, useCallback } from 'react';
+import { useRef, useState, useCallback, useEffect } from 'react';
 import useInView from '../../hooks/useInView';
 import SectionTag from '../../components/SectionTag/SectionTag';
 import { useLanguage } from '../../context/LanguageContext';
@@ -9,8 +9,8 @@ const SKILLS_DATA = ['HTML', 'CSS', 'JavaScript', 'React', 'GitHub', 'Figma', 'P
 const SCROLL_AMOUNT = 300;
 
 const LABELS = {
-  ko: { sectionTag: '보유 스킬' },
-  en: { sectionTag: 'Professional Skills' },
+  ko: { sectionTag: '스킬' },
+  en: { sectionTag: 'Skills' },
 };
 
 const DESCRIPTION = {
@@ -40,9 +40,11 @@ const Skill = () => {
   const checkScroll = useCallback(() => {
     const el = carouselRef.current;
     if (!el) return;
-    setCanScrollLeft(el.scrollLeft > 0);
-    setCanScrollRight(Math.ceil(el.scrollLeft + el.clientWidth) < el.scrollWidth);
+    setCanScrollLeft(el.scrollLeft > 1);
+    setCanScrollRight(el.scrollLeft + el.clientWidth < el.scrollWidth - 1);
   }, []);
+
+  useEffect(() => { checkScroll(); }, [checkScroll]);
 
   const scroll = (direction) => {
     if (!carouselRef.current) return;
@@ -53,7 +55,7 @@ const Skill = () => {
     <section
       ref={sectionRef}
       id="skill"
-      className={`skill-section ${isVisible ? 'is-visible' : ''}`}
+      className={`skill-section${isVisible ? ' is-visible' : ''}`}
     >
       <div className="skill-container">
 

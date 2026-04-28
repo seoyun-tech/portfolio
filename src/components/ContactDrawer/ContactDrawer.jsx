@@ -1,6 +1,7 @@
-import { useRef, useState, useEffect } from 'react';
+import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { useLanguage } from '../../context/LanguageContext';
+import useBodyLock from '../../hooks/useBodyLock';
 import ContactInfoPanel from './ContactInfoPanel';
 import './ContactDrawer.css';
 
@@ -11,13 +12,17 @@ const PLACEHOLDERS = {
     message: '채용 문의, 협업 제안 등 편하게 말씀해 주세요.',
     sending: '전송 중...',
     send: '— 메시지 보내기',
+    success: '메시지가 전송되었습니다.',
+    error: '전송에 실패했습니다. 다시 시도해 주세요.',
   },
   en: {
-    name: "Please enter your name",
+    name: 'Please enter your name.',
     email: 'example@domain.com',
     message: 'Please feel free to share your recruitment inquiries or collaboration proposals.',
     sending: 'Sending...',
     send: '— Send Message',
+    success: 'Your message has been sent.',
+    error: 'Something went wrong. Please try again.',
   },
 };
 
@@ -28,10 +33,7 @@ const ContactDrawer = ({ isOpen, onClose }) => {
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState(null);
 
-  useEffect(() => {
-    document.body.style.overflow = isOpen ? 'hidden' : '';
-    return () => { document.body.style.overflow = ''; };
-  }, [isOpen]);
+  useBodyLock(isOpen);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -77,8 +79,8 @@ const ContactDrawer = ({ isOpen, onClose }) => {
             <button className="cd-form-btn" type="submit" disabled={loading}>
               {loading ? ph.sending : ph.send}
             </button>
-            {status === 'success' && <p className="cd-form-feedback success">메시지가 전송되었습니다.</p>}
-            {status === 'error'   && <p className="cd-form-feedback error">전송에 실패했습니다. 다시 시도해 주세요.</p>}
+            {status === 'success' && <p className="cd-form-feedback success">{ph.success}</p>}
+            {status === 'error'   && <p className="cd-form-feedback error">{ph.error}</p>}
           </form>
         </div>
       </div>

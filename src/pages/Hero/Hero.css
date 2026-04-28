@@ -121,10 +121,11 @@
 
 @media (max-width: 1024px) {
   .hero                 { height: auto; min-height: 100vh; padding: 100px 0 0; }
-  .hero-container       { flex-direction: column; text-align: center; }
+  .hero-container       { flex-direction: column; text-align: center; padding: 0 32px; }
   .hero-image-container {
     position: relative;
     width: 100%;
+    height: auto;
     max-width: 480px;
     right: 0;
     top: 14px;
@@ -137,6 +138,7 @@
 }
 
 @media (max-width: 480px) {
-  .hero-title    { font-size: 30px; line-height: 42px; }
-  .hero-subtitle { font-size: 22px; line-height: 34px; }
+  .hero-container { padding: 0 24px; }
+  .hero-title     { font-size: 30px; line-height: 42px; }
+  .hero-subtitle  { font-size: 22px; line-height: 34px; }
 }

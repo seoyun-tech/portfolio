@@ -110,6 +110,7 @@
 }
 
 @media (max-width: 768px) {
+  .experience           { padding: 60px 0; }
   .experience-container { padding: 0 24px; }
   .experience-tabs      { flex-direction: column; gap: 30px; }
   .tabs-nav             { width: 100%; }

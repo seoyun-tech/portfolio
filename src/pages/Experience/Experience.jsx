@@ -13,7 +13,7 @@ const EXPERIENCES = {
   ko: [
     {
       company: '공원더파크',
-      role: '온라인쇼핑몰 운영',
+      role: '창업 · 운영',
       period: '2022.05 - 2025.10',
       duration: '3년 6개월',
       description: [

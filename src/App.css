@@ -26,6 +26,7 @@ body {
   position: fixed;
   pointer-events: none;
   z-index: 9999;
+  transform: translate(-50%, -50%);
   mix-blend-mode: multiply;
   transition: width 0.25s ease-out, height 0.25s ease-out, background 0.25s ease-out;
 }

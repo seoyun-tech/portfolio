@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useLanguage } from '../../context/LanguageContext';
+import useBodyLock from '../../hooks/useBodyLock';
 import './Navbar.css';
 
 const MENU = {
@@ -28,10 +29,7 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  useEffect(() => {
-    document.body.style.overflow = menuOpen ? 'hidden' : '';
-    return () => { document.body.style.overflow = ''; };
-  }, [menuOpen]);
+  useBodyLock(menuOpen);
 
   const switchLang = (l) => {
     setLang(l);
@@ -41,7 +39,6 @@ const Navbar = () => {
   const handleNavClick = (e, id) => {
     if (!menuOpen) return;
     e.preventDefault();
-    document.body.style.overflow = '';
     setMenuOpen(false);
     requestAnimationFrame(() => {
       const el = document.getElementById(id);

@@ -59,5 +59,6 @@
 }
 
 @media (max-width: 768px) {
-  .footer-container { padding: 0 24px; }
+  .footer-container  { padding: 0 24px; }
+  .footer-copyright  { font-size: 11px; }
 }

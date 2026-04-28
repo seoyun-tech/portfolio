@@ -29,11 +29,11 @@ const PROJECTS = [
     category:    { ko: '풀스택 기획 · 개발',    en: 'Full-Stack Planning & Dev' },
     description: {
       ko: '생성형 AI와 TMDB API를 결합한 키즈 전용 OTT 미디어 서비스입니다. 어린이 맞춤형 콘텐츠 추천과 직관적인 UI를 목표로, 기획부터 프론트엔드·백엔드 개발 및 배포까지 전 과정을 수행했습니다.',
-      en: 'A kids-only OTT service integrating Generative AI with the TMDB API. With a focus on tailored content and an intuitive UI, I led the entire process from planning to full-stack development and deployment.',
+      en: 'A kids-only OTT service integrating Generative AI with the TMDB API. With a focus on tailored content and an intuitive UI, I oversaw the full process from concept through to full-stack development and deployment.',
     },
     intent: {
       ko: '기존 OTT는 성인 중심 설계로 어린이가 안전하게 이용하기 어렵습니다. AI 추천으로 연령에 맞는 콘텐츠를 자동 큐레이션하는 키즈 전용 미디어 환경을 기획·구현했습니다.',
-      en: "OTT platforms are built for adults, leaving children without a safe option. I built a kids-only service that uses AI to automatically match content to each child's age and taste.",
+      en: "OTT platforms are built for adults, leaving children without a safe option. I developed a kids-only service that uses AI to automatically curate content suited to each child's age and interests.",
     },
     image:       '/assets/project-rookiz-scene.jpg',
     modalImage:  '/assets/project-rookiz-modal.png',
@@ -61,11 +61,11 @@ const PROJECTS = [
     category:    { ko: 'UX/UI 기획 및 설계', en: 'UX/UI Planning & Design' },
     description: {
       ko: '스포티파이 앱의 정보 구조와 탐색 흐름을 재설계한 iOS 모바일 앱 리디자인 프로젝트입니다. AI 개인화 추천(AI FOR YOU), 시간·상황 기반 Dynamic TPO, AI DJ 등 신규 기능을 기획하고, 온보딩부터 메인 탐색까지 전체 사용자 여정을 Figma 프로토타입으로 구현했습니다.',
-      en: "An iOS mobile app redesign project restructuring Spotify's information architecture and navigation flow. I planned new features including AI personalized recommendations (AI FOR YOU), time/context-based Dynamic TPO, and AI DJ, and implemented the full user journey from onboarding to main navigation as a Figma prototype.",
+      en: "An iOS mobile app redesign project restructuring Spotify's information architecture and navigation flow. I planned new features including AI personalised recommendations (AI FOR YOU), time/context-based Dynamic TPO, and AI DJ, and implemented the full user journey from onboarding to main navigation as a Figma prototype.",
     },
     intent: {
       ko: '음악은 방대하지만 탐색 흐름이 복잡해 원하는 곡을 찾기 어렵습니다. AI 추천과 상황 기반 큐레이션으로 능동적 탐색 없이도 최적의 음악을 만나는 경험을 설계했습니다.',
-      en: 'The library is vast, but finding the right song takes too many steps. I redesigned the experience so music finds you — through AI and context-aware recommendations.',
+      en: 'The library is vast, but finding the right song takes too many steps. I redesigned the experience so music finds you, through AI and context-aware recommendations.',
     },
     image:       '/assets/project-spotify-scene.jpg',
     modalImage:  null,
@@ -74,8 +74,8 @@ const PROJECTS = [
     embedMask:   { top: 59, left: 152, width: 177, height: 375, borderRadius: 26 },
     embedBg:     true,
     meta: {
-      ko: ['Figma · FigJam', 'Figma 프로토타입 (iOS)', '2주',     '100%', '없음 (모바일 앱)', '10화면 · AI 추천 · Dynamic TPO · AI DJ'],
-      en: ['Figma · FigJam', 'Figma Prototype (iOS)',  '2 weeks', '100%', 'N/A (Mobile App)', '10 screens · AI Rec · Dynamic TPO · AI DJ'],
+      ko: ['Figma · FigJam', 'Figma 프로토타입', '2주',     '100%', '없음 (모바일 앱)', '10화면 · AI 추천 · Dynamic TPO · AI DJ'],
+      en: ['Figma · FigJam', 'Figma Prototype',  '2 weeks', '100%', 'N/A (Mobile App)', '10 screens · AI Rec · Dynamic TPO · AI DJ'],
     },
     links: [
       { label: { ko: '기획서',     en: 'Deck'      }, icon: 'fa-brands fa-figma', url: 'https://www.figma.com/deck/MpwEOgJp09w2yDCL1vJaRO' },

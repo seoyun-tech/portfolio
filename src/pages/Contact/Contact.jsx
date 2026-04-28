@@ -19,7 +19,7 @@ const Contact = () => {
   const [ref, isVisible] = useInView();
 
   return (
-    <section className={`contact-section ${isVisible ? 'is-visible' : ''}`} id="contact" ref={ref}>
+    <section className={`contact-section${isVisible ? ' is-visible' : ''}`} id="contact" ref={ref}>
       <VideoBackground
         videoOpacity={0.25}
         overlay="linear-gradient(190deg, rgba(30, 40, 35, 0.75) 0%, var(--color-dark) 100%)"

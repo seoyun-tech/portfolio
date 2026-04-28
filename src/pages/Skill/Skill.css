@@ -127,5 +127,6 @@
   .skill-section       { padding: 60px 0; }
   .skill-container     { padding: 0 24px; }
   .skill-description p { font-size: var(--text-lg); }
-  .skill-chip          { height: 50px; font-size: var(--text-sm); }
+  .skill-carousel      { gap: 12px; padding-bottom: 20px; }
+  .skill-chip          { height: 50px; min-width: 120px; padding: 0 20px; font-size: var(--text-sm); }
 }

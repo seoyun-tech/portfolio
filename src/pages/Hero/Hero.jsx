@@ -10,7 +10,7 @@ const CONTENT = {
     resumeBtn:  '이력서',
   },
   en: {
-    titleLines: ['Reading the field,', 'Answered in product.'],
+    titleLines: ['Reading the field,', 'Answering through product.'],
     subtitle: { prefix: 'Product Strategist, ', strong: 'Seo-yun Park.', suffix: '' },
     contactBtn: 'Contact Me',
     resumeBtn:  'Resume',
@@ -42,7 +42,7 @@ const Hero = ({ onOpenContact }) => {
             <IconButton icon="fa-solid fa-arrow-right" onClick={onOpenContact}>
               {c.contactBtn}
             </IconButton>
-            <a href="/resume.pdf" className="hero-resume-button" target="_blank" rel="noreferrer">
+            <a href="/박서윤_이력서.pdf" className="hero-resume-button" target="_blank" rel="noreferrer">
               {c.resumeBtn}
             </a>
           </div>
