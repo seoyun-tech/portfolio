@@ -7,13 +7,13 @@ const MENU = {
   ko: [
     { id: 'home',    label: '홈' },
     { id: 'about',   label: '소개' },
-    { id: 'project', label: '프로젝트' },
+    { id: 'project', label: 'IT & 서비스 기획' },
     { id: 'contact', label: '연락처' },
   ],
   en: [
     { id: 'home',    label: 'Home' },
     { id: 'about',   label: 'About' },
-    { id: 'project', label: 'Project' },
+    { id: 'project', label: 'IT & Service Planning' },
     { id: 'contact', label: 'Contact' },
   ],
 };

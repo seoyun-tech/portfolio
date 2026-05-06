@@ -8,9 +8,9 @@ const CONTENT = {
   ko: {
     sectionTag: '소개',
     bioLines: [
-      '6년의 실무 경험에 기술적 이해를 더했습니다.',
-      '현장의 문제를 비즈니스 로직으로 설계하고,',
-      '기술적 소통으로 제품을 완성합니다.',
+      '글로벌 역량에 6년의 실무를 더했습니다.',
+      '데이터로 시장을 읽고 수익 구조를 설계하며,',
+      '기술적 이해로 커머스 비즈니스를 완성합니다.',
     ],
     details: [
       {
@@ -32,9 +32,9 @@ const CONTENT = {
   en: {
     sectionTag: 'About Me',
     bioLines: [
-      '6 years of experience, sharpened with technical depth.',
-      'I frame field problems as business logic,',
-      'and deliver through technical communication.',
+      'Global skills plus 6 years\' expertise.',
+      'Market analysis and revenue structuring.',
+      'Technical depth for commerce mastery.',
     ],
     details: [
       {

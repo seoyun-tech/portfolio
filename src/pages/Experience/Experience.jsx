@@ -14,18 +14,20 @@ const LABELS = {
 const EXPERIENCES = {
   ko: [
     {
-      company: '공원더파크',
-      role: '대표',
+      company: '포레',
+      role: '개인 브랜드 CEO',
       period: '2022.05 - 2025.10',
       duration: '3년 6개월',
       description: [
-        '여성 의류 온라인 쇼핑몰 창업 및 운영',
-        '상품 기획·디자인·생산 관리 및 데이터 기반 마케팅',
-        '사용자 구매 패턴 분석을 통한 웹사이트 최적화',
+        '개인 브랜드 비즈니스 모델 구축 및 총괄',
+        '데이터 기반 상품 큐레이션 및 SKU 관리',
+        '사용자 데이터 분석 기반 구매 전환율 최적화',
       ],
       works: [
         '/assets/works/1-1.png',
         '/assets/works/1-2.png',
+        '/assets/works/1-3.png',
+        '/assets/works/1-4.png',
       ],
     },
     {
@@ -34,13 +36,14 @@ const EXPERIENCES = {
       period: '2020.03 - 2022.05',
       duration: '2년 4개월',
       description: [
-        '시즌 상품 기획 및 비주얼 촬영 디렉팅',
-        '수입 브랜드 3개 총괄 바잉 및 운영 전담',
-        '채널별 판매 전략 수립을 통한 목표 수익 및 매출 달성',
+        '자사 브랜드 보완을 위한 수입 브랜드 바잉 운영',
+        '데이터 분석 기반 상품 비중(7:3) 구성 및 관리',
+        '비주얼 개선 및 비용 절감으로 온라인 매출 40% ↑',
       ],
       works: [
-        '/assets/works/1.png',
         '/assets/works/2.png',
+        '/assets/works/1.png',
+        '/assets/works/3.png',
       ],
     },
   ],
@@ -51,13 +54,15 @@ const EXPERIENCES = {
       period: '2022.05 - 2025.10',
       duration: '3 yrs 6 mos',
       description: [
-        "Founded and operated a women's clothing e-commerce business",
-        'Managed product planning, design, and production while executing data-driven marketing strategies',
-        'Optimised the website through analysis of user purchasing behaviour',
+        "Strategic brand modelling & total management",
+        'Data-led product curation & SKU management',
+        'Optimised conversion rates via user data analysis',
       ],
       works: [
         '/assets/works/1-1.png',
         '/assets/works/1-2.png',
+        '/assets/works/1-3.png',
+        '/assets/works/1-4.png',
       ],
     },
     {
@@ -66,13 +71,14 @@ const EXPERIENCES = {
       period: '2020.03 - 2022.05',
       duration: '2 yrs 4 mos',
       description: [
-        'Led seasonal product planning and directed visual photoshoot production',
-        'Held sole responsibility for the buying and operations of three international import brands',
-        'Delivered revenue and sales targets through channel-specific trading strategies',
+        'Led import buying to complement in-house brand',
+        'Data-led product mix (7:3) planning & management',
+        'Boosted online sales by 40% via visual & cost optimization',
       ],
       works: [
-        '/assets/works/1.png',
         '/assets/works/2.png',
+        '/assets/works/1.png',
+        '/assets/works/3.png',
       ],
     },
   ],

@@ -28,12 +28,12 @@ const PROJECTS = [
     ],
     category:    { ko: '풀스택 기획 · 개발',    en: 'Full-Stack Planning & Dev' },
     description: {
-      ko: '생성형 AI와 TMDB API를 결합한 키즈 전용 OTT 미디어 서비스입니다. 어린이 맞춤형 콘텐츠 추천과 직관적인 UI를 목표로, 기획부터 풀스택 개발 및 배포까지 전 과정을 수행했습니다.',
-      en: 'A kids-only OTT service integrating Generative AI with the TMDB API. With a focus on tailored content and an intuitive UI, I oversaw the full process from concept through to full-stack development and deployment.',
+      ko: '사용자 맞춤형 큐레이션 로직을 이해하기 위해, API 데이터 가공부터 AI 엔진 구현까지 전 과정을 수행했습니다. 기획자의 분석 역량을 기술로 구현해 최적의 추천 원리를 체득한 프로젝트 입니다.',
+      en: "Executed the full development lifecycle from API data processing to AI engine implementation to master personalised curation logic. Mastered optimal recommendation principles by translating strategic analytical insights into technical solutions.",
     },
     intent: {
       ko: '기존 OTT는 성인 중심 설계로 어린이가 안전하게 이용하기 어렵습니다. AI 추천으로 연령에 맞는 콘텐츠를 자동 큐레이션하는 키즈 전용 미디어 환경을 기획·구현했습니다.',
-      en: "OTT platforms are built for adults, leaving children without a safe option. I developed a kids-only service that uses AI to automatically curate content suited to each child's age and interests.",
+      en: "Addressed safety concerns in adult-centric OTT platforms by designing a dedicated kids' media environment. Implemented AI-driven automation to curate age-appropriate content, ensuring a secure and tailored user experience.",
     },
     image:       '/assets/project-rookiz-scene.jpg',
     modalImage:  '/assets/project-rookiz-modal.png',
@@ -60,12 +60,12 @@ const PROJECTS = [
     ],
     category:    { ko: 'UX/UI 기획 및 설계', en: 'UX/UI Planning & Design' },
     description: {
-      ko: '스포티파이 앱의 정보 구조와 탐색 흐름을 재설계한 iOS 모바일 앱 리디자인 프로젝트입니다. AI 개인화 추천, 시간 및 상황 기반 Dynamic TPO, AI DJ 등 신규 기능을 기획하고, 온보딩부터 메인 탐색까지 전체 사용자 여정을 Figma 프로토타입으로 구현했습니다.',
-      en: "An iOS mobile app redesign project restructuring Spotify's information architecture and navigation flow. I planned new features including AI personalised recommendations, time/context-based Dynamic TPO, and AI DJ, and implemented the full user journey from onboarding to main navigation as a Figma prototype.",
+      ko: '방대한 데이터 속에서 고객의 이탈을 막고 최적의 취향을 제안하는 탐색 흐름을 설계했습니다. 상황별(TPO) 큐레이션 전략을 IT 기술과 결합하여 개인화 서비스의 핵심 UX를 제시했습니다.',
+      en: 'Designed a strategic discovery flow to minimise churn and suggest optimal preferences within vast data environments. Delivered core personalised UX by integrating TPO-based curation strategies with advanced technical solutions.',
     },
     intent: {
       ko: '음악은 방대하지만 탐색 흐름이 복잡해 원하는 곡을 찾기 어렵습니다. AI 추천과 상황 기반 큐레이션으로 능동적 탐색 없이도 최적의 음악을 만나는 경험을 설계했습니다.',
-      en: 'The library is vast, but finding the right song takes too many steps. I redesigned the experience so music finds you, through AI and context-aware recommendations.',
+      en: 'Overcame navigation complexities in vast music libraries by designing an effortless discovery experience. Leveraged AI recommendations and context-based curation to deliver optimal tracks without the need for active searching.',
     },
     image:       '/assets/project-spotify-scene.jpg',
     modalImage:  '/assets/project-spotify-modal.png',
@@ -91,11 +91,11 @@ const PROJECTS = [
     category:    { ko: 'UX/UI 기획 · 개발', en: 'UX/UI Planning & Dev' },
     description: {
       ko: '콘텐츠와 커머스의 혼재로 인한 정보 접근성 문제를 해결하기 위해 무신사 웹사이트를 리디자인한 프로젝트입니다. 메인·상세·콘텐츠 3개 페이지를 재설계하고 반응형 레이아웃으로 구현했습니다.',
-      en: 'A redesign of the Musinsa website to resolve the information accessibility issues caused by mixed editorial and commerce content. Three core pages — main, detail, and content — were redesigned with a fully responsive layout.',
+      en: "Redesigned the Musinsa website to enhance information accessibility by separating mixed content and commerce. Reconstructed main, product, and content pages into a fully responsive layout.",
     },
     intent: {
       ko: '웹진과 쇼핑몰 콘텐츠가 혼재되어 사용자의 목적에 따른 탐색이 어렵습니다. 두 기능을 독립적으로 강화하고, 백화점 공간에서 영감을 얻은 [진입 → 욕구 → 구매 → 탐색] 흐름과 스타일 클러스터링으로 맞춤형 쇼핑 경험을 설계했습니다.',
-      en: "Musinsa's webzine and shop content are intertwined, making purposeful navigation difficult. I strengthened each function independently, building an [Entry → Desire → Purchase → Exploration] flow inspired by department store design, with style clustering for a personalised experience.",
+      en: "Resolved navigation complexities caused by the overlap of webzine and e-commerce content. Engineered a tailored shopping experience through style clustering and a strategic flow inspired by department store layouts, guiding users from entry to purchase and discovery.",
     },
     image:       '/assets/project-musinsa-scene.png',
     modalImage:  '/assets/project-musinsa-modal.png',

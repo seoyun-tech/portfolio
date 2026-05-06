@@ -23,7 +23,7 @@ const DESCRIPTION = {
   ),
   en: (
     <p>
-      <strong>Having led the full scope of business operations through an MD role at a major corporation and an e-commerce venture, </strong>
+      <strong>Following graduation from NTU in the UK, I led the full scope of business operations through an MD role at a major corporation and an e-commerce venture. </strong>
       <span className="text-dim">I took up coding to overcome the limitations I encountered on the ground. </span>
       <span className="text-dim">I now draw on data and logic to shape market challenges into considered, actionable plans.</span>
     </p>

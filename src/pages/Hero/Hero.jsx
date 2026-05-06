@@ -4,14 +4,14 @@ import './Hero.css';
 
 const CONTENT = {
   ko: {
-    titleLines: ['현장의 데이터를 읽고,', '제품으로 답하는'],
-    subtitle: { prefix: '기획자 ', strong: '박서윤', suffix: '입니다.' },
+    titleLines: ['데이터로 시장을 읽고,', '매출로 성과를 증명하는'],
+    subtitle: { prefix: '6년차 MD ', strong: '박서윤', suffix: '입니다.' },
     contactBtn: '연락하기',
     resumeBtn:  '이력서',
   },
   en: {
-    titleLines: ['Reading the field,', 'Answering through product.'],
-    subtitle: { prefix: 'Product Strategist, ', strong: 'Seo-yun Park.', suffix: '' },
+    titleLines: ['Reading Markets with Data,', 'Delivering Results in Sales'],
+    subtitle: { prefix: '6-year MD, ', strong: 'Seo-yun Park', suffix: '.' },
     contactBtn: 'Contact Me',
     resumeBtn:  'Resume',
   },
