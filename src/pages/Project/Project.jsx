@@ -38,7 +38,7 @@ const MD_PROJECTS = [
       en: "Diagnosed the root cause of poor online sales for in-house brand Barbara — a mismatched model concept and neglected digital channels. Optimised shoot costs while fully refreshing the concept, then executed a staged turnaround: overhauled SNS aesthetic, ran influencer campaigns, relaunched the brand site, and planned online-exclusive products.",
     },
     image: '/assets/works/vivien-main.png',
-    works: ['/assets/works/2.png', '/assets/works/1.png', '/assets/works/3.png'],
+    works: ['/assets/works/vivien-online-1.png', '/assets/works/vivien-online-2.png'],
     meta: {
       ko: ['온라인 MD · SNS · 인플루언서 마케팅', '1개', '온라인 매출 40% ↑', '자사몰 · SNS'],
       en: ['Online MD · SNS · Influencer Marketing', '1 Brand', 'Online sales +40%', 'Brand Site · SNS'],
@@ -57,7 +57,7 @@ const MD_PROJECTS = [
       en: 'Identified and onboarded replacements for brands that exited the existing import lineup, then solely built and operated the full buying cycle — from scouting and selection to ordering, inventory management, and trend application. Addressed gaps caused by in-house brand delivery and quality issues while broadening style diversity and injecting global trends.',
     },
     image: '/assets/works/vivien-buying-main.png',
-    works: ['/assets/works/2.png', '/assets/works/1.png', '/assets/works/3.png'],
+    works: ['/assets/works/vivien-buying-1.png'],
     meta: {
       ko: ['바잉 MD · 소싱 · 재고 관리', '4개', '바바라 전체 매출 20% ↑ · 카테고리 공백 해소', '백화점'],
       en: ['Buying MD · Sourcing · Inventory', '4 Brands', 'Barbara total sales +20% · Category gap resolved', 'Dept. Store'],
@@ -76,7 +76,7 @@ const MD_PROJECTS = [
       en: 'The first brand (Gongone the Park) earned design recognition, but structural limits in knitwear — high MOQ, defect rates, and lead time issues — created persistent inventory pressure. Added an interlock jersey category to address these constraints, but MOQ remained an issue. Executed a full pivot to a niche Copenhagen-style brand for tall women and concentrated influencer marketing efforts.',
     },
     image: '/assets/works/poroe-main.png',
-    works: ['/assets/works/1-1.png', '/assets/works/1-2.png', '/assets/works/1-3.png', '/assets/works/1-4.png'],
+    works: ['/assets/works/poroe-1.png', '/assets/works/poroe-2.png', '/assets/works/poroe-3.png'],
     meta: {
       ko: ['브랜드 기획 · 피벗 · 운영 총괄', '2개', '연 매출 30% ↑', '자사몰 · SNS'],
       en: ['Brand Planning · Pivot · Total Ops', '2 Brands', 'Annual sales +30%', 'Brand Site · SNS'],

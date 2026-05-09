@@ -135,5 +135,5 @@
 
 @media (max-width: 480px) {
   .about-section { padding: 64px 0; }
-  .keyword-item { font-size: 16px; gap: 20px; padding: 0 20px; }
+  .keyword-item { font-size: 16px; }
 }

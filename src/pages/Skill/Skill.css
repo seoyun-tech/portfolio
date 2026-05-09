@@ -184,31 +184,6 @@
   animation: tabFadeUp 0.45s var(--ease-spring) forwards;
 }
 
-.competency-details .position-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 20px;
-}
-
-.competency-details .position-title {
-  font-size: var(--text-base);
-  font-weight: 400;
-  color: var(--color-primary);
-  margin: 0;
-}
-
-.competency-details .period-info {
-  text-align: right;
-  font-size: var(--text-sm);
-  color: var(--color-primary-25);
-}
-
-.competency-details .duration {
-  display: block;
-  margin-top: 4px;
-}
-
 .competency-details .description-list {
   list-style: none;
   padding: 0;

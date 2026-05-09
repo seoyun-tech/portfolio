@@ -11,13 +11,13 @@ const LABELS = {
 const EXPERIENCES = {
   ko: [
     { type: 'career', name: '포레', sub: '개인 브랜드 CEO', period: '2022.05 – 2025.10', duration: '3년 6개월', summary: '기획 · 디자인 · 생산 · 마케팅 · 판매까지 브랜드 전 과정을 단독 총괄', award: { name: '패션코드 2023 F/W', sub: '한국콘텐츠진흥원(KOCCA) 주관', result: '참가', period: '2023.03' }, works: ['/assets/works/1-1.png', '/assets/works/1-2.png', '/assets/works/1-3.png', '/assets/works/1-4.png'] },
-    { type: 'career', name: '㈜남영비비안', sub: '상품기획 MD', period: '2020.03 – 2022.05', duration: '2년 4개월', summary: '시즌 상품기획 MD와 수입 브랜드 바잉 MD를 병행하며 전 과정 담당', works: ['/assets/works/2.png', '/assets/works/1.png', '/assets/works/3.png'] },
+    { type: 'career', name: '㈜남영비비안', sub: '상품기획 MD', period: '2020.03 – 2022.05', duration: '2년 4개월', summary: '시즌 상품기획 MD와 수입 브랜드 바잉 MD를 병행하며 전 과정 담당' },
     { type: 'education', name: 'Nottingham Trent University (UK)', sub: '패션 디자인 학사', period: '2016.09 – 2019.06', duration: '졸업', award: { name: 'River Island 공모전', sub: '2019 Menswear Collection Concept Competition', result: '전체 우승', period: '2018.05' } },
     { type: 'education', name: 'NTU International College (UK)', sub: 'Art & Design', period: '2015.03 – 2016.03', duration: '졸업' },
   ],
   en: [
     { type: 'career', name: 'Poroe', sub: 'Founder & CEO', period: '2022.05 – 2025.10', duration: '3 yrs 6 mos', summary: 'Led all brand operations independently — planning, design, production, marketing & sales', award: { name: 'Fashioncode 2023 F/W', sub: 'Organised by KOCCA', result: 'Participated', period: 'Mar 2023' }, works: ['/assets/works/1-1.png', '/assets/works/1-2.png', '/assets/works/1-3.png', '/assets/works/1-4.png'] },
-    { type: 'career', name: 'Namyoung Vivien Co., Ltd.', sub: 'Product Planning MD', period: '2020.03 – 2022.05', duration: '2 yrs 4 mos', summary: 'Concurrent product planning MD & import brand buying MD across the full cycle', works: ['/assets/works/2.png', '/assets/works/1.png', '/assets/works/3.png'] },
+    { type: 'career', name: 'Namyoung Vivien Co., Ltd.', sub: 'Product Planning MD', period: '2020.03 – 2022.05', duration: '2 yrs 4 mos', summary: 'Concurrent product planning MD & import brand buying MD across the full cycle' },
     { type: 'education', name: 'Nottingham Trent University (UK)', sub: 'Fashion Design, BA', period: '2016.09 – 2019.06', duration: 'Graduated', award: { name: 'River Island Competition', sub: '2019 Menswear Collection Concept Competition', result: 'Overall Winner', period: 'May 2018' } },
     { type: 'education', name: 'NTU International College (UK)', sub: 'Art & Design', period: '2015.03 – 2016.03', duration: 'Graduated' },
   ],
