@@ -1,17 +1,81 @@
 import { useRef, useState, useCallback, useEffect } from 'react';
 import useInView from '../../hooks/useInView';
+import IconCircle from '../../components/IconCircle/IconCircle';
 import SectionTag from '../../components/SectionTag/SectionTag';
 import { useLanguage } from '../../context/LanguageContext';
 import './Skill.css';
 
-const SKILLS_DATA = ['HTML', 'CSS', 'JavaScript', 'React', 'GitHub', 'Figma', 'Photoshop', 'Illustrator'];
+const SKILLS_DATA = ['ERP', 'Excel', 'HTML', 'CSS', 'JavaScript', 'React', 'GitHub', 'Figma', 'Photoshop', 'Illustrator'];
+
 
 const SCROLL_AMOUNT = 300;
 
 const LABELS = {
-  ko: { sectionTag: '스킬' },
-  en: { sectionTag: 'Skills' },
+  ko: { sectionTag: '스킬', competencyTag: '역량', learnMore: '자세히 보기' },
+  en: { sectionTag: 'Skills', competencyTag: 'Competency', learnMore: 'Learn more' },
 };
+
+const COMPETENCIES = {
+  ko: [
+    {
+      label: '기획',
+      description: [
+        '시즌 콘셉트 기획 및 라인업 구성',
+        '생산 일정·납기 관리',
+        '상품 비중 전략 수립 및 SKU 관리',
+        '브랜드 피벗 전략 수립',
+      ],
+    },
+    {
+      label: '소싱',
+      description: [
+        '수입 브랜드 발굴·선정·계약 운영',
+        '해외 발주 및 재고 관리',
+        '프리미엄 원단 소싱 및 샘플 검토',
+        '글로벌 트렌드 반영 바잉 전략 수립',
+      ],
+    },
+    {
+      label: '분석',
+      description: [
+        '판매 데이터 분석 및 상품 비중 기획',
+        '온라인 채널 데이터 분석',
+        '수요 예측 기반 발주량 산정',
+        '구매 전환율 분석',
+      ],
+    },
+  ],
+  en: [
+    {
+      label: 'Planning',
+      description: [
+        'Seasonal concept planning & lineup composition',
+        'Production scheduling & lead time management',
+        'Product mix strategy & SKU management',
+        'Brand pivot strategy planning',
+      ],
+    },
+    {
+      label: 'Sourcing',
+      description: [
+        'Scouting, selecting & contracting import brands',
+        'Overseas ordering & inventory management',
+        'Premium fabric sourcing & sample review',
+        'Buying strategy aligned with global trends',
+      ],
+    },
+    {
+      label: 'Analysis',
+      description: [
+        'Sales data analysis & product mix planning',
+        'Online channel data analysis',
+        'Demand forecasting for order quantity optimisation',
+        'Conversion rate analysis',
+      ],
+    },
+  ],
+};
+
 
 const DESCRIPTION = {
   ko: (
@@ -30,12 +94,25 @@ const DESCRIPTION = {
   ),
 };
 
+
 const Skill = () => {
   const [sectionRef, isVisible] = useInView();
   const carouselRef = useRef(null);
   const { lang } = useLanguage();
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
+  const [activeTab, setActiveTab] = useState(0);
+  const [animKey, setAnimKey] = useState(0);
+
+  const competencies = COMPETENCIES[lang];
+  const activeItem = competencies[activeTab];
+
+  const handleTabClick = (index) => {
+    setActiveTab(index);
+    setAnimKey(k => k + 1);
+  };
+
+  useEffect(() => { setActiveTab(0); }, [lang]);
 
   const checkScroll = useCallback(() => {
     const el = carouselRef.current;
@@ -96,6 +173,38 @@ const Skill = () => {
           >
             <ArrowIcon direction="right" />
           </button>
+        </div>
+
+        <div className="competency-section-tag">
+          <SectionTag>{LABELS[lang].competencyTag}</SectionTag>
+        </div>
+
+        <div className="competency-tabs">
+          <nav className="tabs-nav">
+            {competencies.map((item, index) => (
+              <div
+                key={index}
+                className={`tab-item${activeTab === index ? ' active' : ''}`}
+                onClick={() => handleTabClick(index)}
+              >
+                {item.label}
+              </div>
+            ))}
+          </nav>
+
+          <div className="competency-details" key={animKey}>
+            <ul className="description-list">
+              {activeItem.description.map((item, idx) => (
+                <li key={idx} className="description-item">{item}</li>
+              ))}
+            </ul>
+            <button className="learn-more-btn">
+              <span className="learn-more-text">{LABELS[lang].learnMore}</span>
+              <IconCircle>
+                <i className="fa-solid fa-plus" style={{ fontSize: '12px' }} />
+              </IconCircle>
+            </button>
+          </div>
         </div>
 
       </div>

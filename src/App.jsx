@@ -1,17 +1,16 @@
-import { useState, lazy, Suspense } from 'react'
+import { useState, useEffect } from 'react'
 import Navbar from './components/Navbar/Navbar'
 import Hero from './pages/Hero/Hero'
+import About from './pages/About/About'
+import Experience from './pages/Experience/Experience'
+import Project from './pages/Project/Project'
+import Skill from './pages/Skill/Skill'
+import Contact from './pages/Contact/Contact'
+import Footer from './components/Footer/Footer'
+import ContactDrawer from './components/ContactDrawer/ContactDrawer'
 import { CursorProvider } from './context/CursorContext'
 import { LanguageProvider } from './context/LanguageContext'
 import './App.css'
-
-const About = lazy(() => import('./pages/About/About'))
-const Skill = lazy(() => import('./pages/Skill/Skill'))
-const Experience = lazy(() => import('./pages/Experience/Experience'))
-const Project = lazy(() => import('./pages/Project/Project'))
-const Contact = lazy(() => import('./pages/Contact/Contact'))
-const Footer = lazy(() => import('./components/Footer/Footer'))
-const ContactDrawer = lazy(() => import('./components/ContactDrawer/ContactDrawer'))
 
 const MainLayout = () => {
   const [isContactOpen, setIsContactOpen] = useState(false);
@@ -21,23 +20,30 @@ const MainLayout = () => {
       <Navbar />
       <main>
         <Hero onOpenContact={() => setIsContactOpen(true)} />
-        <Suspense fallback={null}>
-          <About />
-          <Experience />
-          <Project />
-          <Skill />
-          <Contact />
-        </Suspense>
+        <About />
+        <Experience />
+        <Project />
+        <Skill />
+<Contact />
       </main>
-      <Suspense fallback={null}>
-        <Footer />
-        <ContactDrawer isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
-      </Suspense>
+      <Footer />
+      <ContactDrawer isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
     </>
   );
 }
 
 function App() {
+  useEffect(() => {
+    const hash = window.location.hash.slice(1);
+    if (!hash) return;
+    const el = document.getElementById(hash);
+    if (!el) return;
+    window.__restoringScroll = true;
+    const navHeight = document.querySelector('.navbar')?.offsetHeight ?? 80;
+    window.scrollTo({ top: el.offsetTop - navHeight, behavior: 'instant' });
+    setTimeout(() => { window.__restoringScroll = false; }, 200);
+  }, []);
+
   return (
     <LanguageProvider>
       <CursorProvider>

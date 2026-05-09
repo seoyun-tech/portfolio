@@ -1,7 +1,7 @@
 import IconCircle from '../IconCircle/IconCircle';
 import './IconButton.css';
 
-const IconButton = ({ as: Tag = 'button', icon, iconSize = '12px', children, className = '', ...props }) => (
+const IconButton = ({ as: Tag = 'button', icon, iconSize = '16px', children, className = '', ...props }) => (
   <Tag className={`icon-btn ${className}`.trim()} {...props}>
     <IconCircle>
       <i className={icon} style={{ fontSize: iconSize }} />

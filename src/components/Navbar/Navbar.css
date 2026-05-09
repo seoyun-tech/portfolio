@@ -26,13 +26,13 @@
   position: relative;
 }
 
-/* ── Logo: 데스크톱 좌측 / 모바일 absolute 중앙 ── */
+
 .navbar-logo {
   display: flex;
   align-items: center;
 }
 
-/* ── Nav panel: 데스크톱 absolute 중앙 / 모바일 슬라이드 패널 ── */
+
 .nav-panel {
   position: absolute;
   left: 50%;
@@ -52,9 +52,10 @@
   text-decoration: none;
   transition: color 0.3s;
 }
-.nav-item:hover { color: var(--color-primary); }
+.nav-item:hover,
+.nav-item.active { color: var(--color-primary); font-weight: 600; }
 
-/* ── Lang switcher: 데스크톱 우측 / 모바일 좌측 ── */
+
 .lang-switcher {
   display: flex;
   gap: 24px;
@@ -65,11 +66,10 @@
   cursor: pointer;
   transition: color 0.3s;
 }
-.lang-switcher span:hover,
-.lang-switcher span.active { color: var(--color-primary); }
-.lang-switcher span.active  { font-weight: 600; }
+.lang-switcher span:hover   { color: var(--color-primary); }
+.lang-switcher span.active  { color: var(--color-primary); font-weight: 600; }
 
-/* ── Hamburger toggle ── */
+
 .nav-toggle {
   display: none;
   width: 44px;
@@ -107,7 +107,7 @@
 .nav-toggle.open .hamburger::before { transform: rotate(45deg);  top: 0; }
 .nav-toggle.open .hamburger::after  { transform: rotate(-45deg); top: 0; }
 
-/* ── Overlay ── */
+
 .menu-overlay {
   position: fixed;
   inset: 0;
@@ -116,12 +116,12 @@
   z-index: 999;
 }
 
-/* ── Responsive ── */
+
 @media (max-width: 1024px) {
   .navbar          { height: 72px; }
   .navbar.scrolled { height: 64px; }
 
-  /* 로고 absolute 중앙 */
+  
   .navbar-logo {
     position: absolute;
     left: 50%;
@@ -129,7 +129,7 @@
     transform: translate(-50%, -50%);
   }
 
-  /* 슬라이드 패널 */
+  
   .nav-panel {
     position: fixed;
     top: 0;
@@ -153,7 +153,7 @@
 
   .nav-toggle { display: flex; align-items: center; justify-content: center; }
 
-  /* 모바일 flex 순서: 언어(좌) | 로고(중앙 absolute) | 햄버거(우) */
+  
   .lang-switcher { order: 1; }
   .nav-toggle    { order: 2; }
 }

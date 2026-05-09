@@ -1,215 +1,78 @@
-import { useState, useEffect } from 'react';
-import SectionTag from '../../components/SectionTag/SectionTag';
-import IconCircle from '../../components/IconCircle/IconCircle';
-import useModalLock from '../../hooks/useModalLock';
 import useInView from '../../hooks/useInView';
+import SectionTag from '../../components/SectionTag/SectionTag';
 import { useLanguage } from '../../context/LanguageContext';
 import './Experience.css';
 
 const LABELS = {
-  ko: { sectionTag: '경력', learnMore: '자세히 보기', close: '닫기', prev: '이전', next: '다음' },
-  en: { sectionTag: 'Work Experience', learnMore: 'Learn more', close: 'Close', prev: 'Prev', next: 'Next' },
+  ko: { sectionTag: '경력 & 학력', career: '경력', education: '학력' },
+  en: { sectionTag: 'Career & Education', career: 'Career', education: 'Education' },
 };
 
 const EXPERIENCES = {
   ko: [
-    {
-      company: '포레',
-      role: '개인 브랜드 CEO',
-      period: '2022.05 - 2025.10',
-      duration: '3년 6개월',
-      description: [
-        '개인 브랜드 비즈니스 모델 구축 및 총괄',
-        '데이터 기반 상품 큐레이션 및 SKU 관리',
-        '사용자 데이터 분석 기반 구매 전환율 최적화',
-      ],
-      works: [
-        '/assets/works/1-1.png',
-        '/assets/works/1-2.png',
-        '/assets/works/1-3.png',
-        '/assets/works/1-4.png',
-      ],
-    },
-    {
-      company: '㈜남영비비안',
-      role: '상품기획 MD',
-      period: '2020.03 - 2022.05',
-      duration: '2년 4개월',
-      description: [
-        '자사 브랜드 보완을 위한 수입 브랜드 바잉 운영',
-        '데이터 분석 기반 상품 비중(7:3) 구성 및 관리',
-        '비주얼 개선 및 비용 절감으로 온라인 매출 40% ↑',
-      ],
-      works: [
-        '/assets/works/2.png',
-        '/assets/works/1.png',
-        '/assets/works/3.png',
-      ],
-    },
+    { type: 'career', name: '포레', sub: '개인 브랜드 CEO', period: '2022.05 – 2025.10', duration: '3년 6개월', summary: '기획 · 디자인 · 생산 · 마케팅 · 판매까지 브랜드 전 과정을 단독 총괄', award: { name: '패션코드 2023 F/W', sub: '한국콘텐츠진흥원(KOCCA) 주관', result: '참가', period: '2023.03' }, works: ['/assets/works/1-1.png', '/assets/works/1-2.png', '/assets/works/1-3.png', '/assets/works/1-4.png'] },
+    { type: 'career', name: '㈜남영비비안', sub: '상품기획 MD', period: '2020.03 – 2022.05', duration: '2년 4개월', summary: '시즌 상품기획 MD와 수입 브랜드 바잉 MD를 병행하며 전 과정 담당', works: ['/assets/works/2.png', '/assets/works/1.png', '/assets/works/3.png'] },
+    { type: 'education', name: 'Nottingham Trent University (UK)', sub: '패션 디자인 학사', period: '2016.09 – 2019.06', duration: '졸업', award: { name: 'River Island 공모전', sub: '2019 Menswear Collection Concept Competition', result: '전체 우승', period: '2018.05' } },
+    { type: 'education', name: 'NTU International College (UK)', sub: 'Art & Design', period: '2015.03 – 2016.03', duration: '졸업' },
   ],
   en: [
-    {
-      company: 'Gongone The Park',
-      role: 'Founder',
-      period: '2022.05 - 2025.10',
-      duration: '3 yrs 6 mos',
-      description: [
-        "Strategic brand modelling & total management",
-        'Data-led product curation & SKU management',
-        'Optimised conversion rates via user data analysis',
-      ],
-      works: [
-        '/assets/works/1-1.png',
-        '/assets/works/1-2.png',
-        '/assets/works/1-3.png',
-        '/assets/works/1-4.png',
-      ],
-    },
-    {
-      company: 'Namyoung Vivien Co., Ltd.',
-      role: 'Product Planning MD',
-      period: '2020.03 - 2022.05',
-      duration: '2 yrs 4 mos',
-      description: [
-        'Led import buying to complement in-house brand',
-        'Data-led product mix (7:3) planning & management',
-        'Boosted online sales by 40% via visual & cost optimization',
-      ],
-      works: [
-        '/assets/works/2.png',
-        '/assets/works/1.png',
-        '/assets/works/3.png',
-      ],
-    },
+    { type: 'career', name: 'Poroe', sub: 'Founder & CEO', period: '2022.05 – 2025.10', duration: '3 yrs 6 mos', summary: 'Led all brand operations independently — planning, design, production, marketing & sales', award: { name: 'Fashioncode 2023 F/W', sub: 'Organised by KOCCA', result: 'Participated', period: 'Mar 2023' }, works: ['/assets/works/1-1.png', '/assets/works/1-2.png', '/assets/works/1-3.png', '/assets/works/1-4.png'] },
+    { type: 'career', name: 'Namyoung Vivien Co., Ltd.', sub: 'Product Planning MD', period: '2020.03 – 2022.05', duration: '2 yrs 4 mos', summary: 'Concurrent product planning MD & import brand buying MD across the full cycle', works: ['/assets/works/2.png', '/assets/works/1.png', '/assets/works/3.png'] },
+    { type: 'education', name: 'Nottingham Trent University (UK)', sub: 'Fashion Design, BA', period: '2016.09 – 2019.06', duration: 'Graduated', award: { name: 'River Island Competition', sub: '2019 Menswear Collection Concept Competition', result: 'Overall Winner', period: 'May 2018' } },
+    { type: 'education', name: 'NTU International College (UK)', sub: 'Art & Design', period: '2015.03 – 2016.03', duration: 'Graduated' },
   ],
 };
 
-const WorksModal = ({ works, lang, onClose }) => {
-  const [current, setCurrent] = useState(0);
-  useModalLock(onClose);
-
-  const prev = () => setCurrent(i => (i - 1 + works.length) % works.length);
-  const next = () => setCurrent(i => (i + 1) % works.length);
-
-  // 모달 열릴 때 모든 이미지 프리로드
-  useEffect(() => {
-    works.forEach(src => {
-      const img = new Image();
-      img.src = src;
-    });
-  }, [works]);
-
-  // 방향키 / ESC 키보드 조작
-  useEffect(() => {
-    const handleKey = (e) => {
-      if (e.key === 'ArrowLeft') setCurrent(i => (i - 1 + works.length) % works.length);
-      else if (e.key === 'ArrowRight') setCurrent(i => (i + 1) % works.length);
-      else if (e.key === 'Escape') onClose();
-    };
-    window.addEventListener('keydown', handleKey);
-    return () => window.removeEventListener('keydown', handleKey);
-  }, [works.length, onClose]);
-
-  return (
-    <div className="works-modal-overlay" onClick={onClose}>
-      <div className="works-modal" onClick={e => e.stopPropagation()}>
-        <button className="proj-modal-close" onClick={onClose} aria-label={LABELS[lang].close}>
-          <i className="fa-solid fa-xmark" />
-        </button>
-
-        <div className="works-modal-image-wrap">
-          <img
-            src={works[current]}
-            alt={`work-${current + 1}`}
-            className="works-modal-image"
-          />
-        </div>
-
-        <div className="works-modal-nav">
-          <button className="works-nav-btn" onClick={prev} aria-label={LABELS[lang].prev}>
-            <i className="fa-solid fa-chevron-left" />
-          </button>
-          <span className="works-nav-counter">{current + 1} / {works.length}</span>
-          <button className="works-nav-btn" onClick={next} aria-label={LABELS[lang].next}>
-            <i className="fa-solid fa-chevron-right" />
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-};
 
 const Experience = () => {
-  const [activeTab, setActiveTab] = useState(0);
-  const [animKey, setAnimKey] = useState(0);
-  const [worksOpen, setWorksOpen] = useState(false);
   const { lang } = useLanguage();
   const [ref, isVisible] = useInView();
   const experiences = EXPERIENCES[lang];
-  const activeExp = experiences[activeTab];
-
-  const handleTabClick = (index) => {
-    setActiveTab(index);
-    setAnimKey(k => k + 1);
-  };
+  const labels = LABELS[lang];
 
   return (
-    <>
-      <section className={`experience${isVisible ? ' is-visible' : ''}`} id="experience" ref={ref}>
+    <section className={`experience${isVisible ? ' is-visible' : ''}`} id="experience" ref={ref}>
         <div className="experience-container page-container">
           <div className="experience-tag">
-            <SectionTag>{LABELS[lang].sectionTag}</SectionTag>
+            <SectionTag>{labels.sectionTag}</SectionTag>
           </div>
 
-          <div className="experience-tabs">
-            <nav className="tabs-nav">
-              {experiences.map((exp, index) => (
-                <div
-                  key={index}
-                  className={`tab-item${activeTab === index ? ' active' : ''}`}
-                  onClick={() => handleTabClick(index)}
-                >
-                  {exp.company}
+          <div className="exp-list">
+            {experiences.map((item, i) => (
+              <div key={i} className={`exp-item ${item.type}`} style={{ '--delay': `${0.2 + i * 0.15}s` }}>
+                <div className="exp-left">
+                  <span className={`exp-type ${item.type}`}>
+                    {item.type === 'career' ? labels.career : item.type === 'education' ? labels.education : '수상'}
+                  </span>
                 </div>
-              ))}
-            </nav>
-
-            <div className="experience-details" key={animKey}>
-              <div className="position-header">
-                <h3 className="position-title">{activeExp.role}</h3>
-                <div className="period-info">
-                  <span>{activeExp.period}</span>
-                  <span className="duration">({activeExp.duration})</span>
+                <div className="exp-right">
+                  <div className="exp-header">
+                    <h3 className="exp-name">{item.name}</h3>
+                    <span className="exp-period">{item.period}</span>
+                  </div>
+                  <p className="exp-sub">
+                    {item.sub}{item.duration && <span className="exp-duration"> · {item.duration}</span>}
+                  </p>
+                  {item.summary && (
+                    <p className="exp-summary">{item.summary}</p>
+                  )}
+                  {item.description && (
+                    <ul className="exp-desc">
+                      {item.description.map((d, j) => <li key={j}>{d}</li>)}
+                    </ul>
+                  )}
+                  {item.award && (
+                    <p className="exp-award">
+                      <span className="award-chip">{item.award.result}</span>
+                      {item.award.name} · {item.award.sub} · {item.award.period}
+                    </p>
+                  )}
                 </div>
               </div>
-
-              <ul className="description-list">
-                {activeExp.description.map((item, idx) => (
-                  <li key={idx} className="description-item">{item}</li>
-                ))}
-              </ul>
-
-              {activeExp.works.length > 0 && (
-                <button className="learn-more-btn" onClick={() => setWorksOpen(true)}>
-                  <span className="learn-more-text">{LABELS[lang].learnMore}</span>
-                  <IconCircle>
-                    <i className="fa-solid fa-plus" style={{ fontSize: '12px' }} />
-                  </IconCircle>
-                </button>
-              )}
-            </div>
+            ))}
           </div>
         </div>
-      </section>
-
-      {worksOpen && (
-        <WorksModal
-          works={activeExp.works}
-          lang={lang}
-          onClose={() => setWorksOpen(false)}
-        />
-      )}
-    </>
+    </section>
   );
 };
 

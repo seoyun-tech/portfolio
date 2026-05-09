@@ -1,15 +1,18 @@
 import IconButton from '../../components/IconButton/IconButton';
+import SectionTag from '../../components/SectionTag/SectionTag';
 import { useLanguage } from '../../context/LanguageContext';
 import './Hero.css';
 
 const CONTENT = {
   ko: {
+    chip: '상품기획 MD 포트폴리오',
     titleLines: ['데이터로 시장을 읽고,', '매출로 성과를 증명하는'],
     subtitle: { prefix: '6년차 MD ', strong: '박서윤', suffix: '입니다.' },
     contactBtn: '연락하기',
-    resumeBtn:  '이력서',
+    resumeBtn:  '이력서 보기',
   },
   en: {
+    chip: 'MD Product Planning Portfolio',
     titleLines: ['Reading Markets with Data,', 'Delivering Results in Sales'],
     subtitle: { prefix: '6-year MD, ', strong: 'Seo-yun Park', suffix: '.' },
     contactBtn: 'Contact Me',
@@ -26,6 +29,10 @@ const Hero = ({ onOpenContact }) => {
       <div className="hero-container page-container">
 
         <div className="hero-text-content">
+          <div className="hero-chip-wrap">
+            <SectionTag>{c.chip}</SectionTag>
+          </div>
+
           <h1 className="hero-title">
             {c.titleLines.map((line, i) => (
               <span key={i} className="title-line-wrap">
