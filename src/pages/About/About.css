@@ -83,7 +83,9 @@
   margin: 0;
 }
 
-.about-bio p:first-child { color: var(--color-white); }
+.about-intro { margin-bottom: 1em; }
+
+.about-bio p             { color: var(--color-white); }
 .about-bio p:last-child  { color: var(--color-white-60); }
 
 
@@ -129,8 +131,9 @@
     grid-template-columns: 1fr;
     gap: 48px;
   }
-  .stat-col { flex-direction: row; align-items: baseline; }
+  .stat-col { flex-direction: column; gap: 16px; }
   .stat-number { font-size: clamp(64px, 16vw, 96px); }
+  .about-bio p { line-height: 1.7; }
 }
 
 @media (max-width: 480px) {

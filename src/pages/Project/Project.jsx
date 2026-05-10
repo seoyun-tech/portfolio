@@ -34,14 +34,14 @@ const MD_PROJECTS = [
     ],
     category: { ko: '온라인 MD · 마케팅', en: 'Online MD · Marketing' },
     description: {
-      ko: '온라인 매출이 저조한 자사 브랜드 바바라의 원인을 분석한 결과, 타겟과 맞지 않는 모델·컨셉과 방치된 디지털 채널이 문제였습니다. 촬영 비용을 최적화하면서 컨셉을 전면 교체하고, SNS 감성 전환, 인플루언서 마케팅, 자사몰 리뉴얼, 온라인 전용 상품 기획을 단계적으로 실행했습니다.',
-      en: "Diagnosed the root cause of poor online sales for in-house brand Barbara — a mismatched model concept and neglected digital channels. Optimised shoot costs while fully refreshing the concept, then executed a staged turnaround: overhauled SNS aesthetic, ran influencer campaigns, relaunched the brand site, and planned online-exclusive products.",
+      ko: '자사 브랜드 \'바바라\'의 온라인 부진 원인을 타겟 불일치와 채널 운영 부재로 정의하고 이를 전면 리뉴얼했습니다. 촬영 프로세스 효율화로 리소스를 확보하여 브랜드 컨셉을 재정립했으며, SNS 최적화 및 온라인 전용 상품 기획을 통해 디지털 전환을 완수했습니다.',
+      en: 'Identified misaligned targeting and neglected channel management as the root causes of poor online performance for in-house brand Barbara, and executed a full-scale renewal. Streamlining the shoot process freed up resources to redefine the brand concept, and SNS optimisation alongside online-exclusive product planning completed the digital transformation.',
     },
     image: '/assets/works/vivien-main.png',
     works: ['/assets/works/vivien-online-1.png', '/assets/works/vivien-online-2.png'],
     meta: {
-      ko: ['온라인 MD · SNS · 인플루언서 마케팅', '1개', '온라인 매출 40% ↑', '자사몰 · SNS'],
-      en: ['Online MD · SNS · Influencer Marketing', '1 Brand', 'Online sales +40%', 'Brand Site · SNS'],
+      ko: ['온라인 MD · SNS · 인플루언서 마케팅', '1개', '온라인 매출 40% ↑ · 20-30대 타겟 확장 · 운영 비용 최적화', '자사몰 · SNS'],
+      en: ['Online MD · SNS · Influencer Marketing', '1 Brand', 'Online sales +40% · Target expanded to 20s–30s · Shoot cost reduction', 'Brand Site · SNS'],
     },
   },
   {
@@ -53,13 +53,13 @@ const MD_PROJECTS = [
     ],
     category: { ko: '바잉 MD · 소싱', en: 'Buying MD · Sourcing' },
     description: {
-      ko: '기존 수입 브랜드 라인업에서 이탈한 브랜드의 공백을 메우기 위해 대체 브랜드를 선별하고, 브랜드 선정부터 발주·재고 관리·트렌드 적용까지 전 과정을 단독으로 구축·운영했습니다. 자사 브랜드의 납기·불량 이슈를 보완하고 스타일 다양성과 글로벌 트렌드를 함께 수혈했습니다.',
-      en: 'Identified and onboarded replacements for brands that exited the existing import lineup, then solely built and operated the full buying cycle — from scouting and selection to ordering, inventory management, and trend application. Addressed gaps caused by in-house brand delivery and quality issues while broadening style diversity and injecting global trends.',
+      ko: '기존 수입 라인업의 공백을 메우기 위해 대체 브랜드를 선별하고, 선정부터 발주·재고 관리까지 전 과정을 구축 및 운영했습니다. 이를 통해 자사 생산 라인의 고질적인 납기·불량 이슈를 보완하는 동시에, 글로벌 트렌드를 반영한 스타일 다각화로 브랜드 경쟁력을 강화했습니다.',
+      en: 'Scouted and selected replacement brands to fill gaps left by departing import labels, then built and operated the full cycle from brand selection through to ordering and inventory management. This addressed chronic delivery and quality issues in the in-house production line while broadening style diversity with global trend alignment to strengthen brand competitiveness.',
     },
     image: '/assets/works/vivien-buying-main.png',
     works: ['/assets/works/vivien-buying-1.png'],
     meta: {
-      ko: ['바잉 MD · 소싱 · 재고 관리', '4개', '바바라 전체 매출 20% ↑ · 카테고리 공백 해소', '백화점'],
+      ko: ['바잉 MD · 소싱 · 재고 관리', '4개', '바바라 전체 매출 20% ↑ · 카테고리 공백 해소 · 품질 안정성 확보', '백화점'],
       en: ['Buying MD · Sourcing · Inventory', '4 Brands', 'Barbara total sales +20% · Category gap resolved', 'Dept. Store'],
     },
   },
@@ -72,13 +72,13 @@ const MD_PROJECTS = [
     ],
     category: { ko: '브랜드 CEO · 기획', en: 'Brand CEO · Planning' },
     description: {
-      ko: '첫 브랜드(공원더파크)는 니트웨어 브랜드로 디자인적으로 인정받았지만, 니트웨어 특성상 높은 MOQ·불량·납기 문제가 구조적 한계로 작용해 재고 압박이 지속됐습니다. 이를 해결하기 위해 다이마루 카테고리를 추가했으나 MOQ 문제는 여전했습니다. 이후 코펜하겐 감성의 키 큰 여성 전용 니치 브랜드로 완전 피벗하고, SNS 인플루언서 마케팅을 집중적으로 전개했습니다.',
-      en: 'The first brand (Gongone the Park) earned design recognition, but structural limits in knitwear — high MOQ, defect rates, and lead time issues — created persistent inventory pressure. Added an interlock jersey category to address these constraints, but MOQ remained an issue. Executed a full pivot to a niche Copenhagen-style brand for tall women and concentrated influencer marketing efforts.',
+      ko: '니트웨어의 높은 MOQ와 생산 구조적 한계로 인한 재고 문제를 타겟 피벗으로 정면 돌파했습니다. 키 큰 여성을 위한 니치 브랜드로 브랜딩을 전면 재수립하고, 타겟 맞춤형 인플루언서 마케팅을 전개하며 비즈니스 모델을 최적화했습니다.',
+      en: 'Tackled persistent inventory issues caused by the structural constraints of high MOQ and knitwear production by pivoting to a new target segment. Reestablished the brand identity as a niche label for tall women and optimised the business model through targeted influencer marketing.',
     },
     image: '/assets/works/poroe-main.png',
     works: ['/assets/works/poroe-1.png', '/assets/works/poroe-2.png', '/assets/works/poroe-3.png'],
     meta: {
-      ko: ['브랜드 기획 · 피벗 · 운영 총괄', '2개', '연 매출 30% ↑', '자사몰 · SNS'],
+      ko: ['브랜드 기획 · 피벗 · 운영 총괄', '2개', '연 매출 30% ↑ · 구조적 한계 극복 · 마케팅 효율화', '자사몰 · SNS'],
       en: ['Brand Planning · Pivot · Total Ops', '2 Brands', 'Annual sales +30%', 'Brand Site · SNS'],
     },
   },

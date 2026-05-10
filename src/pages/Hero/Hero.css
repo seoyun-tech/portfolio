@@ -125,7 +125,7 @@
 
 @media (max-width: 1024px) {
   .hero           { height: auto; min-height: 100vh; padding: 100px 0 0; }
-  .hero-container { flex-direction: column; text-align: center; padding: 0 32px; }
+  .hero-container { flex-direction: column; text-align: left; padding: 0 32px; }
   .hero-image-container {
     position: relative;
     width: 100%;
@@ -136,9 +136,9 @@
     margin-top: 50px;
     animation: scaleUpFade 1.2s var(--ease-spring) 0.2s forwards;
   }
-  .hero-title           { font-size: 38px; line-height: 50px; margin-inline: auto; }
-  .hero-subtitle        { font-size: 26px; margin-inline: auto; }
-  .hero-cta-group       { justify-content: center; flex-wrap: wrap; }
+  .hero-title           { font-size: 38px; line-height: 50px; }
+  .hero-subtitle        { font-size: 26px; }
+  .hero-cta-group       { flex-wrap: wrap; }
 }
 
 @media (max-width: 480px) {
