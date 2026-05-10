@@ -9,19 +9,19 @@ const CONTENT = {
   ko: {
     sectionTag: '소개',
     statTag: '년간 실무 경력',
-    intro: '영국 NTU 패션 전공 기반의 트렌드 감각과 남영비비안에서의 실무 경험을 바탕으로 비즈니스의 전 과정을 리딩합니다.',
+    intro: '영국 NTU 패션 전공 기반의 트렌드 감각과 남영비비안에서의 실무 경험을 바탕으로 비즈니스의 전 과정을 주도적으로 핸들링합니다.',
     bio: [
-      '남영비비안에서 상품기획과 수입 바잉을 전담하며, 기획·생산부터 원단 소싱까지 카테고리 전반의 효율을 극대화했습니다. 특히 조직 리소스의 공백을 기회로 삼아 멀티 플레이어로서의 역량을 증명해왔습니다.',
-      '나아가 개인 브랜드 론칭을 통해 디자인부터 자사몰 운영까지 비즈니스 사이클을 완주했습니다. 데이터 기반의 정교한 수요 예측으로 주요 카테고리 매출을 연평균 30% 이상 성장시켰으며, 숫자로 시장을 읽고 한계 없는 실행력으로 가치를 설계합니다.',
+      '남영비비안에서 상품기획과 수입 바잉을 담당하며, 기획·생산부터 원단 소싱까지 카테고리 운영 실무 전반을 주도적으로 수행하며 업무 효율을 높였습니다. 특히 조직 리소스의 공백을 기회로 삼아 멀티 플레이어로서의 역량을 증명해왔습니다.',
+      '나아가 개인 브랜드 론칭을 통해 디자인부터 자사몰 운영까지 비즈니스 사이클을 완주했습니다. 데이터 기반의 정교한 수요 예측으로 주요 카테고리 매출을 전년 대비 30% 이상 성장시켰으며, 숫자로 시장을 읽고 한계 없는 실행력으로 가치를 설계합니다.',
     ],
   },
   en: {
     sectionTag: 'About Me',
     statTag: 'Years of Experience',
-    intro: 'Drawing on trend sensibility from a Fashion Design degree at Nottingham Trent University and hands-on experience at Namyoung Vivien, I lead the full business cycle end to end.',
+    intro: 'Grounded in the trend sensibility of my Fashion Design degree at NTU and practical experience at Namyoung Vivien, I drive the full business cycle from start to finish.',
     bio: [
-      'At Namyoung Vivien, I took sole charge of product planning and import buying, maximising category-wide efficiency from planning and production through to fabric sourcing. I consistently turned organisational resource gaps into opportunities, proving my value as a versatile multi-player.',
-      'Going further, I launched my own brand and completed the full business cycle from design through to running my own online store. With precise, data-driven demand forecasting, I grew key category sales by over 30% year on year, reading markets through data and designing value through limitless execution.',
+      'At Namyoung Vivien, I led product planning and import buying across the full category cycle, from planning and production through to fabric sourcing, driving operational efficiency throughout. I consistently turned organisational resource gaps into opportunity, demonstrating my value as a versatile all rounder.',
+      'Going further, I launched my own brand and completed the full business cycle from design through to managing my own online store. With precise demand forecasting grounded in data, I grew key category sales by over 30% year on year, reading markets through numbers and delivering value through limitless execution.',
     ],
   },
 };

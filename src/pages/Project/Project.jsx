@@ -53,14 +53,14 @@ const MD_PROJECTS = [
     ],
     category: { ko: '바잉 MD · 소싱', en: 'Buying MD · Sourcing' },
     description: {
-      ko: '기존 수입 라인업의 공백을 메우기 위해 대체 브랜드를 선별하고, 선정부터 발주·재고 관리까지 전 과정을 구축 및 운영했습니다. 이를 통해 자사 생산 라인의 고질적인 납기·불량 이슈를 보완하는 동시에, 글로벌 트렌드를 반영한 스타일 다각화로 브랜드 경쟁력을 강화했습니다.',
-      en: 'Scouted and selected replacement brands to fill gaps left by departing import labels, then built and operated the full cycle from brand selection through to ordering and inventory management. This addressed chronic delivery and quality issues in the in-house production line while broadening style diversity with global trend alignment to strengthen brand competitiveness.',
+      ko: '기존 수입 라인업의 공백을 메우기 위해 대체 브랜드를 선별하고, 선정부터 발주·재고 관리까지 전 과정을 구축 및 운영했습니다. 이를 통해 자사 생산 라인의 상품 공급 안정성을 확보하는 동시에, 글로벌 트렌드를 반영한 스타일 다각화로 브랜드 경쟁력을 강화했습니다.',
+      en: 'Selected and onboarded replacement brands to fill the gaps in the existing import lineup, then built and managed the full cycle from selection through to ordering and inventory management. This secured stable product supply for the in-house production line whilst broadening style diversity with global trend alignment to strengthen brand competitiveness.',
     },
     image: '/assets/works/vivien-buying-main.png',
     works: ['/assets/works/vivien-buying-1.png'],
     meta: {
       ko: ['바잉 MD · 소싱 · 재고 관리', '4개', '바바라 전체 매출 20% ↑ · 카테고리 공백 해소 · 품질 안정성 확보', '백화점'],
-      en: ['Buying MD · Sourcing · Inventory', '4 Brands', 'Barbara total sales +20% · Category gap resolved', 'Dept. Store'],
+      en: ['Buying MD · Sourcing · Inventory', '4 Brands', 'Barbara total sales +20% · Category gap resolved · Quality stability secured', 'Dept. Store'],
     },
   },
   {
@@ -72,8 +72,8 @@ const MD_PROJECTS = [
     ],
     category: { ko: '브랜드 CEO · 기획', en: 'Brand CEO · Planning' },
     description: {
-      ko: '니트웨어의 높은 MOQ와 생산 구조적 한계로 인한 재고 문제를 타겟 피벗으로 정면 돌파했습니다. 키 큰 여성을 위한 니치 브랜드로 브랜딩을 전면 재수립하고, 타겟 맞춤형 인플루언서 마케팅을 전개하며 비즈니스 모델을 최적화했습니다.',
-      en: 'Tackled persistent inventory issues caused by the structural constraints of high MOQ and knitwear production by pivoting to a new target segment. Reestablished the brand identity as a niche label for tall women and optimised the business model through targeted influencer marketing.',
+      ko: '니트웨어의 높은 MOQ와 긴 생산 주기로 인한 재고 리스크를 타겟 피벗과 공정 최적화로 해결했습니다. 초기에는 다이마루 라인을 믹스하여 생산 유연성을 확보하고 고정비 부담을 완화했습니다. 이후 국내 시장 내 희소성이 높은 코펜하겐 스타일을 기반의 키 큰 여성을 위한 니치 브랜드로 브랜딩을 재수립하고, 타겟 맞춤형 SNS 마케팅을 전개하며 비즈니스 모델을 최적화했습니다.',
+      en: 'Resolved inventory risk from high MOQ and lengthy knitwear production cycles through target pivoting and process optimisation. In the early phase, mixing in the daimaru line secured production flexibility and eased fixed cost pressure. The brand was subsequently reestablished as a niche label for tall women grounded in the Copenhagen aesthetic, a style scarce in the domestic market, and the business model was refined through targeted SNS marketing.',
     },
     image: '/assets/works/poroe-main.png',
     works: ['/assets/works/poroe-1.png', '/assets/works/poroe-2.png', '/assets/works/poroe-3.png'],

@@ -80,7 +80,7 @@ const COMPETENCIES = {
 const DESCRIPTION = {
   ko: (
     <p>
-      <strong>영국 NTU 졸업 후 대기업 MD와 이커머스 창업을 통해 비즈니스 전 과정을 주도했습니다. </strong>
+      <strong>영국 NTU 졸업 후 정통 언더웨어 브랜드 MD와 이커머스 창업을 거치며 비즈니스 전 과정을 주도했습니다. </strong>
       <span className="text-dim">현장에서 마주한 한계를 기술력으로 돌파하고자 코딩을 익혔고, </span>
       <span className="text-dim">이제 데이터와 로직을 바탕으로 시장의 문제를 실효적인 기획으로 풀어냅니다.</span>
     </p>
