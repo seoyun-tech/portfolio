@@ -18,59 +18,53 @@ const LABELS = {
 const COMPETENCIES = {
   ko: [
     {
-      label: '기획',
+      label: '상품 기획 및 운영 전략',
       description: [
-        '시즌 콘셉트 기획 및 라인업 구성',
-        '생산 일정·납기 관리',
-        '상품 비중 전략 수립 및 SKU 관리',
-        '브랜드 피벗 전략 수립',
+        '시즌 콘셉트 수립 및 라인업 구성',
+        '생산 일정 관리 및 납기 컨트롤',
+        '카테고리별 매출 비중 전략 수립 및 SKU 효율 최적화',
       ],
     },
     {
-      label: '소싱',
+      label: '글로벌 바잉 및 소싱',
       description: [
         '수입 브랜드 발굴·선정·계약 운영',
-        '해외 발주 및 재고 관리',
+        '해외 오더 및 재고 관리',
         '프리미엄 원단 소싱 및 샘플 검토',
-        '글로벌 트렌드 반영 바잉 전략 수립',
       ],
     },
     {
-      label: '분석',
+      label: '데이터 기반 비즈니스 분석',
       description: [
-        '판매 데이터 분석 및 상품 비중 기획',
-        '온라인 채널 데이터 분석',
-        '수요 예측 기반 발주량 산정',
-        '구매 전환율 분석',
+        '판매 데이터 및 적중률 분석을 통한 상품 비중 재설계',
+        '수요 예측 기반의 적정 발주량 산정 및 재고 관리',
+        '이커머스 채널별 구매 전환율 및 고객 유입 경로 분석',
       ],
     },
   ],
   en: [
     {
-      label: 'Planning',
+      label: 'Product Planning',
       description: [
-        'Seasonal concept planning & lineup composition',
-        'Production scheduling & lead time management',
-        'Product mix strategy & SKU management',
-        'Brand pivot strategy planning',
+        'Seasonal concept development and lineup composition',
+        'Production schedule management and lead time control',
+        'Category sales mix strategy and SKU efficiency optimisation',
       ],
     },
     {
-      label: 'Sourcing',
+      label: 'Global Buying',
       description: [
-        'Scouting, selecting & contracting import brands',
-        'Overseas ordering & inventory management',
-        'Premium fabric sourcing & sample review',
-        'Buying strategy aligned with global trends',
+        'Scouting, selecting and contracting import brands',
+        'Overseas ordering and inventory management',
+        'Premium fabric sourcing and sample review',
       ],
     },
     {
-      label: 'Analysis',
+      label: 'Business Analysis',
       description: [
-        'Sales data analysis & product mix planning',
-        'Online channel data analysis',
-        'Demand forecasting for order quantity optimisation',
-        'Conversion rate analysis',
+        'Product mix redesign through sales data and sell-through rate analysis',
+        'Demand forecasting for optimal order quantity planning and inventory management',
+        'Conversion rate and acquisition channel analysis across e-commerce platforms',
       ],
     },
   ],

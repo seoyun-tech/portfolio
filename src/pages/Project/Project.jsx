@@ -40,8 +40,8 @@ const MD_PROJECTS = [
     image: '/assets/works/vivien-main.png',
     works: ['/assets/works/vivien-online-1.png', '/assets/works/vivien-online-2.png'],
     meta: {
-      ko: ['온라인 MD · SNS · 인플루언서 마케팅', '1개', '온라인 매출 40% ↑ · 20-30대 타겟 확장 · 운영 비용 최적화', '자사몰 · SNS'],
-      en: ['Online MD · SNS · Influencer Marketing', '1 Brand', 'Online sales +40% · Target expanded to 20s–30s · Shoot cost reduction', 'Brand Site · SNS'],
+      ko: ['온라인 MD · SNS · 인플루언서 마케팅', '1개', '온라인 매출 20% ↑ · 20-30대 타겟 확장 · 운영 비용 최적화', '자사몰 · SNS'],
+      en: ['Online MD · SNS · Influencer Marketing', '1 Brand', 'Online sales +20% · Target expanded to 20s–30s · Shoot cost reduction', 'Brand Site · SNS'],
     },
   },
   {
@@ -53,14 +53,14 @@ const MD_PROJECTS = [
     ],
     category: { ko: '바잉 MD · 소싱', en: 'Buying MD · Sourcing' },
     description: {
-      ko: '기존 수입 라인업의 공백을 메우기 위해 대체 브랜드를 선별하고, 선정부터 발주·재고 관리까지 전 과정을 구축 및 운영했습니다. 이를 통해 자사 생산 라인의 상품 공급 안정성을 확보하는 동시에, 글로벌 트렌드를 반영한 스타일 다각화로 브랜드 경쟁력을 강화했습니다.',
-      en: 'Selected and onboarded replacement brands to fill the gaps in the existing import lineup, then built and managed the full cycle from selection through to ordering and inventory management. This secured stable product supply for the in-house production line whilst broadening style diversity with global trend alignment to strengthen brand competitiveness.',
+      ko: '기존 수입 라인업의 공백을 메우기 위해 대체 브랜드를 선별하고, 선정부터 발주·재고 관리까지 바잉 프로세스 전 과정을 내재화했습니다. 이를 통해 자사 생산 라인의 상품 공급 안정성을 확보하는 동시에, 글로벌 트렌드를 반영한 스타일 다각화로 브랜드 경쟁력을 강화했습니다.',
+      en: 'Selected and onboarded replacement brands to fill the gaps in the existing import lineup, then internalised the full buying process from selection through to ordering and inventory management. This secured stable product supply for the in-house production line whilst broadening style diversity with global trend alignment to strengthen brand competitiveness.',
     },
     image: '/assets/works/vivien-buying-main.png',
     works: ['/assets/works/vivien-buying-1.png'],
     meta: {
-      ko: ['바잉 MD · 소싱 · 재고 관리', '4개', '바바라 전체 매출 20% ↑ · 카테고리 공백 해소 · 품질 안정성 확보', '백화점'],
-      en: ['Buying MD · Sourcing · Inventory', '4 Brands', 'Barbara total sales +20% · Category gap resolved · Quality stability secured', 'Dept. Store'],
+      ko: ['바잉 MD · 글로벌 소싱 · 재고 관리', '4개', '수입 카테고리 운영 정상화 · 전년 대비 매출 20% ↑ · 품질 안정성 확보', '백화점'],
+      en: ['Buying MD · Global Sourcing · Inventory', '4 Brands', 'Import category operations normalised · Sales +20% YoY · Quality stability secured', 'Dept. Store'],
     },
   },
   {
@@ -72,14 +72,14 @@ const MD_PROJECTS = [
     ],
     category: { ko: '브랜드 CEO · 기획', en: 'Brand CEO · Planning' },
     description: {
-      ko: '니트웨어의 높은 MOQ와 긴 생산 주기로 인한 재고 리스크를 타겟 피벗과 공정 최적화로 해결했습니다. 초기에는 다이마루 라인을 믹스하여 생산 유연성을 확보하고 고정비 부담을 완화했습니다. 이후 국내 시장 내 희소성이 높은 코펜하겐 스타일을 기반의 키 큰 여성을 위한 니치 브랜드로 브랜딩을 재수립하고, 타겟 맞춤형 SNS 마케팅을 전개하며 비즈니스 모델을 최적화했습니다.',
-      en: 'Resolved inventory risk from high MOQ and lengthy knitwear production cycles through target pivoting and process optimisation. In the early phase, mixing in the daimaru line secured production flexibility and eased fixed cost pressure. The brand was subsequently reestablished as a niche label for tall women grounded in the Copenhagen aesthetic, a style scarce in the domestic market, and the business model was refined through targeted SNS marketing.',
+      ko: '니트웨어의 높은 MOQ와 긴 생산 주기에 따른 재고 부담 및 현금 흐름 리스크를 카테고리 믹스와 타겟 피벗으로 해결했습니다. 생산 유연성이 높은 다이마루 라인을 투입하여 고정비 부담을 완화했으며, 국내 희소성이 높은 키 큰 여성을 위한 코펜하겐 스타일로 브랜딩을 재수립하여 니치 마켓 내 마케팅 적중률 및 재고 회전율을 최적화했습니다.',
+      en: 'Resolved inventory burden and cash flow risk from high MOQ and lengthy knitwear production cycles through a category mix and target pivot. Introducing the daimaru line eased fixed cost pressure, whilst reestablishing the brand around the Copenhagen aesthetic for tall women unlocked a niche scarce in the domestic market, optimising both marketing precision and inventory turnover.',
     },
     image: '/assets/works/poroe-main.png',
     works: ['/assets/works/poroe-1.png', '/assets/works/poroe-2.png', '/assets/works/poroe-3.png'],
     meta: {
-      ko: ['브랜드 기획 · 피벗 · 운영 총괄', '2개', '연 매출 30% ↑ · 구조적 한계 극복 · 마케팅 효율화', '자사몰 · SNS'],
-      en: ['Brand Planning · Pivot · Total Ops', '2 Brands', 'Annual sales +30%', 'Brand Site · SNS'],
+      ko: ['브랜드 기획 · 상품 구성비 전략 · 운영 총괄', '2개', '전년 대비 매출 30% ↑ · 재고 회전율 개선을 통한 구조적 한계 극복 · 마케팅 효율화', '자사몰 · SNS'],
+      en: ['Brand Planning · Category Mix Strategy · Total Ops', '2 Brands', 'Annual sales +30% · Structural limits resolved through improved inventory turnover · Marketing efficiency gains', 'Brand Site · SNS'],
     },
   },
 ];
