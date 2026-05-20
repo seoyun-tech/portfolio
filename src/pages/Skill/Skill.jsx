@@ -74,16 +74,16 @@ const COMPETENCIES = {
 const DESCRIPTION = {
   ko: (
     <p>
-      <strong>영국 NTU 졸업 후 정통 언더웨어 브랜드 MD와 이커머스 창업을 거치며 비즈니스 전 과정을 주도했습니다. </strong>
-      <span className="text-dim">현장에서 마주한 한계를 기술력으로 돌파하고자 코딩을 익혔고, </span>
-      <span className="text-dim">이제 데이터와 로직을 바탕으로 시장의 문제를 실효적인 기획으로 풀어냅니다.</span>
+      <strong>기업 MD로 프로세스를 쌓고, 직접 브랜드를 운영하며 시장 전체를 체득했습니다. </strong>
+      <span className="text-dim">현장에서 마주한 데이터와 디지털 채널의 한계를 스스로 돌파하기 위해 코딩과 AI 역량을 직접 익혔고, </span>
+      <span className="text-dim">이제 풀사이클 MD 경험과 기술 역량을 바탕으로 조직 안에서 데이터로 시장을 읽고 매출 구조를 설계합니다.</span>
     </p>
   ),
   en: (
     <p>
-      <strong>Following graduation from NTU in the UK, I led the full scope of business operations through an MD role at a major corporation and an e-commerce venture. </strong>
-      <span className="text-dim">I took up coding to overcome the limitations I encountered on the ground. </span>
-      <span className="text-dim">I now draw on data and logic to shape market challenges into considered, actionable plans.</span>
+      <strong>I built my MD foundations in a corporate setting, then validated my understanding of the full market cycle by running my own brand. </strong>
+      <span className="text-dim">To break through the limits I encountered with data and digital channels in the field, I acquired coding and AI skills myself. </span>
+      <span className="text-dim">Now, with full-cycle MD experience and technical capability, I design data-driven sales structures within organisational settings.</span>
     </p>
   ),
 };

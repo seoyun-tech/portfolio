@@ -9,19 +9,19 @@ const CONTENT = {
   ko: {
     sectionTag: '소개',
     statTag: '년간 실무 경력',
-    intro: '영국 NTU 패션 전공의 트렌드 시각과 남영비비안에서의 실무를 기반으로 브랜드의 수익 구조와 공급망 전체를 주도적으로 핸들링합니다.',
+    intro: '기업 MD로 프로세스를 익히고, 직접 브랜드를 운영하며 시장 전체를 검증한 뒤, 데이터와 기술까지 갖춘 MD로 진화했습니다. 이제 그 경험을 조직의 규모와 결합해 더 큰 임팩트를 만들 준비가 되어 있습니다.',
     bio: [
-      '남영비비안 재직 당시, 카테고리별 효율 분석을 통해 SKU 운영을 최적화하고 수입 바잉 프로세스를 내재화하여 영업 이익률을 방어했습니다. 특히 조직 재편기 속에서 TNA 관리와 원단 소싱 매뉴얼을 정립하며 실무 운영의 안정성을 확보한 경험이 있습니다.',
-      '나아가 개인 브랜드를 운영하며 재고 회전율을 고려한 카테고리 믹스 전략과 니치 마켓 피벗을 통해 비즈니스 모델의 수익성을 개선했습니다. 이제는 현장 감각을 넘어 데이터 분석과 디지털 채널 운영까지 직접 다루는 MD로서, 매출 구조를 시스템적으로 설계합니다.',
+      '남영비비안에서 시즌당 약 350 SKU를 기획·운영하며 상품 기획의 프로세스와 기초를 체득했습니다. 3개국 수입 브랜드 바잉을 내재화해 목표 대비 108%를 초과 달성하고, 온라인 채널 리뉴얼로 하반기 매출 31%↑를 이끌면서, 기획 의도를 직접 시장에서 검증하고 싶다는 확신을 갖게 됐습니다.',
+      '이후 직접 브랜드를 런칭해 기획·소싱·재고·마케팅 전 과정을 단독으로 책임지며 피벗 직후 매출 30%↑와 D2C 운영 안정화를 달성했습니다. 현장에서 데이터와 디지털 채널의 한계를 체감한 뒤 6개월간 코딩과 AI 역량을 직접 쌓았고, 이제는 그 모든 경험을 조직의 리소스와 결합해 더 큰 규모에서 브랜드를 설계할 준비가 되어 있습니다.',
     ],
   },
   en: {
     sectionTag: 'About Me',
     statTag: 'Years of Experience',
-    intro: 'Built on the trend intelligence of my Fashion degree at NTU and hands-on experience at Namyoung Vivien, I take full ownership of a brand\'s revenue structure and its entire supply chain.',
+    intro: 'I built my MD foundations in a corporate setting, validated my understanding of the full market cycle by running my own brand, and then acquired data and technical skills. I am now ready to combine all of that experience with organisational resources to create a bigger impact.',
     bio: [
-      'At Namyoung Vivien, I optimised SKU operations through category efficiency analysis and internalised the import buying process to protect operating profit margins. During a period of organisational restructuring, I established TNA management protocols and a fabric sourcing manual, securing stability across day-to-day operations.',
-      'Beyond that, I ran my own brand, improving business profitability through an inventory-conscious category mix strategy and a pivot into niche markets. Now, as an MD who directly handles data analysis and digital channel operations beyond field experience, I design sales structures in a systematic manner.',
+      'At Namyoung Vivien, I planned and managed approximately 350 SKUs per season, building solid foundations in product planning processes. Internalising the buying process for brands across 3 countries — exceeding targets by 108% — and leading an online channel rebuild that drove H2 sales +31% gave me the conviction to test my planning judgement directly against the market.',
+      'I then launched my own brand, taking sole responsibility for the full cycle — planning, sourcing, inventory and marketing — and achieved +30% sales immediately post-pivot alongside D2C operations stabilisation. After experiencing firsthand the limits of data and digital channels on the ground, I spent 6 months acquiring coding and AI skills. I am now ready to combine all of that with organisational scale to design brand strategies that deliver measurably larger impact.',
     ],
   },
 };

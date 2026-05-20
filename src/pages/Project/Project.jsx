@@ -7,8 +7,18 @@ import { useLanguage } from '../../context/LanguageContext';
 import './Project.css';
 
 const LABELS = {
-  ko: { learnMore: '자세히 보기', tabMd: '패션', tabIt: 'IT' },
-  en: { learnMore: 'Learn more', tabMd: 'Fashion', tabIt: 'IT' },
+  ko: {
+    learnMore: '자세히 보기',
+    tabMd: '패션 MD',
+    tabIt: '디지털 역량',
+    tabItDesc: '현장 MD로서 데이터와 디지털 채널의 한계를 직접 경험하고, 이를 해결하기 위해 기술을 익혔습니다. 개발 역량 자체가 목적이 아닌, MD가 플랫폼 로직과 이커머스 구조를 직접 이해하고 설계할 수 있음을 보여주는 프로젝트들입니다.',
+  },
+  en: {
+    learnMore: 'Learn more',
+    tabMd: 'Fashion MD',
+    tabIt: 'Digital Skills',
+    tabItDesc: 'As a field MD, I encountered firsthand the limits of relying on others to interpret data and manage digital channels — so I learned to build. These projects are not a developer\'s portfolio. They demonstrate an MD who can understand platform logic, work directly with data, and design digital commerce experiences from the inside.',
+  },
 };
 
 const META_LABELS_MD = {
@@ -34,14 +44,14 @@ const MD_PROJECTS = [
     ],
     category: { ko: '온라인 MD · 마케팅', en: 'Online MD · Marketing' },
     description: {
-      ko: '자사 브랜드 \'바바라\'의 온라인 부진 원인을 타겟 불일치와 채널 운영 부재로 정의하고 이를 전면 리뉴얼했습니다. 촬영 프로세스 효율화로 리소스를 확보하여 브랜드 컨셉을 재정립했으며, SNS 최적화 및 온라인 전용 상품 기획을 통해 디지털 전환을 완수했습니다.',
-      en: 'Identified misaligned targeting and neglected channel management as the root causes of poor online performance for in-house brand Barbara, and executed a full-scale renewal. Streamlining the shoot process freed up resources to redefine the brand concept, and SNS optimisation alongside online-exclusive product planning completed the digital transformation.',
+      ko: '자사 브랜드 \'바바라\'의 온라인 부진 원인을 타겟 불일치와 채널 운영 부재로 정의하고 이를 전면 리뉴얼했습니다. 촬영 프로세스 효율화로 리소스를 2배 확보해 브랜드 컨셉을 재정립했으며, SNS 최적화 및 온라인 전용 상품 기획으로 2030 신규 타겟층을 겨냥한 디지털 전환을 완수해 하반기 온라인 매출 31%↑를 달성했습니다.',
+      en: 'Identified misaligned targeting and neglected channel management as the root causes of poor online performance for in-house brand Barbara, and executed a full-scale renewal. Doubling shoot resources through process efficiency redefined the brand concept, and SNS optimisation alongside online-exclusive product planning completed the digital transformation — driving online sales +31% in H2 with a new 20s–30s target audience.',
     },
     image: '/assets/works/vivien-main.png',
     works: ['/assets/works/vivien-online-1.png', '/assets/works/vivien-online-2.png'],
     meta: {
-      ko: ['온라인 MD · SNS · 인플루언서 마케팅', '1개', '온라인 매출 20% ↑ · 20-30대 타겟 확장 · 운영 비용 최적화', '자사몰 · SNS'],
-      en: ['Online MD · SNS · Influencer Marketing', '1 Brand', 'Online sales +20% · Target expanded to 20s–30s · Shoot cost reduction', 'Brand Site · SNS'],
+      ko: ['온라인 MD · SNS · 인플루언서 마케팅', '1개', '하반기 온라인 매출 31%↑ · 촬영 시간 2배 확보 · 운영 비용 절감 · 2030 신규 타겟 확장', '자사몰 · SNS'],
+      en: ['Online MD · SNS · Influencer Marketing', '1 Brand', 'Online sales +31% (H2) · Shoot time doubled · Operating cost reduction · New 20s–30s target', 'Brand Site · SNS'],
     },
   },
   {
@@ -53,14 +63,14 @@ const MD_PROJECTS = [
     ],
     category: { ko: '바잉 MD · 소싱', en: 'Buying MD · Sourcing' },
     description: {
-      ko: '기존 수입 라인업의 공백을 메우기 위해 대체 브랜드를 선별하고, 선정부터 발주·재고 관리까지 바잉 프로세스 전 과정을 내재화했습니다. 이를 통해 자사 생산 라인의 상품 공급 안정성을 확보하는 동시에, 글로벌 트렌드를 반영한 스타일 다각화로 브랜드 경쟁력을 강화했습니다.',
-      en: 'Selected and onboarded replacement brands to fill the gaps in the existing import lineup, then internalised the full buying process from selection through to ordering and inventory management. This secured stable product supply for the in-house production line whilst broadening style diversity with global trend alignment to strengthen brand competitiveness.',
+      ko: '매출 데이터 분석을 기반으로 기존 브랜드 포트폴리오를 재편하고, 프랑스(샹텔)·미국(에버제이)·벨기에(플루토) 3개국 신규 브랜드를 바잉 기획했습니다. 브랜드별 가격 전략을 차등 운영하는 편집샵형 멀티 브랜드 구성을 구현해, 전년 대비 매출 8.2%↑와 목표 대비 108% 초과 달성을 이끌었습니다.',
+      en: 'Restructured the existing brand portfolio through sales data analysis, then planned the buying of three new brands across France (Chantel), the US (Everjay) and Belgium (Pluto). Implementing a curated multi-brand structure with differentiated pricing strategies by brand drove sales +8.2% YoY and 108% of target achieved.',
     },
     image: '/assets/works/vivien-buying-main.png',
     works: ['/assets/works/vivien-buying-1.png'],
     meta: {
-      ko: ['바잉 MD · 글로벌 소싱 · 재고 관리', '4개', '수입 카테고리 운영 정상화 · 전년 대비 매출 20% ↑ · 품질 안정성 확보', '백화점'],
-      en: ['Buying MD · Global Sourcing · Inventory', '4 Brands', 'Import category operations normalised · Sales +20% YoY · Quality stability secured', 'Dept. Store'],
+      ko: ['바잉 MD · 글로벌 소싱 · 재고 관리', '3개국 4개', '전년 대비 매출 8.2%↑ · 목표 대비 108% 초과 달성 · 판매율: 샹텔 52% · 에버제이 39% · 플루토 64%', '백화점'],
+      en: ['Buying MD · Global Sourcing · Inventory', '4 Brands / 3 Countries', 'Sales +8.2% YoY · 108% of target achieved · Sell-through: Chantel 52% · Everjay 39% · Pluto 64%', 'Dept. Store'],
     },
   },
   {
@@ -72,14 +82,14 @@ const MD_PROJECTS = [
     ],
     category: { ko: '브랜드 CEO · 기획', en: 'Brand CEO · Planning' },
     description: {
-      ko: '니트웨어의 높은 MOQ와 긴 생산 주기에 따른 재고 부담 및 현금 흐름 리스크를 카테고리 믹스와 타겟 피벗으로 해결했습니다. 생산 유연성이 높은 다이마루 라인을 투입하여 고정비 부담을 완화했으며, 국내 희소성이 높은 키 큰 여성을 위한 코펜하겐 스타일로 브랜딩을 재수립하여 니치 마켓 내 마케팅 적중률 및 재고 회전율을 최적화했습니다.',
-      en: 'Resolved inventory burden and cash flow risk from high MOQ and lengthy knitwear production cycles through a category mix and target pivot. Introducing the daimaru line eased fixed cost pressure, whilst reestablishing the brand around the Copenhagen aesthetic for tall women unlocked a niche scarce in the domestic market, optimising both marketing precision and inventory turnover.',
+      ko: '기업 MD로서 쌓은 기획 역량을 직접 시장에서 검증하기 위해 브랜드를 런칭했습니다. 니트웨어의 높은 MOQ와 긴 생산 주기에 따른 재고 부담 및 현금 흐름 리스크를 카테고리 믹스와 타겟 피벗으로 해결했습니다. 생산 유연성이 높은 다이마루 라인을 투입해 고정비를 완화했으며, 키 큰 여성을 위한 코펜하겐 스타일로 브랜딩을 재수립해 피벗 직후 매출 30%↑와 D2C 운영 안정화를 달성했습니다.',
+      en: 'Launched the brand to validate the planning capabilities built during my corporate MD career directly against the market. Resolved inventory burden and cash flow risk from high MOQ and lengthy knitwear production cycles through a category mix and target pivot. Introducing the daimaru line eased fixed cost pressure, and reestablishing the brand around the Copenhagen aesthetic for tall women delivered +30% sales immediately post-pivot alongside D2C operations stabilisation.',
     },
     image: '/assets/works/poroe-main.png',
     works: ['/assets/works/poroe-1.png', '/assets/works/poroe-2.png', '/assets/works/poroe-3.png'],
     meta: {
-      ko: ['브랜드 기획 · 상품 구성비 전략 · 운영 총괄', '2개', '전년 대비 매출 30% ↑ · 재고 회전율 개선을 통한 구조적 한계 극복 · 마케팅 효율화', '자사몰 · SNS'],
-      en: ['Brand Planning · Category Mix Strategy · Total Ops', '2 Brands', 'Annual sales +30% · Structural limits resolved through improved inventory turnover · Marketing efficiency gains', 'Brand Site · SNS'],
+      ko: ['브랜드 기획 · 상품 구성비 전략 · 직접 운영', '2개', '피벗 직후 매출 30%↑ · 재고 리스크 해소 · D2C 운영 안정화', '자사몰 · SNS'],
+      en: ['Brand Planning · Category Mix Strategy · Direct Operations', '2 Brands', 'Sales +30% post-pivot · Inventory risk resolved · D2C operations stabilised', 'Brand Site · SNS'],
     },
   },
 ];
@@ -91,10 +101,10 @@ const IT_PROJECTS = [
       { ko: '루키즈(Rookiz)',       en: 'Rookiz',              italic: false },
       { ko: 'AI 키즈 OTT 서비스',  en: 'AI Kids OTT Service', italic: true  },
     ],
-    category:    { ko: '풀스택 기획 · 개발',    en: 'Full-Stack Planning & Dev' },
+    category:    { ko: 'MD 관점의 추천 로직 구현', en: 'Recommendation Logic from an MD Lens' },
     description: {
-      ko: '사용자 맞춤형 큐레이션 로직을 이해하기 위해, API 데이터 가공부터 AI 엔진 구현까지 전 과정을 수행했습니다. 기획자의 분석 역량을 기술로 구현해 최적의 추천 원리를 체득한 프로젝트입니다.',
-      en: "Executed the full development cycle — from API data processing to AI engine implementation — to master personalised curation logic and recommendation principles.",
+      ko: '이커머스 플랫폼의 추천 알고리즘이 MD의 기획 의도와 어떻게 연결되는지 이해하기 위해, API 데이터 가공부터 AI 추천 엔진까지 직접 구현했습니다. 플랫폼 로직을 체득한 MD는 상품 구성과 노출 전략을 데이터 기반으로 더 정확하게 설계할 수 있습니다.',
+      en: 'To understand how a platform\'s recommendation algorithm connects to an MD\'s planning intent, I built the full pipeline — from API data processing to AI engine. An MD who understands platform logic can design product composition and exposure strategy with far greater precision.',
     },
     intent: {
       ko: '기존 OTT는 성인 중심 설계로 어린이가 안전하게 이용하기 어렵습니다. AI 추천으로 연령에 맞는 콘텐츠를 자동 큐레이션하는 키즈 전용 미디어 환경을 기획·구현했습니다.',
@@ -122,10 +132,10 @@ const IT_PROJECTS = [
       { ko: '스포티파이(Spotify)', en: 'Spotify',      italic: false },
       { ko: '앱 리디자인',        en: 'App Redesign',  italic: false },
     ],
-    category:    { ko: 'UX/UI 기획 및 설계', en: 'UX/UI Planning & Design' },
+    category:    { ko: '고객 탐색 흐름 · 전환율 설계', en: 'Discovery Flow & Conversion Design' },
     description: {
-      ko: '방대한 데이터 속에서 고객의 이탈을 막고 최적의 취향을 제안하는 탐색 흐름을 설계했습니다. 상황별(TPO) 큐레이션 전략을 IT 기술과 결합하여 개인화 서비스의 핵심 UX를 제시했습니다.',
-      en: 'Designed a strategic discovery flow to minimise churn and suggest optimal preferences within vast data environments. Delivered core personalised UX by integrating TPO-based curation strategies with advanced technical solutions.',
+      ko: '방대한 상품 데이터 속에서 고객 이탈을 막는 탐색 흐름 설계는 패션 이커머스 MD에게도 직결되는 역량입니다. MD 관점에서 고객 여정과 구매 전환율을 기획하는 방식을 UX 설계로 직접 구현했습니다.',
+      en: 'Designing discovery flows that prevent churn within vast product data is a capability that translates directly to fashion e-commerce MD work. I applied an MD\'s lens to customer journey and conversion rate planning, implementing it through UX design.',
     },
     intent: {
       ko: '음악은 방대하지만 탐색 흐름이 복잡해 원하는 곡을 찾기 어렵습니다. AI 추천과 상황 기반 큐레이션으로 능동적 탐색 없이도 최적의 음악을 만나는 경험을 설계했습니다.',
@@ -151,10 +161,10 @@ const IT_PROJECTS = [
       { ko: '무신사(Musinsa)',    en: 'Musinsa',                  italic: false },
       { ko: '반응형 웹 리디자인', en: 'Responsive Web Redesign',  italic: false },
     ],
-    category:    { ko: 'UX/UI 기획 · 개발', en: 'UX/UI Planning & Dev' },
+    category:    { ko: '상품 발견성 · 구매 동선 설계', en: 'Product Discoverability & Purchase Flow' },
     description: {
-      ko: '콘텐츠와 커머스의 혼재로 인한 정보 접근성 문제를 해결하기 위해 무신사 웹사이트를 리디자인한 프로젝트입니다. 메인·상세·콘텐츠 3개 페이지를 재설계하고 반응형 레이아웃으로 구현했습니다.',
-      en: "Redesigned the Musinsa website to enhance information accessibility by separating mixed content and commerce. Reconstructed main, product, and content pages into a fully responsive layout.",
+      ko: '패션 이커머스에서 콘텐츠와 커머스의 혼재는 상품 발견율과 전환율을 모두 떨어뜨립니다. MD 관점에서 카테고리 동선과 구매 흐름을 재설계하고, 실제 반응형 웹으로 직접 구현하며 이커머스 채널 구조를 체득했습니다.',
+      en: 'In fashion e-commerce, mixing content and commerce hurts both product discoverability and conversion. I redesigned the category flow and purchase path from an MD\'s perspective, then built it as a responsive web to internalise the structure of e-commerce channel design.',
     },
     intent: {
       ko: '웹진과 쇼핑몰 콘텐츠가 혼재되어 사용자의 목적에 따른 탐색이 어렵습니다. 두 기능을 독립적으로 강화하고, 백화점 공간에서 영감을 얻은 [진입 → 욕구 → 구매 → 탐색] 흐름과 스타일 클러스터링으로 맞춤형 쇼핑 경험을 설계했습니다.',
@@ -361,6 +371,9 @@ const Project = () => {
               {LABELS[lang].tabIt}
             </button>
           </div>
+          {activeTab === 'it' && (
+            <p className="project-tab-desc">{LABELS[lang].tabItDesc}</p>
+          )}
         </div>
 
         {projects.map((proj, i) => (
