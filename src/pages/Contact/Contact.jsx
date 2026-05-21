@@ -35,7 +35,7 @@ const Contact = () => {
         <p className="contact-desc">{CONTENT[lang].desc}</p>
 
         <div className="contact-info-bar">
-          <a href="tel:+821074087823" className="contact-phone">+82 10 7408 7823</a>
+          <a href="tel:+821074087823" className="contact-phone">+82 10-7408-7823</a>
           <div className="contact-vdivider" />
           <a href="mailto:cielle.sora@gmail.com" className="contact-email">cielle.sora@gmail.com</a>
         </div>

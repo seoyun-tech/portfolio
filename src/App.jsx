@@ -10,6 +10,7 @@ import Footer from './components/Footer/Footer'
 import ContactDrawer from './components/ContactDrawer/ContactDrawer'
 import { CursorProvider } from './context/CursorContext'
 import { LanguageProvider } from './context/LanguageContext'
+import SiteMeta from './components/SiteMeta/SiteMeta'
 import './App.css'
 
 const MainLayout = () => {
@@ -47,6 +48,7 @@ function App() {
   return (
     <LanguageProvider>
       <CursorProvider>
+        <SiteMeta />
         <div className="App">
           <MainLayout />
         </div>

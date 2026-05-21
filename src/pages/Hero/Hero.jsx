@@ -7,14 +7,14 @@ const CONTENT = {
   ko: {
     chip: '포트폴리오',
     titleLines: ['데이터로 시장을 읽고,', '매출로 성과를 증명하는'],
-    subtitle: { prefix: '기획 MD ', strong: '박서윤', suffix: '입니다.' },
+    subtitle: { prefix: '상품기획 MD ', strong: '박서윤', suffix: '입니다.' },
     contactBtn: '연락하기',
     resumeBtn:  '이력서 보기',
   },
   en: {
     chip: 'Portfolio',
     titleLines: ['Reading Markets with Data,', 'Delivering Results in Sales'],
-    subtitle: { prefix: 'Product MD, ', strong: 'Seo-yun Park', suffix: '.' },
+    subtitle: { prefix: 'Product Planning MD ', strong: 'Seo-yun Park', suffix: '.' },
     contactBtn: 'Contact Me',
     resumeBtn:  'Resume',
   },

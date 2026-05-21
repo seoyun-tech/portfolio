@@ -1,18 +1,17 @@
 import { useRef, useState, useCallback, useEffect } from 'react';
 import useInView from '../../hooks/useInView';
-import IconCircle from '../../components/IconCircle/IconCircle';
 import SectionTag from '../../components/SectionTag/SectionTag';
 import { useLanguage } from '../../context/LanguageContext';
 import './Skill.css';
 
-const SKILLS_DATA = ['ERP', 'Excel', 'HTML', 'CSS', 'JavaScript', 'React', 'GitHub', 'Figma', 'Photoshop', 'Illustrator'];
+const SKILLS_DATA = ['ERP', 'Excel', 'Figma', 'Photoshop', 'Illustrator', 'HTML', 'CSS', 'JavaScript', 'React', 'GitHub'];
 
 
 const SCROLL_AMOUNT = 300;
 
 const LABELS = {
-  ko: { sectionTag: '스킬', competencyTag: '역량', learnMore: '자세히 보기' },
-  en: { sectionTag: 'Skills', competencyTag: 'Competency', learnMore: 'Learn more' },
+  ko: { sectionTag: '스킬', competencyTag: '역량' },
+  en: { sectionTag: 'Skills', competencyTag: 'Competency' },
 };
 
 const COMPETENCIES = {
@@ -28,7 +27,7 @@ const COMPETENCIES = {
     {
       label: '글로벌 바잉 및 소싱',
       description: [
-        '수입 브랜드 발굴·선정·계약 운영',
+        '수입 브랜드 발굴, 선정, 계약 운영',
         '해외 오더 및 재고 관리',
         '프리미엄 원단 소싱 및 샘플 검토',
       ],
@@ -192,12 +191,6 @@ const Skill = () => {
                 <li key={idx} className="description-item">{item}</li>
               ))}
             </ul>
-            <button className="learn-more-btn">
-              <span className="learn-more-text">{LABELS[lang].learnMore}</span>
-              <IconCircle>
-                <i className="fa-solid fa-plus" style={{ fontSize: '12px' }} />
-              </IconCircle>
-            </button>
           </div>
         </div>
 

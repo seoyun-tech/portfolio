@@ -11,13 +11,11 @@ const LABELS = {
     learnMore: '자세히 보기',
     tabMd: '패션 MD',
     tabIt: '디지털 역량',
-    tabItDesc: '현장 MD로서 데이터와 디지털 채널의 한계를 직접 경험하고, 이를 해결하기 위해 기술을 익혔습니다. 개발 역량 자체가 목적이 아닌, MD가 플랫폼 로직과 이커머스 구조를 직접 이해하고 설계할 수 있음을 보여주는 프로젝트들입니다.',
   },
   en: {
     learnMore: 'Learn more',
     tabMd: 'Fashion MD',
     tabIt: 'Digital Skills',
-    tabItDesc: 'As a field MD, I encountered firsthand the limits of relying on others to interpret data and manage digital channels — so I learned to build. These projects are not a developer\'s portfolio. They demonstrate an MD who can understand platform logic, work directly with data, and design digital commerce experiences from the inside.',
   },
 };
 
@@ -39,13 +37,32 @@ const MD_PROJECTS = [
     number: '01',
     isMd: true,
     titleLines: [
+      { ko: '㈜남영비비안',           en: 'Namyoung Vivien',            italic: false },
+      { ko: '수입 브랜드 포트폴리오 재편',  en: 'Import Brand Portfolio Restructure',  italic: true  },
+    ],
+    category: { ko: '바잉 MD · 소싱', en: 'Buying MD · Sourcing' },
+    description: {
+      ko: '매출 데이터 분석을 기반으로 기존 브랜드 포트폴리오를 재편하고, 샹텔(프랑스)·에버제이(미국)·플루토(벨기에) 3개국 브랜드 바잉 및 운영을 담당했습니다. 브랜드별 가격 전략을 차등 운영하는 편집샵형 멀티 브랜드 구성을 정리했습니다.',
+      en: 'Restructured the existing brand portfolio through sales data analysis and led buying and operations for Chantel (France), Everjay (US) and Pluto (Belgium). Structured a curated multi-brand lineup with differentiated pricing strategies by brand.',
+    },
+    image: '/assets/works/vivien-buying-main.png',
+    works: ['/assets/works/vivien-buying-1.png'],
+    meta: {
+      ko: ['바잉 MD · 글로벌 소싱 · 재고 관리', '4개', '전년 대비 매출 8.2%↑ · 목표 108% 달성 · 판매율: 샹텔 52% · 에버제이 39% · 플루토 64%', '백화점'],
+      en: ['Buying MD · Global Sourcing · Inventory', '4 brands', 'Sales +8.2% YoY · 108% of target · Sell-through: Chantel 52% · Everjay 39% · Pluto 64%', 'Dept. Store'],
+    },
+  },
+  {
+    number: '02',
+    isMd: true,
+    titleLines: [
       { ko: '㈜남영비비안',         en: 'Namyoung Vivien',          italic: false },
-      { ko: '온라인 채널 리빌딩',   en: 'Online Channel Rebuild',   italic: true  },
+      { ko: '온라인 채널 리뉴얼',   en: 'Online Channel Renewal',   italic: true  },
     ],
     category: { ko: '온라인 MD · 마케팅', en: 'Online MD · Marketing' },
     description: {
-      ko: '자사 브랜드 \'바바라\'의 온라인 부진 원인을 타겟 불일치와 채널 운영 부재로 정의하고 이를 전면 리뉴얼했습니다. 촬영 프로세스 효율화로 리소스를 2배 확보해 브랜드 컨셉을 재정립했으며, SNS 최적화 및 온라인 전용 상품 기획으로 2030 신규 타겟층을 겨냥한 디지털 전환을 완수해 하반기 온라인 매출 31%↑를 달성했습니다.',
-      en: 'Identified misaligned targeting and neglected channel management as the root causes of poor online performance for in-house brand Barbara, and executed a full-scale renewal. Doubling shoot resources through process efficiency redefined the brand concept, and SNS optimisation alongside online-exclusive product planning completed the digital transformation — driving online sales +31% in H2 with a new 20s–30s target audience.',
+      ko: '자사 브랜드 바바라의 온라인 부진을 타겟 불일치와 채널 운영 부재로 정의하고, 온라인 채널을 전면 리뉴얼했습니다. 촬영, SNS, 온라인 전용 상품 기획으로 2030 신규 타겟 디지털 전환을 진행했습니다.',
+      en: 'Defined weak online performance for in-house brand Barbara as misaligned targeting and neglected channel management, and led a full online channel renewal. Drove a digital shift for a new 20s–30s target through shoot planning, SNS, and online-exclusive products.',
     },
     image: '/assets/works/vivien-main.png',
     works: ['/assets/works/vivien-online-1.png', '/assets/works/vivien-online-2.png'],
@@ -55,41 +72,22 @@ const MD_PROJECTS = [
     },
   },
   {
-    number: '02',
-    isMd: true,
-    titleLines: [
-      { ko: '㈜남영비비안',           en: 'Namyoung Vivien',            italic: false },
-      { ko: '수입 브랜드 바잉 구축',  en: 'Import Brand Buying Setup',  italic: true  },
-    ],
-    category: { ko: '바잉 MD · 소싱', en: 'Buying MD · Sourcing' },
-    description: {
-      ko: '매출 데이터 분석을 기반으로 기존 브랜드 포트폴리오를 재편하고, 프랑스(샹텔)·미국(에버제이)·벨기에(플루토) 3개국 신규 브랜드를 바잉 기획했습니다. 브랜드별 가격 전략을 차등 운영하는 편집샵형 멀티 브랜드 구성을 구현해, 전년 대비 매출 8.2%↑와 목표 대비 108% 초과 달성을 이끌었습니다.',
-      en: 'Restructured the existing brand portfolio through sales data analysis, then planned the buying of three new brands across France (Chantel), the US (Everjay) and Belgium (Pluto). Implementing a curated multi-brand structure with differentiated pricing strategies by brand drove sales +8.2% YoY and 108% of target achieved.',
-    },
-    image: '/assets/works/vivien-buying-main.png',
-    works: ['/assets/works/vivien-buying-1.png'],
-    meta: {
-      ko: ['바잉 MD · 글로벌 소싱 · 재고 관리', '3개국 4개', '전년 대비 매출 8.2%↑ · 목표 대비 108% 초과 달성 · 판매율: 샹텔 52% · 에버제이 39% · 플루토 64%', '백화점'],
-      en: ['Buying MD · Global Sourcing · Inventory', '4 Brands / 3 Countries', 'Sales +8.2% YoY · 108% of target achieved · Sell-through: Chantel 52% · Everjay 39% · Pluto 64%', 'Dept. Store'],
-    },
-  },
-  {
     number: '03',
     isMd: true,
     titleLines: [
       { ko: '포레(Poroe)',        en: 'Poroe',              italic: false },
-      { ko: '브랜드 피벗 & 런칭', en: 'Brand Pivot & Launch', italic: true  },
+      { ko: '브랜드 피벗', en: 'Brand Pivot', italic: true  },
     ],
     category: { ko: '브랜드 CEO · 기획', en: 'Brand CEO · Planning' },
     description: {
-      ko: '기업 MD로서 쌓은 기획 역량을 직접 시장에서 검증하기 위해 브랜드를 런칭했습니다. 니트웨어의 높은 MOQ와 긴 생산 주기에 따른 재고 부담 및 현금 흐름 리스크를 카테고리 믹스와 타겟 피벗으로 해결했습니다. 생산 유연성이 높은 다이마루 라인을 투입해 고정비를 완화했으며, 키 큰 여성을 위한 코펜하겐 스타일로 브랜딩을 재수립해 피벗 직후 매출 30%↑와 D2C 운영 안정화를 달성했습니다.',
-      en: 'Launched the brand to validate the planning capabilities built during my corporate MD career directly against the market. Resolved inventory burden and cash flow risk from high MOQ and lengthy knitwear production cycles through a category mix and target pivot. Introducing the daimaru line eased fixed cost pressure, and reestablishing the brand around the Copenhagen aesthetic for tall women delivered +30% sales immediately post-pivot alongside D2C operations stabilisation.',
+      ko: '니트웨어의 높은 MOQ와 긴 생산 주기로 재고와 현금 흐름 부담이 컸고, 카테고리 및 타겟 피벗으로 구조를 바꿨습니다. 다이마루 라인을 투입하고 키 큰 여성을 위한 코펜하겐 스타일로 브랜딩을 재수립했습니다.',
+      en: 'High MOQ and long knitwear production cycles created inventory and cash flow pressure, which I addressed through a category and target pivot. I introduced the daimaru line and reset the brand around a Copenhagen aesthetic for tall women.',
     },
     image: '/assets/works/poroe-main.png',
     works: ['/assets/works/poroe-1.png', '/assets/works/poroe-2.png', '/assets/works/poroe-3.png'],
     meta: {
-      ko: ['브랜드 기획 · 상품 구성비 전략 · 직접 운영', '2개', '피벗 직후 매출 30%↑ · 재고 리스크 해소 · D2C 운영 안정화', '자사몰 · SNS'],
-      en: ['Brand Planning · Category Mix Strategy · Direct Operations', '2 Brands', 'Sales +30% post-pivot · Inventory risk resolved · D2C operations stabilised', 'Brand Site · SNS'],
+      ko: ['브랜드 기획 · 소싱 · 재고 관리', '1개', '피벗 직후 매출 30%↑ · 재고 리스크 해소 · D2C 운영 안정화', '자사몰 · SNS'],
+      en: ['Brand Planning · Sourcing · Inventory Management', '1 brand', 'Sales +30% post-pivot · Inventory risk resolved · D2C operations stabilised', 'Brand Site · SNS'],
     },
   },
 ];
@@ -101,13 +99,13 @@ const IT_PROJECTS = [
       { ko: '루키즈(Rookiz)',       en: 'Rookiz',              italic: false },
       { ko: 'AI 키즈 OTT 서비스',  en: 'AI Kids OTT Service', italic: true  },
     ],
-    category:    { ko: 'MD 관점의 추천 로직 구현', en: 'Recommendation Logic from an MD Lens' },
+    category:    { ko: '풀스택 기획 · 개발', en: 'Full-Stack Planning · Dev' },
     description: {
-      ko: '이커머스 플랫폼의 추천 알고리즘이 MD의 기획 의도와 어떻게 연결되는지 이해하기 위해, API 데이터 가공부터 AI 추천 엔진까지 직접 구현했습니다. 플랫폼 로직을 체득한 MD는 상품 구성과 노출 전략을 데이터 기반으로 더 정확하게 설계할 수 있습니다.',
-      en: 'To understand how a platform\'s recommendation algorithm connects to an MD\'s planning intent, I built the full pipeline — from API data processing to AI engine. An MD who understands platform logic can design product composition and exposure strategy with far greater precision.',
+      ko: 'API 데이터 가공부터 AI 추천과 화면 노출까지 이어지는 추천 파이프라인을 구현하고 배포했습니다. 직접 만들며 추천 및 노출이 서비스에서 어떻게 설계되는지 구조를 파악했습니다.',
+      en: 'Built and deployed the full recommendation pipeline — from API data processing through AI recommendations to on-screen exposure. By building it myself, I learned how recommendation and exposure are structured in a live service.',
     },
     intent: {
-      ko: '기존 OTT는 성인 중심 설계로 어린이가 안전하게 이용하기 어렵습니다. AI 추천으로 연령에 맞는 콘텐츠를 자동 큐레이션하는 키즈 전용 미디어 환경을 기획·구현했습니다.',
+      ko: '기존 OTT는 성인 중심 설계로 어린이가 안전하게 이용하기 어렵습니다. AI 추천으로 연령에 맞는 콘텐츠를 자동 큐레이션하는 키즈 전용 미디어 환경을 기획 및 구현했습니다.',
       en: "Addressed safety concerns in adult-centric OTT platforms by designing a dedicated kids' media environment. Implemented AI-driven automation to curate age-appropriate content.",
     },
     image:       '/assets/project-rookiz-scene.jpg',
@@ -132,10 +130,10 @@ const IT_PROJECTS = [
       { ko: '스포티파이(Spotify)', en: 'Spotify',      italic: false },
       { ko: '앱 리디자인',        en: 'App Redesign',  italic: false },
     ],
-    category:    { ko: '고객 탐색 흐름 · 전환율 설계', en: 'Discovery Flow & Conversion Design' },
+    category:    { ko: 'UX/UI 기획 · 설계', en: 'UX/UI Planning · Design' },
     description: {
-      ko: '방대한 상품 데이터 속에서 고객 이탈을 막는 탐색 흐름 설계는 패션 이커머스 MD에게도 직결되는 역량입니다. MD 관점에서 고객 여정과 구매 전환율을 기획하는 방식을 UX 설계로 직접 구현했습니다.',
-      en: 'Designing discovery flows that prevent churn within vast product data is a capability that translates directly to fashion e-commerce MD work. I applied an MD\'s lens to customer journey and conversion rate planning, implementing it through UX design.',
+      ko: '고객 여정·탐색·전환 흐름을 UX로 재설계하고 Figma 프로토타입으로 검증했습니다. 직접 기획하며 탐색 구조가 이탈 및 전환에 어떻게 영향을 주는지 확인했습니다.',
+      en: 'Redesigned the customer journey, discovery, and conversion flows in UX and validated them with a Figma prototype. By planning it myself, I saw how discovery structure affects churn and conversion.',
     },
     intent: {
       ko: '음악은 방대하지만 탐색 흐름이 복잡해 원하는 곡을 찾기 어렵습니다. AI 추천과 상황 기반 큐레이션으로 능동적 탐색 없이도 최적의 음악을 만나는 경험을 설계했습니다.',
@@ -147,8 +145,8 @@ const IT_PROJECTS = [
     embedUrl:    'https://www.figma.com/proto/tATtPvK1Ez7Jh9rJTsWAks/SPOTIFY-%EB%94%94%EC%9E%90%EC%9D%B8?node-id=2188-3467&p=f&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=2188%3A3467&page-id=2188%3A1329&hide-ui=1',
     embedMask:   { top: 59, left: 152, width: 177, height: 375, borderRadius: 26 },
     meta: {
-      ko: ['Figma · FigJam', 'Figma 프로토타입', '2주',     '100%', '없음 (모바일 앱)', '10화면 · AI 추천 · Dynamic TPO · AI DJ'],
-      en: ['Figma · FigJam', 'Figma Prototype',  '2 weeks', '100%', 'N/A (Mobile App)', '10 screens · AI Rec · Dynamic TPO · AI DJ'],
+      ko: ['Figma · FigJam', 'Figma 프로토타입', '2주',     '100%', 'iOS · Android', '10화면 · AI 추천 · Dynamic TPO · AI DJ'],
+      en: ['Figma · FigJam', 'Figma Prototype',  '2 weeks', '100%', 'iOS · Android', '10 screens · AI Rec · Dynamic TPO · AI DJ'],
     },
     links: [
       { label: { ko: '기획서',     en: 'Deck'      }, icon: 'fa-brands fa-figma', url: 'https://www.figma.com/deck/MpwEOgJp09w2yDCL1vJaRO' },
@@ -161,10 +159,10 @@ const IT_PROJECTS = [
       { ko: '무신사(Musinsa)',    en: 'Musinsa',                  italic: false },
       { ko: '반응형 웹 리디자인', en: 'Responsive Web Redesign',  italic: false },
     ],
-    category:    { ko: '상품 발견성 · 구매 동선 설계', en: 'Product Discoverability & Purchase Flow' },
+    category:    { ko: 'UX/UI 기획 · 개발', en: 'UX/UI Planning · Dev' },
     description: {
-      ko: '패션 이커머스에서 콘텐츠와 커머스의 혼재는 상품 발견율과 전환율을 모두 떨어뜨립니다. MD 관점에서 카테고리 동선과 구매 흐름을 재설계하고, 실제 반응형 웹으로 직접 구현하며 이커머스 채널 구조를 체득했습니다.',
-      en: 'In fashion e-commerce, mixing content and commerce hurts both product discoverability and conversion. I redesigned the category flow and purchase path from an MD\'s perspective, then built it as a responsive web to internalise the structure of e-commerce channel design.',
+      ko: '카테고리 및 구매 동선을 재설계하고 HTML, CSS, JavaScript로 반응형 웹에 직접 구현했습니다. 구현하며 이커머스 채널에서 발견 및 전환이 어떻게 설계되는지 구조를 파악했습니다.',
+      en: 'Redesigned category and purchase flows and built them as a responsive web with HTML, CSS, and JavaScript. Through that build, I learned how discoverability and conversion are structured on an e-commerce channel.',
     },
     intent: {
       ko: '웹진과 쇼핑몰 콘텐츠가 혼재되어 사용자의 목적에 따른 탐색이 어렵습니다. 두 기능을 독립적으로 강화하고, 백화점 공간에서 영감을 얻은 [진입 → 욕구 → 구매 → 탐색] 흐름과 스타일 클러스터링으로 맞춤형 쇼핑 경험을 설계했습니다.',
@@ -194,7 +192,7 @@ const ProjectModal = ({ proj, lang, onClose }) => {
 
   return (
     <div className="proj-modal-overlay" onClick={onClose}>
-      <div className="proj-modal" onClick={(e) => e.stopPropagation()}>
+      <div className={`proj-modal${proj.isMd ? ' proj-modal--md' : ''}`} onClick={(e) => e.stopPropagation()}>
         <button className="proj-modal-close" onClick={onClose} aria-label="Close">
           <i className="fa-solid fa-xmark" />
         </button>
@@ -325,6 +323,8 @@ const ProjectBlock = ({ proj, i, lang, onOpen }) => {
             ))}
           </h3>
 
+          {proj.kpi && <p className="proj-kpi">{proj.kpi[lang]}</p>}
+
           <p className="proj-desc">{proj.description[lang]}</p>
 
           <IconButton
@@ -371,9 +371,6 @@ const Project = () => {
               {LABELS[lang].tabIt}
             </button>
           </div>
-          {activeTab === 'it' && (
-            <p className="project-tab-desc">{LABELS[lang].tabItDesc}</p>
-          )}
         </div>
 
         {projects.map((proj, i) => (
