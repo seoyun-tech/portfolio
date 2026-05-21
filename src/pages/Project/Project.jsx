@@ -37,7 +37,7 @@ const MD_PROJECTS = [
     number: '01',
     isMd: true,
     titleLines: [
-      { ko: '㈜남영비비안',           en: 'Namyoung Vivien',            italic: false },
+      { ko: '바바라(barbara)',   en: 'Barbara',            italic: false },
       { ko: '수입 브랜드 포트폴리오 재편',  en: 'Import Brand Portfolio Restructure',  italic: true  },
     ],
     category: { ko: '바잉 MD · 소싱', en: 'Buying MD · Sourcing' },
@@ -56,7 +56,7 @@ const MD_PROJECTS = [
     number: '02',
     isMd: true,
     titleLines: [
-      { ko: '㈜남영비비안',         en: 'Namyoung Vivien',          italic: false },
+      { ko: '바바라(barbara)', en: 'Barbara',          italic: false },
       { ko: '온라인 채널 리뉴얼',   en: 'Online Channel Renewal',   italic: true  },
     ],
     category: { ko: '온라인 MD · 마케팅', en: 'Online MD · Marketing' },

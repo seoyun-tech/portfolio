@@ -43,7 +43,8 @@
   color: var(--color-primary);
 }
 
-.exp-type.education { color: var(--color-primary-60); }
+.exp-type.education,
+.exp-type.training { color: var(--color-primary-60); }
 
 
 .exp-right {
