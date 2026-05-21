@@ -8,7 +8,7 @@ import Skill from './pages/Skill/Skill'
 import Contact from './pages/Contact/Contact'
 import Footer from './components/Footer/Footer'
 import ContactDrawer from './components/ContactDrawer/ContactDrawer'
-import { CursorProvider } from './context/CursorContext'
+import CursorDot from './components/CursorDot/CursorDot'
 import { LanguageProvider } from './context/LanguageContext'
 import SiteMeta from './components/SiteMeta/SiteMeta'
 import './App.css'
@@ -47,12 +47,12 @@ function App() {
 
   return (
     <LanguageProvider>
-      <CursorProvider>
+      <CursorDot>
         <SiteMeta />
         <div className="App">
           <MainLayout />
         </div>
-      </CursorProvider>
+      </CursorDot>
     </LanguageProvider>
   )
 }

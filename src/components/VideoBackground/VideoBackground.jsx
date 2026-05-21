@@ -3,7 +3,7 @@ import './VideoBackground.css';
 const VIDEO_SRC = 'https://elegantbusiness.liquid-themes.com/wp-content/uploads/2024/09/elegant-business-bg.mp4';
 
 const VideoBackground = ({ videoOpacity = 0.4, overlay }) => (
-  <div className="video-bg">
+  <div className="video-bg" aria-hidden="true">
     <video
       className="video-bg__video"
       autoPlay muted loop playsInline

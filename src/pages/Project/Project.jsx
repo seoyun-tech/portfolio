@@ -10,7 +10,7 @@ const LABELS = {
   ko: {
     learnMore: '자세히 보기',
     tabMd: '패션 MD',
-    tabIt: '디지털 역량',
+    tabIt: '디지털(보조)',
   },
   en: {
     learnMore: 'Learn more',
@@ -192,7 +192,7 @@ const ProjectModal = ({ proj, lang, onClose }) => {
 
   return (
     <div className="proj-modal-overlay" onClick={onClose}>
-      <div className={`proj-modal${proj.isMd ? ' proj-modal--md' : ''}`} onClick={(e) => e.stopPropagation()}>
+      <div className={`proj-modal${proj.isMd ? ' proj-modal--md' : ''}`} role="dialog" aria-modal="true" onClick={(e) => e.stopPropagation()}>
         <button className="proj-modal-close" onClick={onClose} aria-label="Close">
           <i className="fa-solid fa-xmark" />
         </button>

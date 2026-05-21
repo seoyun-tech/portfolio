@@ -91,8 +91,8 @@ const Navbar = () => {
           </div>
 
           <div className="lang-switcher">
-            <span className={lang === 'ko' ? 'active' : ''} onClick={() => switchLang('ko')}>Kr.</span>
-            <span className={lang === 'en' ? 'active' : ''} onClick={() => switchLang('en')}>En.</span>
+            <span role="button" tabIndex={0} className={lang === 'ko' ? 'active' : ''} onClick={() => switchLang('ko')} onKeyDown={(e) => e.key === 'Enter' && switchLang('ko')}>Kr.</span>
+            <span role="button" tabIndex={0} className={lang === 'en' ? 'active' : ''} onClick={() => switchLang('en')} onKeyDown={(e) => e.key === 'Enter' && switchLang('en')}>En.</span>
           </div>
 
           <button

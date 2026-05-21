@@ -105,7 +105,7 @@ const About = () => {
               })}
             </div>
 
-            <div className="keyword-strip">
+            <div className="keyword-strip" aria-hidden="true">
               <div className="keyword-track">
                 {track.map((kw, i) => (
                   <span key={i} className="keyword-item">{kw}</span>

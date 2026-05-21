@@ -18,7 +18,7 @@ const PLACEHOLDERS = {
   en: {
     name: 'Please enter your name.',
     email: 'example@domain.com',
-    message: 'Please feel free to share your recruitment inquiries or collaboration proposals.',
+    message: 'Feel free to share your message — hiring inquiries, collaboration proposals, etc.',
     sending: 'Sending...',
     send: '— Send Message',
     success: 'Your message has been sent.',
@@ -68,12 +68,12 @@ const ContactDrawer = ({ isOpen, onClose }) => {
           <form ref={formRef} onSubmit={handleSubmit} className="cd-form">
             <div className="cd-form-row">
               <input className="cd-form-input" type="text" name="user_name"
-                placeholder={ph.name} autoComplete="off" required />
+                placeholder={ph.name} aria-label={ph.name} autoComplete="off" required />
               <input className="cd-form-input" type="email" name="user_email"
-                placeholder={ph.email} autoComplete="off" required />
+                placeholder={ph.email} aria-label={ph.email} autoComplete="off" required />
             </div>
             <textarea className="cd-form-textarea" name="message"
-              placeholder={ph.message} autoComplete="off" rows={4} required />
+              placeholder={ph.message} aria-label={ph.message} autoComplete="off" rows={4} required />
             <button className="cd-form-btn" type="submit" disabled={loading}>
               {loading ? ph.sending : ph.send}
             </button>

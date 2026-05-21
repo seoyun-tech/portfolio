@@ -1,6 +1,7 @@
 import VideoBackground from '../../components/VideoBackground/VideoBackground';
 import useInView from '../../hooks/useInView';
 import { useLanguage } from '../../context/LanguageContext';
+import { CONTACT_PHONE, CONTACT_EMAIL } from '../../constants/contact';
 import './Contact.css';
 
 const CONTENT = {
@@ -35,9 +36,9 @@ const Contact = () => {
         <p className="contact-desc">{CONTENT[lang].desc}</p>
 
         <div className="contact-info-bar">
-          <a href="tel:+821074087823" className="contact-phone">+82 10-7408-7823</a>
+          <a href={CONTACT_PHONE.href} className="contact-phone">{CONTACT_PHONE.value}</a>
           <div className="contact-vdivider" />
-          <a href="mailto:cielle.sora@gmail.com" className="contact-email">cielle.sora@gmail.com</a>
+          <a href={CONTACT_EMAIL.href} className="contact-email">{CONTACT_EMAIL.value}</a>
         </div>
       </div>
     </section>

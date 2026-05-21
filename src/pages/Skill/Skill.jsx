@@ -59,7 +59,7 @@ const COMPETENCIES = {
       ],
     },
     {
-      label: 'Business Analysis',
+      label: 'Data-Driven Business Analysis',
       description: [
         'Product mix redesign through sales data and sell-through rate analysis',
         'Demand forecasting for optimal order quantity planning and inventory management',
@@ -156,6 +156,7 @@ const Skill = () => {
             className="control-btn prev"
             onClick={() => scroll('prev')}
             disabled={!canScrollLeft}
+            aria-label="이전"
           >
             <ArrowIcon direction="left" />
           </button>
@@ -163,6 +164,7 @@ const Skill = () => {
             className="control-btn next"
             onClick={() => scroll('next')}
             disabled={!canScrollRight}
+            aria-label="다음"
           >
             <ArrowIcon direction="right" />
           </button>
@@ -175,13 +177,15 @@ const Skill = () => {
         <div className="competency-tabs">
           <nav className="tabs-nav">
             {competencies.map((item, index) => (
-              <div
+              <button
                 key={index}
+                type="button"
                 className={`tab-item${activeTab === index ? ' active' : ''}`}
                 onClick={() => handleTabClick(index)}
+                aria-selected={activeTab === index}
               >
                 {item.label}
-              </div>
+              </button>
             ))}
           </nav>
 

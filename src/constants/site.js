@@ -9,7 +9,7 @@ export const SITE_META = {
       '상품기획 MD 박서윤 — 시즌·바잉·온라인 6년+ 실무. 남영비비안·자사 브랜드 운영과 데이터·디지털 역량.',
   },
   en: {
-    title: 'Seo-yun Park | Product Planning MD',
+    title: 'Seo-yun Park | Product Planning MD Portfolio',
     description:
       'Product Planning MD with 6+ years across seasonal planning, buying, and online channels — corporate MD, brand operations, and digital skills.',
   },

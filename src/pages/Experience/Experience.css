@@ -140,31 +140,6 @@
 }
 
 
-.learn-more-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 16px;
-  margin-top: 20px;
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  color: var(--color-primary);
-  font-size: var(--text-sm);
-  font-weight: 500;
-  font-family: inherit;
-}
-
-.learn-more-btn:hover .icon-circle {
-  background-color: var(--color-primary);
-  border-color: var(--color-primary);
-}
-
-.learn-more-btn:hover .icon-circle i {
-  color: var(--color-white);
-}
-
-
 
 @media (max-width: 768px) {
   .experience    { padding: 60px 0; }

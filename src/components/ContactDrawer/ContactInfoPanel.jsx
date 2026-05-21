@@ -1,5 +1,6 @@
 import SocialLinks from '../SocialLinks/SocialLinks';
 import { useLanguage } from '../../context/LanguageContext';
+import { CONTACT_PHONE, CONTACT_EMAIL } from '../../constants/contact';
 import './ContactInfoPanel.css';
 
 const CONTENT = {
@@ -8,8 +9,8 @@ const CONTENT = {
     title: ['새로운 기회를', '기다립니다.'],
     desc: '새로운 기회와 협업에 대해 언제든 환영합니다.\n편하게 연락주세요.',
     items: [
-      { title: '전화',   desc: null,                       href: 'tel:+821074087823',           value: '+82 10-7408-7823' },
-      { title: '이메일', desc: '이메일로 직접 보내실 수도 있어요.', href: 'mailto:cielle.sora@gmail.com', value: 'cielle.sora@gmail.com' },
+      { title: '전화',   desc: null,                           ...CONTACT_PHONE },
+      { title: '이메일', desc: '이메일로 직접 보내실 수도 있어요.', ...CONTACT_EMAIL },
     ],
   },
   en: {
@@ -17,8 +18,8 @@ const CONTENT = {
     title: ["Let's work", 'together'],
     desc: 'I am always open to new opportunities and collaborations.\nPlease feel free to get in touch.',
     items: [
-      { title: 'Phone', desc: null,                        href: 'tel:+821074087823',           value: '+82 10-7408-7823' },
-      { title: 'Email',   desc: 'Or send a direct email at', href: 'mailto:cielle.sora@gmail.com', value: 'cielle.sora@gmail.com' },
+      { title: 'Phone', desc: null,                        ...CONTACT_PHONE },
+      { title: 'Email', desc: 'Or send a direct email at', ...CONTACT_EMAIL },
     ],
   },
 };
