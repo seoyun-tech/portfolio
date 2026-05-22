@@ -81,7 +81,7 @@ const MD_PROJECTS = [
       { ko: '포레(Poroe)',        en: 'Poroe',              italic: false },
       { ko: '브랜드 피벗', en: 'Brand Pivot', italic: true  },
     ],
-    category: { ko: '브랜드 CEO · 기획', en: 'Brand CEO · Planning' },
+    category: { ko: '브랜드 기획 · 운영', en: 'Brand Planning · Operating' },
     description: {
       ko: '니트웨어의 높은 MOQ와 긴 생산 주기로 재고와 현금 흐름 부담이 컸고, 카테고리 및 타겟 피벗으로 구조를 바꿨습니다. 다이마루 라인을 투입하고 키 큰 여성을 위한 코펜하겐 스타일로 브랜딩을 재수립했습니다.',
       en: 'High MOQ and long knitwear production cycles created inventory and cash flow pressure, which I addressed through a category and target pivot. I introduced the daimaru line and reset the brand around a Copenhagen aesthetic for tall women.',
