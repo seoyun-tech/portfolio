@@ -18,7 +18,7 @@ const PLACEHOLDERS = {
   en: {
     name: 'Please enter your name.',
     email: 'example@domain.com',
-    message: 'Feel free to share your message — hiring inquiries, collaboration proposals, etc.',
+    message: 'Feel free to share your message: hiring inquiries, collaboration proposals, etc.',
     sending: 'Sending...',
     send: '— Send Message',
     success: 'Your message has been sent.',

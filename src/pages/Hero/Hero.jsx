@@ -49,7 +49,7 @@ const Hero = ({ onOpenContact }) => {
             <IconButton icon="fa-solid fa-arrow-right" onClick={onOpenContact}>
               {c.contactBtn}
             </IconButton>
-            <a href="/박서윤_이력서.pdf" className="hero-resume-button" target="_blank" rel="noreferrer">
+            <a href="/resume.pdf" className="hero-resume-button" target="_blank" rel="noreferrer">
               {c.resumeBtn}
             </a>
           </div>

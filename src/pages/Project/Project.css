@@ -243,6 +243,14 @@
   margin-bottom: 16px;
 }
 
+.proj-modal-image--vertical {
+  aspect-ratio: auto;
+  max-height: 320px;
+  object-fit: contain;
+  object-position: center;
+  background-color: var(--color-primary-05);
+}
+
 .proj-works-thumbs {
   display: flex;
   gap: 8px;
@@ -408,7 +416,6 @@
     padding: 24px 20px 20px;
     animation: slideUpSheet 0.35s var(--ease-spring);
   }
-  .proj-modal:not(.proj-modal--md) .proj-modal-image { display: none; }
   .proj-modal--md .proj-modal-image {
     display: block;
     aspect-ratio: auto;

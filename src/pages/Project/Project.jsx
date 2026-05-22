@@ -36,6 +36,7 @@ const MD_PROJECTS = [
   {
     number: '01',
     isMd: true,
+    worksVertical: true,
     titleLines: [
       { ko: '바바라(barbara)',   en: 'Barbara',            italic: false },
       { ko: '수입 브랜드 포트폴리오 재편',  en: 'Import Brand Portfolio Restructure',  italic: true  },
@@ -55,25 +56,27 @@ const MD_PROJECTS = [
   {
     number: '02',
     isMd: true,
+    worksVertical: true,
     titleLines: [
       { ko: '바바라(barbara)', en: 'Barbara',          italic: false },
       { ko: '온라인 채널 리뉴얼',   en: 'Online Channel Renewal',   italic: true  },
     ],
-    category: { ko: '온라인 MD · 마케팅', en: 'Online MD · Marketing' },
+    category: { ko: '온라인 기획 · 마케팅', en: 'Online Planning · Marketing' },
     description: {
-      ko: '자사 브랜드 바바라의 온라인 부진을 타겟 불일치와 채널 운영 부재로 정의하고, 온라인 채널을 전면 리뉴얼했습니다. 촬영, SNS, 온라인 전용 상품 기획으로 2030 신규 타겟 디지털 전환을 진행했습니다.',
-      en: 'Defined weak online performance for in-house brand Barbara as misaligned targeting and neglected channel management, and led a full online channel renewal. Drove a digital shift for a new 20s–30s target through shoot planning, SNS, and online-exclusive products.',
+      ko: '자사 브랜드 바바라의 온라인 부진을 타겟 불일치와 채널 운영 부재로 정의하고, 온라인 채널 리뉴얼을 기획했습니다. 촬영, SNS, 온라인 전용 상품 기획으로 2030 신규 타겟 디지털 전환을 진행했습니다.',
+      en: 'Defined weak online performance for in-house brand Barbara as misaligned targeting and neglected channel management, and planned a full online channel renewal. Drove a digital shift for a new 20s-30s target through shoot planning, SNS, and online-exclusive products.',
     },
     image: '/assets/works/vivien-main.png',
-    works: ['/assets/works/vivien-online-1.png', '/assets/works/vivien-online-2.png'],
+    works: ['/assets/works/vivien-online-1.png'],
     meta: {
-      ko: ['온라인 MD · SNS · 인플루언서 마케팅', '1개', '하반기 온라인 매출 31%↑ · 촬영 시간 2배 확보 · 운영 비용 절감 · 2030 신규 타겟 확장', '자사몰 · SNS'],
-      en: ['Online MD · SNS · Influencer Marketing', '1 Brand', 'Online sales +31% (H2) · Shoot time doubled · Operating cost reduction · New 20s–30s target', 'Brand Site · SNS'],
+      ko: ['온라인 상품·촬영·SNS·인플루언서 기획', '1개', '하반기 온라인 매출 31%↑ · 촬영 시간 2배 확보 · 운영 비용 절감 · 2030 신규 타겟 확장', '자사몰 · SNS'],
+      en: ['Online Product · Shoot · SNS · Influencer Planning', '1 Brand', 'Online sales +31% (H2) · Shoot time doubled · Operating cost reduction · New 20s-30s target', 'Brand Site · SNS'],
     },
   },
   {
     number: '03',
     isMd: true,
+    worksVertical: true,
     titleLines: [
       { ko: '포레(Poroe)',        en: 'Poroe',              italic: false },
       { ko: '브랜드 피벗', en: 'Brand Pivot', italic: true  },
@@ -84,7 +87,7 @@ const MD_PROJECTS = [
       en: 'High MOQ and long knitwear production cycles created inventory and cash flow pressure, which I addressed through a category and target pivot. I introduced the daimaru line and reset the brand around a Copenhagen aesthetic for tall women.',
     },
     image: '/assets/works/poroe-main.png',
-    works: ['/assets/works/poroe-1.png', '/assets/works/poroe-2.png', '/assets/works/poroe-3.png'],
+    works: ['/assets/works/poroe-1.png', '/assets/works/poroe-2.png', '/assets/works/poroe-3.png', '/assets/works/poroe-4.png'],
     meta: {
       ko: ['브랜드 기획 · 소싱 · 재고 관리', '1개', '피벗 직후 매출 30%↑ · 재고 리스크 해소 · D2C 운영 안정화', '자사몰 · SNS'],
       en: ['Brand Planning · Sourcing · Inventory Management', '1 brand', 'Sales +30% post-pivot · Inventory risk resolved · D2C operations stabilised', 'Brand Site · SNS'],
@@ -102,14 +105,13 @@ const IT_PROJECTS = [
     category:    { ko: '풀스택 기획 · 개발', en: 'Full-Stack Planning · Dev' },
     description: {
       ko: 'API 데이터 가공부터 AI 추천과 화면 노출까지 이어지는 추천 파이프라인을 구현하고 배포했습니다. 직접 만들며 추천 및 노출이 서비스에서 어떻게 설계되는지 구조를 파악했습니다.',
-      en: 'Built and deployed the full recommendation pipeline — from API data processing through AI recommendations to on-screen exposure. By building it myself, I learned how recommendation and exposure are structured in a live service.',
+      en: 'Built and deployed the full recommendation pipeline, from API data processing through AI recommendations to on-screen exposure. By building it myself, I learned how recommendation and exposure are structured in a live service.',
     },
     intent: {
       ko: '기존 OTT는 성인 중심 설계로 어린이가 안전하게 이용하기 어렵습니다. AI 추천으로 연령에 맞는 콘텐츠를 자동 큐레이션하는 키즈 전용 미디어 환경을 기획 및 구현했습니다.',
       en: "Addressed safety concerns in adult-centric OTT platforms by designing a dedicated kids' media environment. Implemented AI-driven automation to curate age-appropriate content.",
     },
     image:       '/assets/project-rookiz-scene.jpg',
-    modalImage:  '/assets/project-rookiz-modal.png',
     mobileImage: '/assets/project-rookiz.png',
     embedUrl:    'https://www.figma.com/proto/uiEEZajUsTu8qwpV3h2jVV/ROOKIZ-%EB%94%94%EC%9E%90%EC%9D%B8?node-id=4230-7512&p=f&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=4230%3A7512&page-id=0%3A1&hide-ui=1',
     embedMask:   { top: 83, left: 60.2, width: 359, height: 256, borderRadius: 4 },
@@ -140,7 +142,6 @@ const IT_PROJECTS = [
       en: 'Overcame navigation complexities in vast music libraries by designing an effortless discovery experience. Leveraged AI recommendations and context-based curation to deliver optimal tracks without active searching.',
     },
     image:       '/assets/project-spotify-scene.jpg',
-    modalImage:  '/assets/project-spotify-modal.png',
     mobileImage: '/assets/project-spotify.png',
     embedUrl:    'https://www.figma.com/proto/tATtPvK1Ez7Jh9rJTsWAks/SPOTIFY-%EB%94%94%EC%9E%90%EC%9D%B8?node-id=2188-3467&p=f&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=2188%3A3467&page-id=2188%3A1329&hide-ui=1',
     embedMask:   { top: 59, left: 152, width: 177, height: 375, borderRadius: 26 },
@@ -169,7 +170,6 @@ const IT_PROJECTS = [
       en: "Resolved navigation complexities caused by the overlap of webzine and e-commerce content. Engineered a tailored shopping experience through style clustering and a strategic flow inspired by department store layouts.",
     },
     image:       '/assets/project-musinsa-scene.png',
-    modalImage:  '/assets/project-musinsa-modal.png',
     mobileImage: '/assets/project-musinsa.png',
     meta: {
       ko: ['HTML · CSS · JavaScript', 'GitHub Pages', '2주',     '100%', 'Chrome · Safari · Firefox', '3페이지 · 모달 구성 · 반응형'],
@@ -197,9 +197,9 @@ const ProjectModal = ({ proj, lang, onClose }) => {
           <i className="fa-solid fa-xmark" />
         </button>
 
-        {proj.works ? (
+        {proj.works && (
           <>
-            <img src={proj.works[worksIdx]} alt={proj.titleLines[0][lang]} className="proj-modal-image" />
+            <img src={proj.works[worksIdx]} alt={proj.titleLines[0][lang]} className={`proj-modal-image${proj.worksVertical ? ' proj-modal-image--vertical' : ''}`} />
             {proj.works.length > 1 && (
               <div className="proj-works-thumbs">
                 {proj.works.map((src, i) => (
@@ -215,8 +215,6 @@ const ProjectModal = ({ proj, lang, onClose }) => {
               </div>
             )}
           </>
-        ) : (
-          <img src={proj.modalImage ?? proj.image} alt={proj.titleLines[0][lang]} className="proj-modal-image" />
         )}
 
         <div className="proj-modal-header">
