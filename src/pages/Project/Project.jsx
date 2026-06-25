@@ -49,8 +49,8 @@ const MD_PROJECTS = [
     image: '/assets/works/vivien-buying-main.png',
     works: ['/assets/works/vivien-buying-1.png'],
     meta: {
-      ko: ['바잉 MD · 글로벌 소싱 · 재고 관리', '4개', '전년 대비 매출 8.2%↑ · 목표 108% 달성 · 판매율: 샹텔 52% · 에버제이 39% · 플루토 64%', '백화점'],
-      en: ['Buying MD · Global Sourcing · Inventory', '4 brands', 'Sales +8.2% YoY · 108% of target · Sell-through: Chantel 52% · Everjay 39% · Pluto 64%', 'Dept. Store'],
+      ko: ['바잉 MD, 글로벌 소싱, 재고 관리', '4개', '3개국 신규 브랜드 포트폴리오 재편 및 런칭, 첫 시즌부터 판매 호조 달성', '백화점'],
+      en: ['Buying MD, Global Sourcing, Inventory', '4 brands', 'Restructured and launched a new brand portfolio across 3 countries, strong sales from the first season', 'Dept. Store'],
     },
   },
   {
@@ -69,8 +69,8 @@ const MD_PROJECTS = [
     image: '/assets/works/vivien-main.png',
     works: ['/assets/works/vivien-online-1.png'],
     meta: {
-      ko: ['온라인 상품·촬영·SNS·인플루언서 기획', '1개', '하반기 온라인 매출 31%↑ · 촬영 시간 2배 확보 · 운영 비용 절감 · 2030 신규 타겟 확장', '자사몰 · SNS'],
-      en: ['Online Product · Shoot · SNS · Influencer Planning', '1 Brand', 'Online sales +31% (H2) · Shoot time doubled · Operating cost reduction · New 20s-30s target', 'Brand Site · SNS'],
+      ko: ['온라인 상품, 촬영, SNS, 인플루언서 기획', '1개', '하반기 온라인 매출 전년 대비 유의미한 성장 달성, 촬영 컨셉 전면 교체로 운영 비용 절감, 2030 신규 타겟 확장', '자사몰, SNS'],
+      en: ['Online Product, Shoot, SNS, Influencer Planning', '1 Brand', 'Achieved meaningful YoY growth in online sales in H2, cut operating costs by overhauling the shoot concept, expanded to a new 20s-30s target', 'Brand Site, SNS'],
     },
   },
   {
@@ -89,8 +89,8 @@ const MD_PROJECTS = [
     image: '/assets/works/poroe-main.png',
     works: ['/assets/works/poroe-1.png', '/assets/works/poroe-2.png', '/assets/works/poroe-3.png', '/assets/works/poroe-4.png'],
     meta: {
-      ko: ['브랜드 기획 · 소싱 · 재고 관리', '1개', '피벗 직후 매출 30%↑ · 재고 리스크 해소 · D2C 운영 안정화', '자사몰 · SNS'],
-      en: ['Brand Planning · Sourcing · Inventory Management', '1 brand', 'Sales +30% post-pivot · Inventory risk resolved · D2C operations stabilised', 'Brand Site · SNS'],
+      ko: ['브랜드 기획, 소싱, 재고 관리', '1개', '피벗 직후 매출 30%↑, 재고 리스크 해소, D2C 운영 안정화', '자사몰, SNS'],
+      en: ['Brand Planning, Sourcing, Inventory Management', '1 brand', 'Sales +30% post-pivot, inventory risk resolved, D2C operations stabilised', 'Brand Site, SNS'],
     },
   },
 ];

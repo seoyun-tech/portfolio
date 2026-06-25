@@ -11,8 +11,8 @@ const CONTENT = {
     statTag: '년간 실무 경력',
     intro: '기업 MD로 프로세스를 익히고, 브랜드를 직접 운영하며 시장에서 검증했습니다. 데이터 및 디지털 역량까지 더한 뒤, 패션 및 유통 기업의 상품기획 MD로 그 경험을 이어가고자 합니다.',
     bio: [
-      '남영비비안에서 시즌당 약 350 SKU를 기획 및 운영했습니다. 3개국 수입 바잉 내재화 목표 108% 달성, 온라인 채널 리뉴얼 기획으로 하반기 매출 31%↑를 달성했습니다.',
-      '포레에서 기획·소싱·재고·마케팅 전 과정을 운영하며 피벗 후 매출 30%↑, D2C 안정화를 달성했습니다. 현장의 데이터 및 디지털 한계를 보완하기 위해 기술 역량을 쌓았고, 이를 상품기획 MD로 확장할 준비가 되어 있습니다.',
+      '남영비비안에서 시즌당 총 500 SKU를 기획 및 운영했습니다. 3개국 수입 브랜드 포트폴리오를 재편 및 신규 런칭하고 온라인 채널 리뉴얼 기획으로 하반기 매출 전년 대비 유의미한 성장을 달성했습니다.',
+      '포레에서 기획, 소싱, 재고, 마케팅 전 과정을 운영하며 피벗 후 매출 30%↑, D2C 안정화를 달성했습니다. 현장의 데이터 및 디지털 한계를 보완하기 위해 기술 역량을 쌓았고, 이를 상품기획 MD로 확장할 준비가 되어 있습니다.',
     ],
   },
   en: {
@@ -20,7 +20,7 @@ const CONTENT = {
     statTag: 'Years of Experience',
     intro: 'I built corporate MD foundations, validated them by running my own brand in the market, and added data and digital skills. I am now looking to continue as a Product Planning MD in fashion and retail.',
     bio: [
-      'At Namyoung Vivien, I planned and operated approximately 350 SKUs per season. Internalised import buying across three countries (108% of target) and led an online channel renewal that drove H2 sales +31%.',
+      'At Namyoung Vivien, I planned and operated a total of 500 SKUs per season. I restructured and newly launched an import brand portfolio across three countries, and an online channel renewal drove meaningful year-over-year sales growth in H2.',
       'At Poroe, I ran planning, sourcing, inventory and marketing end-to-end, achieving +30% sales post-pivot and stabilising D2C operations. I built technical skills to address data and digital gaps in the field, and I am ready to extend that as a Product Planning MD.',
     ],
   },
