@@ -14,14 +14,14 @@ const EXPERIENCES = {
     { type: 'career', name: '㈜남영비비안', sub: '상품기획 MD', period: '2020.03 – 2022.05', duration: '2년 4개월', summary: '시즌 상품 기획, 수입 바잉, 생산관리, 온라인 채널 운영', description: ['라이선스 350 SKU + 수입 브랜드 150 SKU, 시즌당 총 500 SKU 기획 및 운영', '3개국 신규 브랜드 포트폴리오 재편 및 런칭, 첫 시즌 판매 호조 달성', '온라인 채널 리뉴얼 기획, 하반기 매출 전년 대비 유의미한 성장 달성'] },
     { type: 'training', name: 'MBC 아카데미 (종로)', sub: '웹 개발 과정', period: '2025.10 – 2026.04', duration: '수료', summary: 'AI 기반 콘텐츠 기획, 반응형 웹 개발(HTML, CSS, JS, React), 영상 제작' },
     { type: 'education', name: 'Nottingham Trent University (UK)', sub: '패션 디자인 학사', period: '2016.09 – 2019.06', duration: '졸업', award: { name: 'River Island 공모전', sub: '2019 Menswear Collection Concept Competition', result: '전체 우승', period: '2018.05' } },
-    { type: 'education', name: 'NTU International College (UK)', sub: 'Art & Design', period: '2015.03 – 2016.03', duration: '졸업' },
+    { type: 'education', name: 'NTU International College (UK)', sub: 'Art & Design', period: '2015.09 – 2016.06', duration: '졸업' },
   ],
   en: [
     { type: 'career', name: 'Poroe', sub: 'Founder & CEO', period: '2022.05 – 2025.10', duration: '3 yrs 6 mos', summary: 'Product planning, sourcing, inventory, marketing — end-to-end', description: ['32 SKUs per season, maximised inventory efficiency', 'Sales +30% post-pivot, D2C operations stabilised', 'Category and target pivot, resolved inventory risk, improved profitability'] },
     { type: 'career', name: 'Namyoung Vivien Co., Ltd.', sub: 'Product Planning MD', period: '2020.03 – 2022.05', duration: '2 yrs 4 mos', summary: 'Seasonal product planning, import buying, production management, online channel operations', description: ['Licensed 350 SKUs + imported brands 150 SKUs — total 500 SKUs planned and operated per season', 'Restructured and launched a new brand portfolio across 3 countries, strong sales in the first season', 'Planned online channel renewal, achieved meaningful YoY sales growth in H2'] },
     { type: 'training', name: 'MBC Academy (Jongno)', sub: 'Web Development', period: 'Oct 2025 – Apr 2026', duration: 'Completed', summary: 'AI-based content planning, responsive web development (HTML, CSS, JS, React), video production' },
     { type: 'education', name: 'Nottingham Trent University (UK)', sub: 'Fashion Design, BA', period: '2016.09 – 2019.06', duration: 'Graduated', award: { name: 'River Island Competition', sub: '2019 Menswear Collection Concept Competition', result: 'Overall Winner', period: 'May 2018' } },
-    { type: 'education', name: 'NTU International College (UK)', sub: 'Art & Design', period: '2015.03 – 2016.03', duration: 'Graduated' },
+    { type: 'education', name: 'NTU International College (UK)', sub: 'Art & Design', period: '2015.09 – 2016.06', duration: 'Graduated' },
   ],
 };
 
